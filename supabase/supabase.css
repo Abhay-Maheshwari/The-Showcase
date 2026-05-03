@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap');
+/* Using system-ui as a fallback for Circular */
+
+:root {
+  /* Brand */
+  --supabase-green: #3ecf8e;
+  --green-link: #00c573;
+  --green-border: rgba(62, 207, 142, 0.3);
+  
+  /* Neutral Scale */
+  --near-black: #0f0f0f;
+  --dark: #171717;
+  --dark-border: #242424;
+  --border-dark: #2e2e2e;
+  --mid-border: #363636;
+  --border-light: #393939;
+  
+  /* Text */
+  --off-white: #fafafa;
+  --light-gray: #b4b4b4;
+  --mid-gray: #898989;
+  
+  /* Fonts */
+  --font-primary: 'Circular', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+  
+  /* Theme Map */
+  --bg-primary: var(--dark);
+  --bg-secondary: var(--near-black);
+  --text-primary: var(--off-white);
+  --text-secondary: var(--mid-gray);
+  --nav-bg: rgba(23, 23, 23, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: normal;
+}
+
+h2.section-heading {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+h3.card-title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.16px;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--text-secondary);
+}
+
+.code-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+/* Links */
+a {
+  color: var(--off-white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--green-link);
+}
+a.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--off-white);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 9999px; /* Pill */
+  transition: all 0.2s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--supabase-green);
+  color: var(--near-black);
+  padding: 8px 16px;
+  border: 1px solid var(--supabase-green);
+}
+.btn-primary:hover {
+  background-color: #4fe5a1;
+  border-color: #4fe5a1;
+  color: var(--near-black);
+}
+
+.btn-secondary {
+  background-color: var(--near-black);
+  color: var(--off-white);
+  padding: 8px 16px;
+  border: 1px solid var(--border-dark);
+}
+.btn-secondary:hover {
+  border-color: var(--mid-border);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--off-white);
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 6px; /* Note: Ghost is not pill */
+}
+.btn-ghost:hover {
+  border-color: var(--border-dark);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--near-black);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  padding: 24px;
+}
+.card:hover {
+  border-color: var(--mid-border);
+}
+
+/* Inputs */
+.input-field {
+  background-color: var(--near-black);
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--off-white);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  width: 100%;
+}
+.input-field:focus {
+  outline: none;
+  border-color: var(--supabase-green);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 128px 0;
+}
+
+@media (max-width: 600px) {
+  h1.display-hero {
+    font-size: 48px;
+  }
+}

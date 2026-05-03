@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WIRED Design Showcase</title>
+  <link rel="stylesheet" href="./wired.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <div class="top-bar">
+    <div>Subscribe</div>
+    <div style="display: flex; gap: 24px;">
+      <span>Tech</span>
+      <span>Reviews</span>
+      <span>Science</span>
+      <span>Culture</span>
+    </div>
+  </div>
+
+  <nav style="padding: 24px 48px; border-bottom: 2px solid var(--wired-black); display: flex; justify-content: center; position: sticky; top: 0; background: #fff; z-index: 100;">
+    <div style="font-family: var(--font-display); font-size: 48px; font-weight: 700; letter-spacing: -2px;">WIRED</div>
+  </nav>
+
+  <main class="container">
+    <section class="section">
+      <div class="story-grid">
+        <!-- Main Story -->
+        <div>
+          <div style="background-color: #eee; width: 100%; aspect-ratio: 16/9; margin-bottom: 24px;"></div>
+          <span class="kicker">Artificial Intelligence</span>
+          <h1 class="display-hero" style="margin-bottom: 16px;">The AI Revolution Is Here, and It's Rewriting the Rules of Reality</h1>
+          <p class="deck" style="margin-bottom: 16px;">From deepfakes to hyper-personalized medicine, generative models are transforming every aspect of human life. We explore the frontiers of the new digital age.</p>
+          <div class="timestamp">12 Hours Ago</div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+          <div class="ribbon" style="margin-bottom: 24px; width: 100%;">Most Popular</div>
+          <div style="display: flex; flex-direction: column; gap: 32px;">
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <span style="font-family: var(--font-display); font-size: 32px; color: #ccc;">01</span>
+              <div>
+                <span class="kicker" style="font-size: 11px;">Gear</span>
+                <h3 class="story-headline">The Best Laptops for Every Kind of User</h3>
+              </div>
+            </div>
+            <hr class="hairline" style="margin: 0;">
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <span style="font-family: var(--font-display); font-size: 32px; color: #ccc;">02</span>
+              <div>
+                <span class="kicker" style="font-size: 11px;">Science</span>
+                <h3 class="story-headline">NASA's New Mission to the Outer Planets</h3>
+              </div>
+            </div>
+            <hr class="hairline" style="margin: 0;">
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <span style="font-family: var(--font-display); font-size: 32px; color: #ccc;">03</span>
+              <div>
+                <span class="kicker" style="font-size: 11px;">Security</span>
+                <h3 class="story-headline">How to Protect Your Privacy in 2024</h3>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <hr class="hairline" style="height: 2px;">
+
+    <section class="section">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+        <div>
+          <div style="background-color: #eee; width: 100%; aspect-ratio: 4/3; margin-bottom: 16px;"></div>
+          <span class="kicker">Business</span>
+          <h3 class="story-headline">The Future of Remote Work Is Hybrid</h3>
+        </div>
+        <div>
+          <div style="background-color: #eee; width: 100%; aspect-ratio: 4/3; margin-bottom: 16px;"></div>
+          <span class="kicker">Culture</span>
+          <h3 class="story-headline">Why Vinyl Records Are Making a Comeback</h3>
+        </div>
+        <div>
+          <div style="background-color: #eee; width: 100%; aspect-ratio: 4/3; margin-bottom: 16px;"></div>
+          <span class="kicker">Ideas</span>
+          <h3 class="story-headline">Can We Build a Better Internet?</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color: var(--wired-black); color: var(--paper-white); padding: 80px 48px; margin-top: 80px;">
+    <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 32px; font-weight: 700; margin-bottom: 24px;">WIRED</div>
+        <p style="font-family: var(--font-ui); font-size: 14px; opacity: 0.6;">© 2024 Condé Nast. All rights reserved.</p>
+      </div>
+      <div style="font-family: var(--font-ui); font-size: 14px;">
+        <div style="font-weight: 700; text-transform: uppercase; margin-bottom: 16px;">Section 1</div>
+        <div style="margin-bottom: 8px;">Ad Choices</div>
+        <div style="margin-bottom: 8px;">Accessibility Help</div>
+        <div style="margin-bottom: 8px;">Condé Nast Store</div>
+      </div>
+      <div style="font-family: var(--font-ui); font-size: 14px;">
+        <div style="font-weight: 700; text-transform: uppercase; margin-bottom: 16px;">Section 2</div>
+        <div style="margin-bottom: 8px;">Contact Us</div>
+        <div style="margin-bottom: 8px;">Newsletter</div>
+        <div style="margin-bottom: 8px;">Sitemap</div>
+      </div>
+      <div>
+        <button class="btn btn-inverted" style="width: 100%;">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./wired.js"></script>
+</body>
+</html>

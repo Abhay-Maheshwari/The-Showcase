@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replicate Design Showcase</title>
+  <link rel="stylesheet" href="./replicate.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav style="padding: 24px; display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--replicate-dark);">
+    <div style="display: flex; align-items: center; gap: 48px;">
+      <a href="/" style="font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--replicate-dark); text-decoration: none;">Replicate</a>
+      <div style="display: flex; gap: 32px;">
+        <a href="#" class="dotted-link">Explore</a>
+        <a href="#" class="dotted-link">Docs</a>
+        <a href="#" class="dotted-link">Pricing</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="#" class="dotted-link">GitHub</a>
+      <button class="btn btn-dark">Get started</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <div class="container" style="text-align: center;">
+        <h1 class="display-hero" style="margin-bottom: 32px;">Run AI with an API.</h1>
+        <p class="body-large" style="max-width: 700px; margin: 0 auto 48px; opacity: 0.9;">Replicate lets you run machine learning models with a cloud API, without having to understand the intricacies of GPU clusters or Docker.</p>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-dark" style="background: #ffffff; color: var(--replicate-dark);">Get started</button>
+          <button class="btn btn-outline" style="border-color: #ffffff; color: #ffffff;">View models</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 64px;">
+        <h2 class="section-heading">Trending Models</h2>
+        <div class="badge-green">Operational</div>
+      </div>
+      
+      <div class="grid-gallery">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="pill" style="aspect-ratio: 1; background: #eee; border: 1px solid var(--replicate-dark); overflow: hidden;">
+             <!-- AI Image placeholder -->
+             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #ea2804 0%, #ff00ff 100%); opacity: 0.2;"></div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-weight: 600;">stability-ai/sdxl</div>
+            <div style="font-size: 14px; color: var(--medium-gray);">1.2M runs</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="pill" style="aspect-ratio: 1; background: #eee; border: 1px solid var(--replicate-dark); overflow: hidden;">
+             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #2b9a66 0%, #3b82f6 100%); opacity: 0.2;"></div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-weight: 600;">meta/llama-2-70b</div>
+            <div style="font-size: 14px; color: var(--medium-gray);">850k runs</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="pill" style="aspect-ratio: 1; background: #eee; border: 1px solid var(--replicate-dark); overflow: hidden;">
+             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #ef2cc1 0%, #fc4c02 100%); opacity: 0.2;"></div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-weight: 600;">black-forest-labs/flux</div>
+            <div style="font-size: 14px; color: var(--medium-gray);">2.4M runs</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="pill" style="aspect-ratio: 1; background: #eee; border: 1px solid var(--replicate-dark); overflow: hidden;">
+             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #1456f0 0%, #ea5ec1 100%); opacity: 0.2;"></div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-weight: 600;">mistralai/mistral-7b</div>
+            <div style="font-size: 14px; color: var(--medium-gray);">900k runs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--replicate-dark); color: #ffffff; padding: 160px 0; overflow: hidden;">
+      <div class="container">
+        <div class="manifesto-text" style="text-align: center;">
+          Imagine what<br>
+          <span style="color: var(--replicate-red);">you can build.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 80px 0; border-top: 1px solid var(--replicate-dark);">
+    <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 32px; font-weight: 700; margin-bottom: 24px;">Replicate</div>
+        <p style="color: var(--medium-gray);">The easiest way to run and deploy AI models.</p>
+      </div>
+      <div>
+        <div style="font-weight: 600; margin-bottom: 24px;">Models</div>
+        <div style="margin-bottom: 12px;"><a href="#" class="dotted-link">Language Models</a></div>
+        <div style="margin-bottom: 12px;"><a href="#" class="dotted-link">Image Models</a></div>
+        <div style="margin-bottom: 12px;"><a href="#" class="dotted-link">Audio Models</a></div>
+      </div>
+      <div>
+        <div style="font-weight: 600; margin-bottom: 24px;">Community</div>
+        <div style="margin-bottom: 12px;"><a href="#" class="dotted-link">Discord</a></div>
+        <div style="margin-bottom: 12px;"><a href="#" class="dotted-link">X / Twitter</a></div>
+        <div style="margin-bottom: 12px;"><a href="#" class="dotted-link">Blog</a></div>
+      </div>
+      <div>
+        <button class="btn btn-dark" style="width: 100%;">Create Account</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./replicate.js"></script>
+</body>
+</html>

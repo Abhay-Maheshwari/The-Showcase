@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resend Design Showcase</title>
+    <link rel="stylesheet" href="./resend.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--void-black);">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 48px;">
+        <a href="/" style="font-family: var(--font-section); font-weight: 600; font-size: 20px; letter-spacing: -0.5px;">Resend</a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">About</a>
+          <a href="#" class="nav-link">Customers</a>
+          <a href="#" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Enterprise</a>
+          <a href="#" class="nav-link">Changelog</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-link" style="color: var(--near-white);">Sign In</a>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 160px; padding-bottom: 80px;">
+        <div style="margin-bottom: 32px;">
+          <span style="border: 1px solid var(--frost-border); border-radius: 9999px; padding: 4px 12px; font-size: 12px; letter-spacing: 0.5px; font-weight: 500;">RESEND AI <span style="color: var(--silver); margin-left: 8px;">Learn more &rarr;</span></span>
+        </div>
+        <h1 class="display-hero" style="margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto;">
+          Email for developers
+        </h1>
+        <p class="body-text" style="max-width: 500px; margin: 0 auto 40px auto; font-size: 18px;">
+          The best API to reach humans instead of spam folders. Build, test, and deliver transactional emails at scale.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 100px;">
+          <button class="btn btn-primary" style="padding: 12px 24px;">Get Started</button>
+          <button class="btn btn-ghost" style="padding: 12px 24px;">Documentation</button>
+        </div>
+
+        <!-- Code Demo Container -->
+        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+          <div class="code-block">
+            <div style="display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 1px solid var(--frost-border); padding-bottom: 16px;">
+              <span style="color: var(--near-white);">send.ts</span>
+            </div>
+            <div>
+              <span class="token-blue">import</span> { Resend } <span class="token-blue">from</span> <span class="token-orange">'resend'</span>;<br><br>
+              <span class="token-blue">const</span> resend = <span class="token-blue">new</span> Resend(<span class="token-orange">'re_123456789'</span>);<br><br>
+              resend.emails.<span class="token-blue">send</span>({<br>
+              &nbsp;&nbsp;from: <span class="token-orange">'onboarding@resend.dev'</span>,<br>
+              &nbsp;&nbsp;to: <span class="token-orange">'user@gmail.com'</span>,<br>
+              &nbsp;&nbsp;subject: <span class="token-orange">'Welcome aboard'</span>,<br>
+              &nbsp;&nbsp;html: <span class="token-orange">'&lt;p&gt;Congratulations on signing up!&lt;/p&gt;'</span><br>
+              });
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="section container">
+        <h2 class="section-heading" style="text-align: center; margin-bottom: 80px;">Develop with confidence</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div class="card">
+            <h3 class="card-title" style="margin-bottom: 16px;">React Email</h3>
+            <p class="body-text" style="margin-bottom: 32px;">
+              A collection of high-quality, unstyled components for creating beautiful emails using React and TypeScript.
+            </p>
+            <a href="#" style="color: var(--pure-white); font-weight: 500;">Explore components &rarr;</a>
+          </div>
+          
+          <div class="card">
+            <h3 class="card-title" style="margin-bottom: 16px;">Webhooks</h3>
+            <p class="body-text" style="margin-bottom: 32px;">
+              Receive notifications about your email delivery. Track bounces, complaints, and opens in real-time.
+            </p>
+            <a href="#" style="color: var(--pure-white); font-weight: 500;">View documentation &rarr;</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./resend.js"></script>
+  </body>
+</html>

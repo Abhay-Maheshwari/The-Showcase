@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notion Design Showcase</title>
+    <link rel="stylesheet" href="./notion.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <a href="/" style="font-weight: 600; font-size: 18px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 4v16h16V4H4zm14 14H6V6h12v12z"/>
+            <path d="M8 8h8v2H8zM8 12h8v2H8z"/>
+          </svg>
+          Notion
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on small */">
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Download</a>
+          <a href="#" class="nav-link">Solutions</a>
+          <a href="#" class="nav-link">Resources</a>
+          <a href="#" class="nav-link">Pricing</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="#" class="nav-link" style="margin-right: 8px;">Log in</a>
+        <button class="btn btn-primary">Get Notion free</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 120px;">
+        <h1 class="display-hero" style="max-width: 800px; margin: 0 auto 24px auto;">Write, plan, share. <br>With AI at your side.</h1>
+        <p class="body-large" style="max-width: 600px; margin: 0 auto 32px auto; color: var(--text-primary);">
+          Notion is the connected workspace where better, faster work happens.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 64px;">
+          <button class="btn btn-primary">Get Notion free</button>
+          <button class="btn btn-ghost" style="text-decoration: underline !important;">Request a demo &rarr;</button>
+        </div>
+        
+        <!-- Hero Illustration / App UI Simulation -->
+        <div class="hero-card" style="width: 100%; height: 500px; margin: 0 auto; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; height: 40px; border-bottom: var(--whisper-border); display: flex; align-items: center; padding: 0 16px; gap: 8px;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+          </div>
+          <p class="body-text">Workspace simulation</p>
+        </div>
+      </section>
+
+      <!-- Warm Alternating Section -->
+      <section class="section section-warm">
+        <div class="container" style="text-align: center;">
+          <h2 class="section-heading" style="margin-bottom: 64px;">Millions run on Notion every day</h2>
+          <p class="body-text" style="max-width: 600px; margin: 0 auto 48px auto;">
+            Powering the world's best teams, from next-generation startups to established enterprises.
+          </p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <div class="card" style="text-align: left;">
+              <div style="margin-bottom: 16px;"><span class="badge">Docs</span></div>
+              <h3 class="card-title" style="margin-bottom: 12px;">Simple, powerful, beautiful. Next-gen notes & docs.</h3>
+              <p class="body-text">Communicate more efficiently with a beautiful formatting experience.</p>
+            </div>
+            
+            <div class="card" style="text-align: left;">
+              <div style="margin-bottom: 16px;"><span class="badge" style="background: rgba(16, 163, 127, 0.1); color: #10a37f;">Projects</span></div>
+              <h3 class="card-title" style="margin-bottom: 12px;">Manage any project from beginning to end.</h3>
+              <p class="body-text">Track everything your team is doing, with the flexibility to customize your workflow.</p>
+            </div>
+            
+            <div class="card" style="text-align: left;">
+              <div style="margin-bottom: 16px;"><span class="badge" style="background: rgba(221, 91, 0, 0.1); color: #dd5b00;">Wikis</span></div>
+              <h3 class="card-title" style="margin-bottom: 12px;">Centralize your knowledge. No more hunting for answers.</h3>
+              <p class="body-text">Make it easy to find information and keep it up to date in one place.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./notion.js"></script>
+  </body>
+</html>

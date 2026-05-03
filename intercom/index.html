@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intercom Design Showcase</title>
+    <link rel="stylesheet" href="./intercom.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="/" style="display: flex; align-items: center; font-weight: 700; font-size: 24px; letter-spacing: -1px;">
+          intercom
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on small screens */">
+          <a href="#products">Products</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#customers">Customers</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn btn-outlined" aria-label="Toggle theme" style="padding: 8px; border-radius: 4px; border-color: var(--border-color);"></button>
+        <a href="/" class="btn" style="padding: 8px 16px;">Gallery</a>
+        <button class="btn btn-primary" style="padding: 8px 16px;">Start free trial</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <div class="mono-label" style="margin-bottom: 24px;">Meet Fin AI Agent</div>
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 32px auto;">The AI-first customer service platform.</h1>
+        <p class="body-emphasis" style="max-width: 600px; margin: 0 auto 48px auto;">
+          Intercom is the only platform that combines an AI agent, AI copilot, and AI workspace to maximize CS team performance.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-primary">Start free trial</button>
+          <button class="btn btn-outlined">View demo</button>
+        </div>
+      </section>
+
+      <!-- Split Feature Section -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+          <div class="card" style="background-color: var(--color-pure-white); padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 400px;">
+            <!-- Abstract representation of Fin AI -->
+            <div style="width: 120px; height: 120px; background-color: var(--color-fin); border-radius: 40px; display: flex; align-items: center; justify-content: center;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h2 class="section-heading" style="margin-bottom: 24px;">Resolve 50% of your support volume instantly.</h2>
+            <p class="body-text" style="color: var(--color-black-60); margin-bottom: 32px;">
+              Fin is a breakthrough AI agent that resolves complex customer issues with human-like conversation—so your team can focus on what matters most.
+            </p>
+            <a href="#" style="color: var(--color-fin); font-weight: 500; font-size: 18px; border-bottom: 1px solid var(--color-fin); padding-bottom: 2px;">Meet Fin →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multi-Card Section -->
+      <section class="section container">
+        <h3 class="sub-heading" style="text-align: center; margin-bottom: 64px; max-width: 800px; margin-left: auto; margin-right: auto;">
+          One platform. <br>Three powerful AI products.
+        </h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div class="card" style="display: flex; flex-direction: column;">
+            <div class="mono-label" style="margin-bottom: 16px;">AI Agent</div>
+            <h4 class="card-title" style="margin-bottom: 16px;">Fin</h4>
+            <p class="body-text" style="color: var(--color-black-60); margin-bottom: 32px; flex-grow: 1;">
+              An AI agent that resolves customer issues instantly and accurately, using your existing support content.
+            </p>
+            <button class="btn btn-warm" style="width: 100%;">Explore Fin</button>
+          </div>
+          
+          <div class="card" style="display: flex; flex-direction: column;">
+            <div class="mono-label" style="color: var(--color-report-orange); margin-bottom: 16px;">AI Copilot</div>
+            <h4 class="card-title" style="margin-bottom: 16px;">Inbox</h4>
+            <p class="body-text" style="color: var(--color-black-60); margin-bottom: 32px; flex-grow: 1;">
+              An AI-enhanced workspace that makes your human agents faster, more efficient, and more effective.
+            </p>
+            <button class="btn btn-warm" style="width: 100%;">Explore Inbox</button>
+          </div>
+          
+          <div class="card" style="display: flex; flex-direction: column;">
+            <div class="mono-label" style="color: #65b5ff; margin-bottom: 16px;">Proactive AI</div>
+            <h4 class="card-title" style="margin-bottom: 16px;">Outbound</h4>
+            <p class="body-text" style="color: var(--color-black-60); margin-bottom: 32px; flex-grow: 1;">
+              Targeted messaging that drives action and prevents support questions before they happen.
+            </p>
+            <button class="btn btn-warm" style="width: 100%;">Explore Outbound</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./intercom.js"></script>
+  </body>
+</html>

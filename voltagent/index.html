@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoltAgent Design Showcase</title>
+    <link rel="stylesheet" href="./voltagent.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--abyss-black);">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="display: flex; align-items: center; gap: 8px;">
+          <!-- VoltAgent-like Bolt Logo -->
+          <svg class="logo-bolt" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+          <span style="font-weight: 700; font-size: 18px; letter-spacing: -0.5px;">VoltAgent</span>
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Use Cases</a>
+          <a href="#" class="nav-link">Resources</a>
+          <a href="#" class="nav-link" style="display: flex; align-items: center; gap: 6px;">
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+             12.5k
+          </a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="btn btn-ghost">Sign In</button>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 120px; padding-bottom: 80px;">
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 24px auto;">
+          The AI Agent Engineering <span style="color: var(--emerald-signal);">Platform</span>
+        </h1>
+        <p class="body-text" style="font-size: 18px; max-width: 700px; margin: 0 auto 48px auto;">
+          Build, deploy, and monitor autonomous AI agents at scale. The developer-first orchestration framework for production-grade agentic systems.
+        </p>
+        
+        <!-- Hero Code Snippet CTA -->
+        <div style="max-width: 500px; margin: 0 auto 48px auto;">
+          <div class="code-snippet">
+            <span class="code-text"><span style="color: #ff7b72;">npm</span> create voltagent-app@latest</span>
+            <button class="btn btn-primary" style="padding: 6px 12px; font-size: 13px; font-family: var(--font-mono); border-radius: 4px;">Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture/Code Feature Section -->
+      <section class="section container">
+        <h2 class="section-heading" style="margin-bottom: 48px; text-align: center;">Write agents like you write code.</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <!-- Code Block (Left) -->
+          <div class="card highlighted" style="padding: 0; overflow: hidden; background-color: var(--abyss-black);">
+            <div style="background-color: var(--carbon-surface); border-bottom: 1px solid var(--warm-charcoal); padding: 12px 16px; display: flex; gap: 8px;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--warm-charcoal);"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--warm-charcoal);"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--warm-charcoal);"></div>
+            </div>
+            <div class="code-text" style="padding: 24px; color: var(--snow-white); line-height: 1.6; overflow-x: auto;">
+              <span style="color: #ff7b72;">import</span> { Agent, Tool } <span style="color: #ff7b72;">from</span> <span style="color: #a5d6ff;">'@voltagent/core'</span>;<br><br>
+              <span style="color: #ff7b72;">const</span> researchAgent = <span style="color: #ff7b72;">new</span> <span style="color: #d2a8ff;">Agent</span>({<br>
+              &nbsp;&nbsp;name: <span style="color: #a5d6ff;">'Researcher'</span>,<br>
+              &nbsp;&nbsp;model: <span style="color: #a5d6ff;">'gpt-4o'</span>,<br>
+              &nbsp;&nbsp;tools: [<span style="color: #ff7b72;">new</span> <span style="color: #d2a8ff;">WebSearchTool</span>(), <span style="color: #ff7b72;">new</span> <span style="color: #d2a8ff;">ReadPageTool</span>()],<br>
+              &nbsp;&nbsp;systemPrompt: <span style="color: #a5d6ff;">'You are a senior analyst...'</span><br>
+              });<br><br>
+              <span style="color: #ff7b72;">await</span> researchAgent.<span style="color: #d2a8ff;">execute</span>(<span style="color: #a5d6ff;">'Analyze the market'</span>);
+            </div>
+          </div>
+          
+          <!-- Text Description (Right) -->
+          <div>
+            <h3 class="sub-heading" style="margin-bottom: 16px;">Type-Safe Agent Definitions</h3>
+            <p class="body-text" style="margin-bottom: 24px;">
+              Define agents, tools, and workflows using familiar TypeScript constructs. VoltAgent provides full type safety from tool execution to LLM responses.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+              <li style="display: flex; gap: 12px; align-items: start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-signal)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span style="color: var(--snow-white);">Zod schema validation out of the box</span>
+              </li>
+              <li style="display: flex; gap: 12px; align-items: start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-signal)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span style="color: var(--snow-white);">Native integration with major LLM providers</span>
+              </li>
+            </ul>
+            <button class="btn btn-ghost">Read the Docs</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multi-Card Grid -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div class="card">
+            <h3 style="font-family: var(--font-ui); font-size: 20px; font-weight: 600; margin-bottom: 12px;">Memory Systems</h3>
+            <p class="body-text">
+              Plug-and-play semantic memory with vector database integrations. Give your agents long-term recall effortlessly.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="font-family: var(--font-ui); font-size: 20px; font-weight: 600; margin-bottom: 12px;">Tool Ecosystem</h3>
+            <p class="body-text">
+              Access 100+ pre-built tools or wrap your existing APIs into agent-compatible functions in seconds.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="font-family: var(--font-ui); font-size: 20px; font-weight: 600; margin-bottom: 12px;">Observability</h3>
+            <p class="body-text">
+              Track every LLM call, token usage, and tool execution with the built-in VoltAgent tracing studio.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./voltagent.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mintlify Design Showcase</title>
+    <link rel="stylesheet" href="./mintlify.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <div class="hero-wash"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="font-weight: 600; font-size: 20px; display: flex; align-items: center; gap: 8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-brand)">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Mintlify
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on small */">
+          <a href="#" class="nav-link">Customers</a>
+          <a href="#" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Blog</a>
+          <a href="#" class="nav-link">Docs</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-toggle btn btn-nav" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="#" class="nav-link">Sign In</a>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Atmospheric Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 120px; padding-bottom: 64px;">
+        <div style="margin-bottom: 32px;">
+          <span class="mono-badge">Mintlify 3.0 is here</span>
+        </div>
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 24px auto;">Beautiful documentation that converts.</h1>
+        <p class="body-large" style="max-width: 600px; margin: 0 auto 48px auto;">
+          Meet the modern standard for public documentation. Beautiful out of the box, easy to maintain, and optimized for user engagement.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-primary">Start Building</button>
+          <button class="btn btn-secondary">Request Demo</button>
+        </div>
+      </section>
+
+      <!-- Trust Bar -->
+      <section class="container" style="padding-bottom: 96px;">
+        <p class="label-uppercase" style="text-align: center; margin-bottom: 32px;">Loved by modern engineering teams</p>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px;">
+          <!-- Simulated Logos -->
+          <div style="width: 120px; height: 40px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-weight: 500;">Anthropic</div>
+          <div style="width: 120px; height: 40px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-weight: 500;">Cursor</div>
+          <div style="width: 120px; height: 40px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-weight: 500;">Resend</div>
+          <div style="width: 120px; height: 40px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-weight: 500;">Supabase</div>
+        </div>
+      </section>
+
+      <!-- Feature Grid -->
+      <section class="section container">
+        <div style="margin-bottom: 48px; max-width: 600px;">
+          <h2 class="section-heading" style="margin-bottom: 16px;">Everything you need to build world-class docs.</h2>
+          <p class="body-text">We've thought of every detail so you can focus on writing great content.</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div class="card">
+            <div style="width: 40px; height: 40px; background: var(--color-gray-50); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-primary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
+            <h4 class="card-title" style="margin-bottom: 12px;">MDX Support</h4>
+            <p class="body-text">Write content using Markdown and embed React components directly in your docs.</p>
+          </div>
+          
+          <div class="card">
+            <div style="width: 40px; height: 40px; background: var(--color-gray-50); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-primary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <h4 class="card-title" style="margin-bottom: 12px;">AI Search</h4>
+            <p class="body-text">Help users find answers instantly with built-in semantic search and AI chat.</p>
+          </div>
+          
+          <div class="card">
+            <div style="width: 40px; height: 40px; background: var(--color-gray-50); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-primary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h4 class="card-title" style="margin-bottom: 12px;">API Playground</h4>
+            <p class="body-text">Automatically generate interactive API references from your OpenAPI specs.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./mintlify.js"></script>
+  </body>
+</html>

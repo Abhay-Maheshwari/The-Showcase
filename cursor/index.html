@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor Design Showcase</title>
+    <link rel="stylesheet" href="./cursor.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" style="display: flex; align-items: center; gap: 8px; font-family: var(--font-gothic); font-size: 24px; text-transform: uppercase;">
+        <div style="width: 16px; height: 16px; background: var(--text-primary); border-radius: 2px;"></div>
+        Cursor
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <button class="theme-toggle btn-pill" aria-label="Toggle theme" style="border: none; cursor: pointer;"></button>
+        <a href="/" class="btn btn-pill" style="border: 1px solid var(--border-primary);">Gallery</a>
+        <button class="btn btn-primary">Download</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <h1 class="display-hero">The AI Code Editor</h1>
+        <p class="body-serif" style="margin-top: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Built to make you extraordinarily productive, Cursor is the best way to code with AI.
+        </p>
+        <div style="margin-top: 32px;">
+          <button class="btn btn-primary" style="font-size: 18px; padding: 12px 24px;">Download for Windows</button>
+        </div>
+      </section>
+
+      <!-- Editor Mockup Section -->
+      <section class="section container">
+        <div class="editor-mockup card-elevated">
+          <div class="editor-header">
+            <span style="color: var(--text-muted);">main.py</span>
+            <span style="color: var(--text-muted);">utils.py</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr; height: 400px;">
+            <!-- Code Area -->
+            <div style="padding: 16px; border-right: 1px solid rgba(255,255,255,0.05);">
+              <div><span style="color: #c678dd;">def</span> <span style="color: #61afef;">calculate_metrics</span>(data):</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #5c6370;"># AI: Calculate engagement score</span></div>
+              <div style="background: rgba(192, 168, 221, 0.1); padding: 2px 0;">&nbsp;&nbsp;&nbsp;&nbsp;score = (data.likes * <span style="color: #d19a66;">1.5</span>) + (data.shares * <span style="color: #d19a66;">3.0</span>)</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c678dd;">return</span> score</div>
+            </div>
+            <!-- AI Chat / Timeline Area -->
+            <div style="padding: 16px; background: rgba(0,0,0,0.2);">
+              <div style="margin-bottom: 16px; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 4px;">
+                Add an engagement score calculation
+              </div>
+              <div class="timeline">
+                <div class="timeline-item thinking">
+                  <div class="system-label" style="color: var(--color-thinking);">Thinking...</div>
+                </div>
+                <div class="timeline-item grep">
+                  <div class="system-label" style="color: var(--color-grep);">Grep</div>
+                  <div style="font-size: 11px; opacity: 0.7;">Searching for "metrics"</div>
+                </div>
+                <div class="timeline-item read">
+                  <div class="system-label" style="color: var(--color-read);">Read</div>
+                  <div style="font-size: 11px; opacity: 0.7;">utils.py</div>
+                </div>
+                <div class="timeline-item edit">
+                  <div class="system-label" style="color: var(--color-edit);">Edit</div>
+                  <div style="font-size: 11px; opacity: 0.7;">main.py</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Cards -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+          <div class="card">
+            <div style="margin-bottom: 16px;"><span class="btn-pill">Copilot++</span></div>
+            <h3 class="sub-heading" style="margin-bottom: 16px;">Predicts your next edit</h3>
+            <p class="body-serif-sm">
+              Cursor doesn't just autocomplete code. It predicts your next edit across multiple lines, learning from your recent changes.
+            </p>
+          </div>
+          <div class="card">
+            <div style="margin-bottom: 16px;"><span class="btn-pill">Codebase Answers</span></div>
+            <h3 class="sub-heading" style="margin-bottom: 16px;">Chat with your project</h3>
+            <p class="body-serif-sm">
+              Ask questions about your entire codebase. Cursor finds the relevant files and gives you answers grounded in your specific context.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./cursor.js"></script>
+  </body>
+</html>

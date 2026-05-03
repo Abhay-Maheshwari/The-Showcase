@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Fallback for NeueHaasGrotesk and Inter-Variable */
+:root {
+  /* Surface & Background */
+  --void-black: #000000;
+  --deep-teal: #02090a;
+  --dark-forest: #061a1c;
+  --forest: #102620;
+  --dark-card-border: #1e2c31;
+  
+  /* Primary & Accents */
+  --shopify-white: #ffffff;
+  --shopify-black: #000000;
+  --neon-green: #36f4a4;
+  --aloe: #c1fbd4;
+  --pistachio: #d4f9e0;
+  
+  /* Neutrals (Zinc Scale) */
+  --shade-30: #d4d4d8;
+  --muted-text: #a1a1aa;
+  --shade-50: #71717a;
+  --shade-60: #52525b;
+  --shade-70: #3f3f46;
+  
+  /* Fonts */
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  
+  /* Shadows */
+  --shadow-multi: rgba(0,0,0,0.1) 0px 0px 0px 1px, 
+                  rgba(0,0,0,0.1) 0px 2px 2px, 
+                  rgba(0,0,0,0.1) 0px 4px 4px, 
+                  rgba(0,0,0,0.1) 0px 8px 8px,
+                  rgba(255,255,255,0.03) 0px 1px 0px inset;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--void-black);
+  color: var(--shopify-white);
+  line-height: 1.56;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss03" 1; /* Signature typographic detail */
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 96px;
+  font-weight: 300; /* Simulating 330 */
+  line-height: 1.00;
+  letter-spacing: normal;
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 55px;
+  font-weight: 300;
+  line-height: 1.16;
+}
+
+h3.card-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400; /* Simulating 360 */
+  line-height: 1.14;
+  letter-spacing: 0.32px;
+}
+
+p.body-large {
+  font-family: var(--font-display); /* or Inter */
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.40;
+  letter-spacing: 0.3px;
+  color: var(--muted-text);
+}
+
+p.body-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
+  color: var(--muted-text);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.20;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+/* Links */
+a {
+  color: var(--shopify-white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a.nav-link {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+}
+a.nav-link:hover {
+  color: var(--muted-text);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 9999px; /* Pill */
+  transition: all 0.2s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--shopify-white);
+  color: var(--shopify-black);
+  padding: 12px 26px 12px 16px; /* Asymmetric */
+  border: 2px solid transparent;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+.btn-primary:focus {
+  border-color: var(--neon-green);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--shopify-white);
+  padding: 12px 26px 12px 16px;
+  border: 2px solid var(--shopify-white);
+}
+.btn-secondary:hover {
+  background-color: var(--shopify-white);
+  color: var(--shopify-black);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--deep-teal);
+  border: 1px solid var(--dark-card-border);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: var(--shadow-multi);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 64px;
+  background-color: transparent; /* Becomes forest on scroll in reality */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+/* Theatrical Gradient */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--void-black);
+}
+.hero-gradient {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 80vh;
+  background: radial-gradient(ellipse at top, rgba(16, 38, 32, 0.6) 0%, rgba(2, 9, 10, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero {
+    font-size: 48px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .navbar {
+    padding: 16px 24px;
+  }
+}

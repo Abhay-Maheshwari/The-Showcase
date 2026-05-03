@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM Design Showcase</title>
+    <link rel="stylesheet" href="./ibm.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Masthead -->
+    <header class="cds-masthead">
+      <div style="display: flex; height: 100%;">
+        <a href="/" class="cds-masthead-logo">
+          <!-- 8-bar approximation -->
+          <svg width="32" height="16" viewBox="0 0 32 16" fill="currentColor">
+            <rect x="0" y="0" width="32" height="2"/>
+            <rect x="0" y="4" width="32" height="2"/>
+            <rect x="0" y="8" width="32" height="2"/>
+            <rect x="0" y="12" width="32" height="2"/>
+          </svg>
+          IBM
+        </a>
+        <nav class="cds-masthead-nav" style="margin-left: 32px;">
+          <a href="#" class="cds-masthead-link">Products</a>
+          <a href="#" class="cds-masthead-link active">Solutions</a>
+          <a href="#" class="cds-masthead-link">Consulting</a>
+          <a href="#" class="cds-masthead-link">Support</a>
+        </nav>
+      </div>
+      <div>
+        <button class="theme-toggle cds-btn cds-btn-ghost" aria-label="Toggle theme" style="color: #ffffff; padding: 0 16px;">Toggle Theme</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="cds-section cds-container" style="padding-top: 80px; padding-bottom: 80px;">
+        <div class="cds-row">
+          <div class="cds-col" style="max-width: 66%;">
+            <h1 class="cds-display-01" style="margin-bottom: 24px;">Enterprise AI that puts business first</h1>
+            <p class="cds-body-long-01" style="margin-bottom: 32px; max-width: 80%;">
+              Scale AI with trust and transparency. Multiply the impact of AI across your business with an architecture built for enterprise security.
+            </p>
+            <div style="display: flex; gap: 16px;">
+              <button class="cds-btn cds-btn-primary">Explore watsonx</button>
+              <button class="cds-btn cds-btn-secondary">Contact sales</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alternating Background Section -->
+      <section class="cds-section cds-section-layer-01">
+        <div class="cds-container">
+          <h2 class="cds-heading-02" style="margin-bottom: 48px;">Discover our solutions</h2>
+          
+          <div class="cds-row">
+            <div class="cds-col" style="flex: 0 0 33.333%;">
+              <div class="cds-tile">
+                <h3 class="cds-heading-04" style="margin-bottom: 16px;">Artificial Intelligence</h3>
+                <p class="cds-body-short-01">Put AI to work across your business with the watsonx AI and data platform.</p>
+              </div>
+            </div>
+            
+            <div class="cds-col" style="flex: 0 0 33.333%;">
+              <div class="cds-tile">
+                <h3 class="cds-heading-04" style="margin-bottom: 16px;">Hybrid Cloud</h3>
+                <p class="cds-body-short-01">Build, run and manage applications across any cloud environment with Red Hat OpenShift.</p>
+              </div>
+            </div>
+            
+            <div class="cds-col" style="flex: 0 0 33.333%;">
+              <div class="cds-tile">
+                <h3 class="cds-heading-04" style="margin-bottom: 16px;">Security</h3>
+                <p class="cds-body-short-01">Align your security strategy with your business to protect your most critical assets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Section to show specific input styles -->
+      <section class="cds-section cds-container">
+        <div class="cds-row">
+          <div class="cds-col" style="flex: 0 0 50%;">
+            <h2 class="cds-heading-02" style="margin-bottom: 24px;">Stay informed</h2>
+            <p class="cds-body-long-01" style="margin-bottom: 32px;">Sign up to receive the latest insights and news from IBM experts.</p>
+            
+            <div class="cds-form-item">
+              <label class="cds-label">Email address</label>
+              <input type="text" class="cds-text-input" placeholder="e.g. name@company.com">
+            </div>
+            
+            <button class="cds-btn cds-btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./ibm.js"></script>
+  </body>
+</html>

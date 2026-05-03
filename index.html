@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Showcase | Design Systems Gallery</title>
+  <link rel="stylesheet" href="/hub.css" />
+  <script src="/theme.js"></script>
+</head>
+  <div class="top-banner">
+    <span>Foundation from <a href="https://getdesign.md/" target="_blank">getdesign.md</a></span>
+  </div>
+  <div class="hub-container">
+    <nav class="top-nav">
+      <a href="/" class="logo-container">
+        <div class="logo-symbol"></div>
+        <div class="logo-text" style="letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;">The Showcase</div>
+      </a>
+      <div class="nav-right">
+        <a href="#" class="nav-link">Showcases</a>
+        <a href="#" class="nav-link">About</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="btn-signin">Access</button>
+      </div>
+    </nav>
+
+    <div class="marquee-container">
+      <div class="marquee-content" id="marqueeContent"></div>
+    </div>
+
+    <div class="main-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Explore</h2>
+        <div class="category-list" id="categoryList">
+          <button class="category-btn active" data-filter="all"><span>All Systems</span> <span class="count">67</span></button>
+          <button class="category-btn" data-filter="ai"><span>AI & LLM</span> <span class="count">12</span></button>
+          <button class="category-btn" data-filter="devtools"><span>Development</span> <span class="count">7</span></button>
+          <button class="category-btn" data-filter="backend"><span>Infrastructure</span> <span class="count">8</span></button>
+          <button class="category-btn" data-filter="productivity"><span>Productivity</span> <span class="count">7</span></button>
+          <button class="category-btn" data-filter="design"><span>Creative</span> <span class="count">6</span></button>
+          <button class="category-btn" data-filter="fintech"><span>Finance</span> <span class="count">7</span></button>
+          <button class="category-btn" data-filter="retail"><span>Commerce</span> <span class="count">5</span></button>
+          <button class="category-btn" data-filter="tech"><span>Consumer Tech</span> <span class="count">11</span></button>
+          <button class="category-btn" data-filter="auto"><span>Automotive</span> <span class="count">7</span></button>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <div class="search-box">
+           <span>🔍</span>
+           <input type="text" class="search-input" placeholder="Search the collection..." id="searchInput">
+        </div>
+
+        <div class="list-header">
+           <div># Design Systems</div>
+           <div style="padding-left: 40px;">Description</div>
+           <div style="text-align: right;">Installs</div>
+           <div style="text-align: right;">Bookmarks</div>
+        </div>
+
+        <div class="systems-list" id="systemsList">
+           <!-- AI & LLM Platforms -->
+           <a href="/claude/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #d97757;">C</div>
+                 <div class="system-name">Claude</div>
+              </div>
+              <div class="system-desc">Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.</div>
+              <div class="system-stat">8.8K</div>
+              <div class="system-stat">915</div>
+           </a>
+           <a href="/cohere/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #6e45fe;">C</div>
+                 <div class="system-name">Cohere</div>
+              </div>
+              <div class="system-desc">Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.</div>
+              <div class="system-stat">2.7K</div>
+              <div class="system-stat">169</div>
+           </a>
+           <a href="/elevenlabs/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #1a1a1a;">E</div>
+                 <div class="system-name">ElevenLabs</div>
+              </div>
+              <div class="system-desc">AI voice platform. Dark cinematic UI, audio-waveform aesthetics.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">157</div>
+           </a>
+           <a href="/minimax/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff2d92;">M</div>
+                 <div class="system-name">MiniMax</div>
+              </div>
+              <div class="system-desc">AI model provider. Bold dark interface with neon accents.</div>
+              <div class="system-stat">2.6K</div>
+              <div class="system-stat">152</div>
+           </a>
+           <a href="/mistral.ai/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #fbbd41; color: black;">M</div>
+                 <div class="system-name">Mistral AI</div>
+              </div>
+              <div class="system-desc">Open-weight LLM provider. French-engineered minimalism, purple-toned.</div>
+              <div class="system-stat">2.3K</div>
+              <div class="system-stat">65</div>
+           </a>
+           <a href="/ollama/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black;">O</div>
+                 <div class="system-name">Ollama</div>
+              </div>
+              <div class="system-desc">Run LLMs locally. Terminal-first, monochrome simplicity.</div>
+              <div class="system-stat">2.4K</div>
+              <div class="system-stat">74</div>
+           </a>
+           <a href="/opencode.ai/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #333;">O</div>
+                 <div class="system-name">OpenCode</div>
+              </div>
+              <div class="system-desc">AI coding platform. Developer-centric dark theme.</div>
+              <div class="system-stat">2.7K</div>
+              <div class="system-stat">87</div>
+           </a>
+           <a href="/replicate/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff4d00;">R</div>
+                 <div class="system-name">Replicate</div>
+              </div>
+              <div class="system-desc">Run ML models via API. Clean white canvas, code-forward.</div>
+              <div class="system-stat">2.1K</div>
+              <div class="system-stat">35</div>
+           </a>
+           <a href="/together.ai/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0070f3;">T</div>
+                 <div class="system-name">Together AI</div>
+              </div>
+              <div class="system-desc">Open-source AI infrastructure. Technical, blueprint-style design.</div>
+              <div class="system-stat">2.2K</div>
+              <div class="system-stat">85</div>
+           </a>
+           <a href="/voltagent/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #00ff00; color: black;">V</div>
+                 <div class="system-name">VoltAgent</div>
+              </div>
+              <div class="system-desc">AI agent framework. Void-black canvas, emerald accent, terminal-native.</div>
+              <div class="system-stat">2.7K</div>
+              <div class="system-stat">89</div>
+           </a>
+           <a href="/x.ai/" class="system-item" data-category="ai">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">X</div>
+                 <div class="system-name">xAI</div>
+              </div>
+              <div class="system-desc">Elon Musk's AI lab. Stark monochrome, futuristic minimalism.</div>
+              <div class="system-stat">2.4K</div>
+              <div class="system-stat">102</div>
+           </a>
+
+           <!-- Developer Tools & IDEs -->
+           <a href="/cursor/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #00e5ff; color: black;">C</div>
+                 <div class="system-name">Cursor</div>
+              </div>
+              <div class="system-desc">AI-first code editor. Sleek dark interface, gradient accents.</div>
+              <div class="system-stat">4.2K</div>
+              <div class="system-stat">289</div>
+           </a>
+           <a href="/expo/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black;">E</div>
+                 <div class="system-name">Expo</div>
+              </div>
+              <div class="system-desc">React Native platform. Dark theme, tight letter-spacing, code-centric.</div>
+              <div class="system-stat">2.3K</div>
+              <div class="system-stat">81</div>
+           </a>
+           <a href="/lovable/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff2d92;">L</div>
+                 <div class="system-name">Lovable</div>
+              </div>
+              <div class="system-desc">AI full-stack builder. Playful gradients, friendly dev aesthetic.</div>
+              <div class="system-stat">2.7K</div>
+              <div class="system-stat">122</div>
+           </a>
+           <a href="/raycast/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff4d00;">R</div>
+                 <div class="system-name">Raycast</div>
+              </div>
+              <div class="system-desc">Productivity launcher. Sleek dark chrome, vibrant gradient accents.</div>
+              <div class="system-stat">3.3K</div>
+              <div class="system-stat">77</div>
+           </a>
+           <a href="/superhuman/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #6e45fe;">S</div>
+                 <div class="system-name">Superhuman</div>
+              </div>
+              <div class="system-desc">Fast email client. Premium dark UI, keyboard-first, purple glow.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">73</div>
+           </a>
+           <a href="/vercel/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">V</div>
+                 <div class="system-name">Vercel</div>
+              </div>
+              <div class="system-desc">Frontend deployment. Black and white precision, Geist font.</div>
+              <div class="system-stat">7.8K</div>
+              <div class="system-stat">221</div>
+           </a>
+           <a href="/warp/" class="system-item" data-category="devtools">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #00e5ff; color: black;">W</div>
+                 <div class="system-name">Warp</div>
+              </div>
+              <div class="system-desc">Modern terminal. Dark IDE-like interface, block-based command UI.</div>
+              <div class="system-stat">2.4K</div>
+              <div class="system-stat">45</div>
+           </a>
+
+           <!-- Backend, Database & DevOps -->
+           <a href="/clickhouse/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #fbbd41; color: black;">C</div>
+                 <div class="system-name">ClickHouse</div>
+              </div>
+              <div class="system-desc">Fast analytics database. Yellow-accented, technical documentation style.</div>
+              <div class="system-stat">2.3K</div>
+              <div class="system-stat">77</div>
+           </a>
+           <a href="/composio/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #1a1a1a;">C</div>
+                 <div class="system-name">Composio</div>
+              </div>
+              <div class="system-desc">Tool integration platform. Modern dark with colorful integration icons.</div>
+              <div class="system-stat">2.2K</div>
+              <div class="system-stat">74</div>
+           </a>
+           <a href="/hashicorp/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black;">H</div>
+                 <div class="system-name">HashiCorp</div>
+              </div>
+              <div class="system-desc">Infrastructure automation. Enterprise-clean, black and white.</div>
+              <div class="system-stat">2.4K</div>
+              <div class="system-stat">45</div>
+           </a>
+           <a href="/posthog/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff4d00;">P</div>
+                 <div class="system-name">PostHog</div>
+              </div>
+              <div class="system-desc">Product analytics. Playful hedgehog branding, developer-friendly dark UI.</div>
+              <div class="system-stat">2.8K</div>
+              <div class="system-stat">58</div>
+           </a>
+           <a href="/sanity/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #f03e3e;">S</div>
+                 <div class="system-name">Sanity</div>
+              </div>
+              <div class="system-desc">Headless CMS. Red accent, content-first editorial layout.</div>
+              <div class="system-stat">2.2K</div>
+              <div class="system-stat">36</div>
+           </a>
+           <a href="/sentry/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #6e45fe;">S</div>
+                 <div class="system-name">Sentry</div>
+              </div>
+              <div class="system-desc">Error monitoring. Dark dashboard, data-dense, pink-purple accent.</div>
+              <div class="system-stat">2.8K</div>
+              <div class="system-stat">63</div>
+           </a>
+           <a href="/supabase/" class="system-item" data-category="backend">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #3ecf8e; color: black;">S</div>
+                 <div class="system-name">Supabase</div>
+              </div>
+              <div class="system-desc">Open-source Firebase alternative. Dark emerald theme, code-first.</div>
+              <div class="system-stat">3.7K</div>
+              <div class="system-stat">148</div>
+           </a>
+
+           <!-- Productivity & SaaS -->
+           <a href="/cal/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black;">C</div>
+                 <div class="system-name">Cal.com</div>
+              </div>
+              <div class="system-desc">Open-source scheduling. Clean neutral UI, developer-oriented simplicity.</div>
+              <div class="system-stat">3.3K</div>
+              <div class="system-stat">187</div>
+           </a>
+           <a href="/intercom/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0070f3;">I</div>
+                 <div class="system-name">Intercom</div>
+              </div>
+              <div class="system-desc">Customer messaging. Friendly blue palette, conversational UI patterns.</div>
+              <div class="system-stat">2.8K</div>
+              <div class="system-stat">84</div>
+           </a>
+           <a href="/linear/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #5e6ad2;">L</div>
+                 <div class="system-name">Linear</div>
+              </div>
+              <div class="system-desc">Project management. Ultra-minimal, precise, purple accent.</div>
+              <div class="system-stat">11K</div>
+              <div class="system-stat">434</div>
+           </a>
+           <a href="/mintlify/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #3ecf8e; color: black;">M</div>
+                 <div class="system-name">Mintlify</div>
+              </div>
+              <div class="system-desc">Documentation platform. Clean, green-accented, reading-optimized.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">128</div>
+           </a>
+           <a href="/notion/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black;">N</div>
+                 <div class="system-name">Notion</div>
+              </div>
+              <div class="system-desc">All-in-one workspace. Warm minimalism, serif headings, soft surfaces.</div>
+              <div class="system-stat">8K</div>
+              <div class="system-stat">443</div>
+           </a>
+           <a href="/resend/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #1a1a1a;">R</div>
+                 <div class="system-name">Resend</div>
+              </div>
+              <div class="system-desc">Email API. Minimal dark theme, monospace accents.</div>
+              <div class="system-stat">2.5K</div>
+              <div class="system-stat">63</div>
+           </a>
+           <a href="/zapier/" class="system-item" data-category="productivity">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff4d00;">Z</div>
+                 <div class="system-name">Zapier</div>
+              </div>
+              <div class="system-desc">Automation platform. Warm orange, friendly illustration-driven.</div>
+              <div class="system-stat">2.4K</div>
+              <div class="system-stat">76</div>
+           </a>
+
+           <!-- Design & Creative Tools -->
+           <a href="/airtable/" class="system-item" data-category="design">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0070f3;">A</div>
+                 <div class="system-name">Airtable</div>
+              </div>
+              <div class="system-desc">Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">225</div>
+           </a>
+           <a href="/clay/" class="system-item" data-category="design">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #3ecf8e; color: black;">C</div>
+                 <div class="system-name">Clay</div>
+              </div>
+              <div class="system-desc">Creative agency. Organic shapes, soft gradients, art-directed layout.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">221</div>
+           </a>
+           <a href="/figma/" class="system-item" data-category="design">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff2d92;">F</div>
+                 <div class="system-name">Figma</div>
+              </div>
+              <div class="system-desc">Collaborative design tool. Vibrant multi-color, playful yet professional.</div>
+              <div class="system-stat">4K</div>
+              <div class="system-stat">374</div>
+           </a>
+           <a href="/framer/" class="system-item" data-category="design">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">F</div>
+                 <div class="system-name">Framer</div>
+              </div>
+              <div class="system-desc">Website builder. Bold black and blue, motion-first, design-forward.</div>
+              <div class="system-stat">3.4K</div>
+              <div class="system-stat">174</div>
+           </a>
+           <a href="/miro/" class="system-item" data-category="design">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffcc00; color: black;">M</div>
+                 <div class="system-name">Miro</div>
+              </div>
+              <div class="system-desc">Visual collaboration. Bright yellow accent, infinite canvas aesthetic.</div>
+              <div class="system-stat">2.4K</div>
+              <div class="system-stat">73</div>
+           </a>
+           <a href="/webflow/" class="system-item" data-category="design">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #4353ff;">W</div>
+                 <div class="system-name">Webflow</div>
+              </div>
+              <div class="system-desc">Visual web builder. Blue-accented, polished marketing site aesthetic.</div>
+              <div class="system-stat">2.5K</div>
+              <div class="system-stat">87</div>
+           </a>
+
+           <!-- Fintech & Crypto -->
+           <a href="/binance/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #f3ba2f; color: black;">B</div>
+                 <div class="system-name">Binance</div>
+              </div>
+              <div class="system-desc">Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.</div>
+              <div class="system-stat">1.9K</div>
+              <div class="system-stat">148</div>
+           </a>
+           <a href="/coinbase/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0070f3;">C</div>
+                 <div class="system-name">Coinbase</div>
+              </div>
+              <div class="system-desc">Crypto exchange. Clean blue identity, trust-focused, institutional feel.</div>
+              <div class="system-stat">3.1K</div>
+              <div class="system-stat">150</div>
+           </a>
+           <a href="/kraken/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #6e45fe;">K</div>
+                 <div class="system-name">Kraken</div>
+              </div>
+              <div class="system-desc">Crypto trading. Purple-accented dark UI, data-dense dashboards.</div>
+              <div class="system-stat">2.6K</div>
+              <div class="system-stat">72</div>
+           </a>
+           <a href="/mastercard/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff5f00;">M</div>
+                 <div class="system-name">Mastercard</div>
+              </div>
+              <div class="system-desc">Global payments network. Warm cream canvas, orbital pill shapes.</div>
+              <div class="system-stat">1.1K</div>
+              <div class="system-stat">121</div>
+           </a>
+           <a href="/revolut/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black;">R</div>
+                 <div class="system-name">Revolut</div>
+              </div>
+              <div class="system-desc">Digital banking. Sleek dark interface, gradient cards, fintech precision.</div>
+              <div class="system-stat">3.1K</div>
+              <div class="system-stat">83</div>
+           </a>
+           <a href="/stripe/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #635bff;">S</div>
+                 <div class="system-name">Stripe</div>
+              </div>
+              <div class="system-desc">Payment infrastructure. Signature purple gradients, weight-300 elegance.</div>
+              <div class="system-stat">8.8K</div>
+              <div class="system-stat">201</div>
+           </a>
+           <a href="/wise/" class="system-item" data-category="fintech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #3ecf8e; color: black;">W</div>
+                 <div class="system-name">Wise</div>
+              </div>
+              <div class="system-desc">Money transfer. Bright green accent, friendly and clear.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">147</div>
+           </a>
+
+           <!-- E-commerce & Retail -->
+           <a href="/airbnb/" class="system-item" data-category="retail">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff385c;">A</div>
+                 <div class="system-name">Airbnb</div>
+              </div>
+              <div class="system-desc">Travel marketplace. Warm coral accent, photography-driven, rounded UI.</div>
+              <div class="system-stat">6.3K</div>
+              <div class="system-stat">738</div>
+           </a>
+           <a href="/meta/" class="system-item" data-category="retail">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0668e1;">M</div>
+                 <div class="system-name">Meta</div>
+              </div>
+              <div class="system-desc">Tech retail store. Photography-first, binary light/dark surfaces.</div>
+              <div class="system-stat">1.7K</div>
+              <div class="system-stat">111</div>
+           </a>
+           <a href="/nike/" class="system-item" data-category="retail">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">N</div>
+                 <div class="system-name">Nike</div>
+              </div>
+              <div class="system-desc">Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.</div>
+              <div class="system-stat">1.9K</div>
+              <div class="system-stat">146</div>
+           </a>
+           <a href="/shopify/" class="system-item" data-category="retail">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #95bf47; color: black;">S</div>
+                 <div class="system-name">Shopify</div>
+              </div>
+              <div class="system-desc">E-commerce platform. Dark-first cinematic, neon green accent.</div>
+              <div class="system-stat">1.9K</div>
+              <div class="system-stat">103</div>
+           </a>
+           <a href="/starbucks/" class="system-item" data-category="retail">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #006241;">S</div>
+                 <div class="system-name">Starbucks</div>
+              </div>
+              <div class="system-desc">Global coffee retail brand. Four-tier green system, warm cream canvas.</div>
+              <div class="system-stat">834</div>
+              <div class="system-stat">131</div>
+           </a>
+
+           <!-- Media & Consumer Tech -->
+           <a href="/apple/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black; border: 1px solid #ccc;">A</div>
+                 <div class="system-name">Apple</div>
+              </div>
+              <div class="system-desc">Consumer electronics. Premium white space, SF Pro, cinematic imagery.</div>
+              <div class="system-stat">12K</div>
+              <div class="system-stat">2.3K</div>
+           </a>
+           <a href="/ibm/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0062ff;">I</div>
+                 <div class="system-name">IBM</div>
+              </div>
+              <div class="system-desc">Enterprise technology. Carbon design system, structured blue palette.</div>
+              <div class="system-stat">2.9K</div>
+              <div class="system-stat">142</div>
+           </a>
+           <a href="/nvidia/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #76b900; color: black;">N</div>
+                 <div class="system-name">Nvidia</div>
+              </div>
+              <div class="system-desc">GPU computing. Green-black energy, technical power aesthetic.</div>
+              <div class="system-stat">2.5K</div>
+              <div class="system-stat">64</div>
+           </a>
+           <a href="/pinterest/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #e60023;">P</div>
+                 <div class="system-name">Pinterest</div>
+              </div>
+              <div class="system-desc">Visual discovery. Red accent, masonry grid, image-first.</div>
+              <div class="system-stat">2.6K</div>
+              <div class="system-stat">91</div>
+           </a>
+           <a href="/playstation/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #003791;">P</div>
+                 <div class="system-name">PlayStation</div>
+              </div>
+              <div class="system-desc">Gaming console retail. Quiet-authority display type, cyan hover-scale.</div>
+              <div class="system-stat">1.4K</div>
+              <div class="system-stat">117</div>
+           </a>
+           <a href="/spacex/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">S</div>
+                 <div class="system-name">SpaceX</div>
+              </div>
+              <div class="system-desc">Space technology. Stark black and white, full-bleed imagery, futuristic.</div>
+              <div class="system-stat">2.9K</div>
+              <div class="system-stat">116</div>
+           </a>
+           <a href="/spotify/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #1db954; color: black;">S</div>
+                 <div class="system-name">Spotify</div>
+              </div>
+              <div class="system-desc">Music streaming. Vibrant green on dark, bold type, album-art-driven.</div>
+              <div class="system-stat">3.9K</div>
+              <div class="system-stat">233</div>
+           </a>
+           <a href="/theverge/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #e5ff00; color: black;">V</div>
+                 <div class="system-name">The Verge</div>
+              </div>
+              <div class="system-desc">Tech editorial media. Acid-mint and ultraviolet accents, Manuka display.</div>
+              <div class="system-stat">1.4K</div>
+              <div class="system-stat">137</div>
+           </a>
+           <a href="/uber/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">U</div>
+                 <div class="system-name">Uber</div>
+              </div>
+              <div class="system-desc">Mobility platform. Bold black and white, tight type, urban energy.</div>
+              <div class="system-stat">2.7K</div>
+              <div class="system-stat">126</div>
+           </a>
+           <a href="/vodafone/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #e60000;">V</div>
+                 <div class="system-name">Vodafone</div>
+              </div>
+              <div class="system-desc">Global telecom brand. Monumental display, Vodafone Red chapter bands.</div>
+              <div class="system-stat">657</div>
+              <div class="system-stat">89</div>
+           </a>
+           <a href="/wired/" class="system-item" data-category="tech">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black; border: 1px solid #ccc;">W</div>
+                 <div class="system-name">WIRED</div>
+              </div>
+              <div class="system-desc">Tech magazine. Broadsheet density, custom serif display, ink-blue links.</div>
+              <div class="system-stat">1.3K</div>
+              <div class="system-stat">83</div>
+           </a>
+
+           <!-- Automotive -->
+           <a href="/bmw/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #0066b1;">B</div>
+                 <div class="system-name">BMW M</div>
+              </div>
+              <div class="system-desc">Motorsport automotive. M tricolor stripe accents, full-bleed photography.</div>
+              <div class="system-stat">260</div>
+              <div class="system-stat">51</div>
+           </a>
+           <a href="/bmw/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffffff; color: black; border: 1px solid #000;">B</div>
+                 <div class="system-name">BMW</div>
+              </div>
+              <div class="system-desc">Luxury automotive. Dark premium surfaces, precise German engineering.</div>
+              <div class="system-stat">2.7K</div>
+              <div class="system-stat">150</div>
+           </a>
+           <a href="/bugatti/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #000; border: 1px solid #333;">B</div>
+                 <div class="system-name">Bugatti</div>
+              </div>
+              <div class="system-desc">Hypercar brand. Cinema-black canvas, monumental display type.</div>
+              <div class="system-stat">1.3K</div>
+              <div class="system-stat">90</div>
+           </a>
+           <a href="/ferrari/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ff0000;">F</div>
+                 <div class="system-name">Ferrari</div>
+              </div>
+              <div class="system-desc">Luxury automotive. Chiaroscuro editorial, Ferrari Red accents.</div>
+              <div class="system-stat">3K</div>
+              <div class="system-stat">100</div>
+           </a>
+           <a href="/lamborghini/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #fbbd41; color: black;">L</div>
+                 <div class="system-name">Lamborghini</div>
+              </div>
+              <div class="system-desc">Supercar brand. True black surfaces, gold accents, dramatic typography.</div>
+              <div class="system-stat">2.5K</div>
+              <div class="system-stat">58</div>
+           </a>
+           <a href="/renault/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #ffcc00; color: black;">R</div>
+                 <div class="system-name">Renault</div>
+              </div>
+              <div class="system-desc">French automotive. Vibrant aurora gradients, NouvelR typography.</div>
+              <div class="system-stat">2.1K</div>
+              <div class="system-stat">18</div>
+           </a>
+           <a href="/tesla/" class="system-item" data-category="auto">
+              <div class="system-name-group">
+                 <div class="system-icon" style="background: #cc0000;">T</div>
+                 <div class="system-name">Tesla</div>
+              </div>
+              <div class="system-desc">Electric automotive. Radical subtraction, full-viewport photography.</div>
+              <div class="system-stat">3.1K</div>
+              <div class="system-stat">128</div>
+           </a>
+        </div>
+
+        <footer style="margin-top: 100px; padding: 60px 0; border-top: 1px solid var(--border-primary); display: flex; flex-direction: column; align-items: center; gap: 24px;">
+           <div style="display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 13px; color: var(--text-dim);">
+              <div style="width: 8px; height: 8px; background: var(--accent-orange); border-radius: 50%;"></div>
+              <span>The Showcase &mdash; Excellence in Design Engineering</span>
+           </div>
+           <div style="font-size: 14px; color: var(--text-secondary); text-align: center; max-width: 600px; line-height: 1.6; font-family: var(--font-serif);">
+              Special thanks to <a href="https://getdesign.md/" target="_blank" style="color: var(--text-primary); text-decoration: underline; text-underline-offset: 4px; font-weight: 500;">getdesign.md</a> for providing the <strong>DESIGN.md</strong> specifications that serve as the technical foundation for this entire gallery.
+           </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const systems = ["Linear", "Vercel", "Stripe", "Framer", "Airtable", "Apple", "Cal", "ClickHouse", "Composio", "Cursor", "Expo", "Figma", "HashiCorp", "IBM", "Intercom", "Lovable", "Meta", "Mintlify", "Miro", "Notion", "Nvidia", "Opencode.ai", "Pinterest", "PostHog", "Raycast", "Resend", "Sanity", "Sentry", "Shopify", "Supabase", "Superhuman", "The Verge", "VoltAgent", "Warp", "Webflow", "Wired", "Zapier", "Claude", "Cohere", "ElevenLabs", "MiniMax", "Mistral AI", "Ollama", "Replicate", "Together AI", "xAI", "Binance", "Coinbase", "Kraken", "Mastercard", "Revolut", "Wise", "BMW", "Bugatti", "Ferrari", "Lamborghini", "Renault", "Tesla", "Uber", "Airbnb", "Starbucks", "Spotify", "SpaceX", "PlayStation", "Nike", "Vodafone", "Clay"];
+
+    const marquee = document.getElementById('marqueeContent');
+    marquee.innerHTML = [...systems, ...systems].map(name => `
+      <a href="/${name.toLowerCase().replace(/\s+/g, '')}/" class="marquee-item">
+        <span>✦</span> ${name}
+      </a>
+    `).join('');
+
+    const searchInput = document.getElementById('searchInput');
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const systemItems = document.querySelectorAll('.system-item');
+
+    let currentCategory = 'all';
+    let searchTerm = '';
+
+    function filterSystems() {
+      systemItems.forEach(item => {
+        const matchesCategory = currentCategory === 'all' || item.dataset.category === currentCategory;
+        const matchesSearch = item.textContent.toLowerCase().includes(searchTerm);
+        item.style.display = (matchesCategory && matchesSearch) ? 'grid' : 'none';
+      });
+      
+      const activeBtn = document.querySelector('.category-btn.active span');
+      const activeCategoryText = activeBtn ? activeBtn.textContent : "designs";
+      searchInput.placeholder = `Search within ${activeCategoryText.toLowerCase()}...`;
+    }
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.dataset.filter;
+        filterSystems();
+      });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      searchTerm = e.target.value.toLowerCase();
+      filterSystems();
+    });
+  </script>
+</body>
+</html>

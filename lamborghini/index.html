@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamborghini Design Showcase</title>
+  <link rel="stylesheet" href="./lamborghini.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-menu-btn">
+      <div style="width: 24px; height: 2px; background: white; position: relative;">
+        <div style="width: 24px; height: 2px; background: white; position: absolute; top: -6px;"></div>
+        <div style="width: 24px; height: 2px; background: white; position: absolute; top: 6px;"></div>
+      </div>
+      <span>Menu</span>
+    </div>
+    <div class="nav-logo"></div>
+    <div style="display: flex; gap: 24px;">
+      <span>🔍</span>
+      <span>🔖</span>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-viewport">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=2000" alt="Lamborghini Revuelto" class="hero-video-bg">
+      <div class="container" style="position: relative; z-index: 1;">
+        <h1 class="hero-display" style="margin-bottom: 48px;">TEMERARIO</h1>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-gold">Discover More</button>
+          <button class="btn btn-ghost">Configure</button>
+        </div>
+      </div>
+      <div class="hex-pause" style="position: absolute; bottom: 40px; right: 40px;">||</div>
+    </section>
+
+    <section class="section">
+       <div class="container">
+          <div style="margin-bottom: 80px;">
+             <div class="label-micro" style="margin-bottom: 16px;">Beyond Concrete</div>
+             <h2 class="section-display">HURACÁN STERRATO</h2>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #333;">
+             <div class="card">
+                <h3 style="font-size: 27px; text-transform: uppercase; margin-bottom: 24px;">Aerodynamics</h3>
+                <p style="color: var(--ash); margin-bottom: 32px;">Inspired by the sharp lines of fighter jets, every component is sculpted to cut through the air with surgical precision.</p>
+                <a href="#" style="color: var(--white); text-decoration: underline; font-size: 14px;">Technical Specs</a>
+             </div>
+             <div class="card">
+                <h3 style="font-size: 27px; text-transform: uppercase; margin-bottom: 24px;">Performance</h3>
+                <p style="color: var(--ash); margin-bottom: 32px;">The V12 engine represents the pinnacle of naturally aspirated power, delivering an emotional experience like no other.</p>
+                <a href="#" style="color: var(--white); text-decoration: underline; font-size: 14px;">Engine Details</a>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <section style="background-color: var(--charcoal); padding: 120px 0;">
+       <div class="container" style="text-align: center;">
+          <h2 class="section-display" style="margin-bottom: 64px;">LAMBORGHINI ARENA</h2>
+          <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=1500" alt="Event" style="width: 100%; height: 600px; object-fit: cover; margin-bottom: 48px;">
+          <button class="btn btn-gold">View Event Gallery</button>
+       </div>
+    </section>
+  </main>
+
+  <footer style="background-color: var(--dark-iron); padding: 100px 0; border-top: 1px solid #222;">
+    <div class="container">
+       <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;">
+          <div>
+             <div class="nav-logo" style="margin-bottom: 40px;"></div>
+             <p style="color: var(--ash); font-size: 14px; max-width: 300px;">Automobili Lamborghini S.p.A. Headquarters in Sant'Agata Bolognese, Italy.</p>
+          </div>
+          <div>
+             <div class="label-micro" style="margin-bottom: 24px; color: white;">Models</div>
+             <div style="color: var(--ash); margin-bottom: 12px; font-size: 14px;">Revuelto</div>
+             <div style="color: var(--ash); margin-bottom: 12px; font-size: 14px;">Huracán</div>
+             <div style="color: var(--ash); margin-bottom: 12px; font-size: 14px;">Urus</div>
+          </div>
+          <div>
+             <div class="label-micro" style="margin-bottom: 24px; color: white;">Ownership</div>
+             <div style="color: var(--ash); margin-bottom: 12px; font-size: 14px;">Connectivity</div>
+             <div style="color: var(--ash); margin-bottom: 12px; font-size: 14px;">Customer App</div>
+             <div style="color: var(--ash); margin-bottom: 12px; font-size: 14px;">Service</div>
+          </div>
+          <div>
+             <div class="label-micro" style="margin-bottom: 24px; color: white;">Follow</div>
+             <div style="display: flex; gap: 16px;">
+                <span>IG</span> <span>YT</span> <span>FB</span>
+             </div>
+          </div>
+       </div>
+       <div style="margin-top: 100px; padding-top: 40px; border-top: 1px solid #333; color: var(--steel); font-size: 10px; display: flex; justify-content: space-between;">
+          <span>© 2024 AUTOMOBILI LAMBORGHINI S.P.A.</span>
+          <span>PRIVACY POLICY | COOKIE POLICY</span>
+       </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./lamborghini.js"></script>
+</body>
+</html>

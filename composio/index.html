@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composio Design Showcase</title>
+    <link rel="stylesheet" href="./composio.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" style="display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 20px; letter-spacing: -0.5px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M8 12h8m-4-4v8" />
+        </svg>
+        Composio Showcase
+      </a>
+      <div class="nav-links">
+        <a href="#integrations">Integrations</a>
+        <a href="#docs">Documentation</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme" style="padding: 8px; border: 1px solid var(--card-border);"></button>
+        <a href="/" class="btn" style="padding: 8px 16px;">Gallery</a>
+        <button class="btn btn-primary">Start Building</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <div class="overline" style="margin-bottom: 24px;">The Developer Identity Layer</div>
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 32px auto;">Build integrations<br>at terminal velocity.</h1>
+        <p class="body-text" style="font-size: 18px; max-width: 600px; margin: 0 auto 48px auto;">
+          The single API to add production-ready integrations to your AI agents and applications. Built by developers, for developers.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-cyan">Get API Key</button>
+          <button class="btn btn-ghost">View Docs <span class="code-inline" style="margin-left: 8px; font-size: 11px;">⌘K</span></button>
+        </div>
+      </section>
+
+      <!-- Code & Brutalism Section -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+          <div class="glow-cyan">
+            <div class="card card-brutalist" style="font-family: var(--font-code); font-size: 14px; letter-spacing: -0.28px; line-height: 1.5; color: var(--pure-white);">
+              <div style="color: var(--ghost-white); margin-bottom: 16px;">// Initialize Composio client</div>
+              <div><span style="color: #c678dd;">import</span> { Composio } <span style="color: #c678dd;">from</span> <span style="color: #98c379;">'composio-core'</span>;</div>
+              <br>
+              <div><span style="color: #c678dd;">const</span> client = <span style="color: #e5c07b;">new</span> Composio({</div>
+              <div>&nbsp;&nbsp;apiKey: process.env.<span style="color: #e06c75;">COMPOSIO_API_KEY</span></div>
+              <div>});</div>
+              <br>
+              <div style="color: var(--ghost-white);">// Execute action across 100+ tools</div>
+              <div><span style="color: #c678dd;">await</span> client.actions.<span style="color: #61afef;">execute</span>({</div>
+              <div>&nbsp;&nbsp;actionId: <span style="color: #98c379;">'GITHUB_STAR_REPO'</span>,</div>
+              <div>&nbsp;&nbsp;params: { repo: <span style="color: #98c379;">'composiohq/composio'</span> }</div>
+              <div>});</div>
+            </div>
+          </div>
+          <div>
+            <div class="overline" style="margin-bottom: 16px;">Universal Actions</div>
+            <h3 class="sub-heading" style="margin-bottom: 24px;">One API for every tool your AI needs.</h3>
+            <p class="body-text" style="margin-bottom: 32px;">
+              Stop writing custom OAuth flows and endpoint wrappers. Composio provides a unified interface to read, write, and execute actions across hundreds of platforms instantly.
+            </p>
+            <a href="#" style="color: var(--electric-cyan); font-weight: 500;">Explore all actions →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./composio.js"></script>
+  </body>
+</html>

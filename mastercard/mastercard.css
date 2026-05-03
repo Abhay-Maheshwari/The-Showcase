@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;700&display=swap');
+
+:root {
+  /* Brand */
+  --mc-ink: #141413;
+  --mc-signal-orange: #CF4500;
+  --mc-light-orange: #F37338;
+  
+  /* Surface */
+  --mc-canvas: #F3F0EE;
+  --mc-lifted: #FCFBFA;
+  --white: #FFFFFF;
+  
+  /* Text */
+  --text-ink: #141413;
+  --text-slate: #696969;
+  
+  /* Fonts */
+  --font-primary: 'Sofia Sans', sans-serif; /* MarkForMC substitute */
+  
+  /* Shadows */
+  --shadow-nav: rgba(0, 0, 0, 0.04) 0px 4px 24px 0px;
+  --shadow-hero: rgba(0, 0, 0, 0.08) 0px 24px 48px 0px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--mc-canvas);
+  color: var(--text-ink);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -1.28px;
+}
+
+h2.section-heading {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.72px;
+}
+
+h3.card-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.48px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.56px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrow::before {
+  content: '•';
+  color: var(--mc-signal-orange);
+}
+
+p.body-standard {
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-ink-pill {
+  background-color: var(--mc-ink);
+  color: var(--mc-canvas);
+  border-radius: 20px;
+}
+
+.btn-outline-pill {
+  background-color: var(--white);
+  color: var(--mc-ink);
+  border: 1.5px solid var(--mc-ink);
+  border-radius: 20px;
+}
+
+.satellite-cta {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  color: var(--mc-ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(30%, 30%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Cards & Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 128px 0;
+}
+
+.stadium-frame {
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #000;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.circular-portrait {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.ghost-text {
+  font-size: 128px;
+  font-weight: 500;
+  color: rgba(20, 20, 19, 0.05);
+  letter-spacing: -3px;
+  position: absolute;
+  z-index: -1;
+  white-space: nowrap;
+}
+
+/* Nav */
+.nav-pill {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-nav);
+  position: sticky;
+  top: 24px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero { font-size: 40px; }
+  .ghost-text { font-size: 64px; }
+  .container { padding: 0 24px; }
+}

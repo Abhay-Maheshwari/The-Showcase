@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Framer Design Showcase</title>
+    <link rel="stylesheet" href="./framer.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" class="logo">Framer Showcase</a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#templates" class="nav-link">Templates</a>
+        <a href="#community" class="nav-link">Community</a>
+      </div>
+      <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+        <button class="theme-toggle btn btn-pill-frosted" aria-label="Toggle theme"></button>
+        <a href="/" class="btn btn-pill-frosted">Back to Gallery</a>
+        <button class="btn btn-pill-white">Sign up</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1 class="display-hero">The internet<br>is your canvas.</h1>
+        <p class="body-large" style="margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
+          Framer is where teams design and publish stunning sites. Build your dream site with zero code, at maximum speed.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-pill-white">Start for free</button>
+        </div>
+        
+        <div class="screenshot-container">
+          Product UI Screenshot Simulation
+        </div>
+      </section>
+
+      <div class="container section">
+        <!-- Feature Heading -->
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 60px;">
+          <div>
+            <h3 class="section-heading">Design freely.</h3>
+            <p class="body-large" style="margin-top: 20px;">The only limit is your imagination. Combine layout, typography, and motion in a freeform canvas.</p>
+          </div>
+          <button class="btn btn-pill-frosted">Explore Features</button>
+        </div>
+        
+        <!-- Cards Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+          <div class="card">
+            <h5 class="card-title" style="margin-bottom: 15px; color: var(--pure-white);">Component based.</h5>
+            <p class="body">Create reusable components with variants and variables. Design systems made simple.</p>
+          </div>
+          
+          <div class="card-elevated">
+            <h5 class="card-title" style="margin-bottom: 15px; color: var(--pure-white);">Cinematic motion.</h5>
+            <p class="body">Add scroll effects, appear animations, and complex state transitions without writing a single line of code.</p>
+            
+            <div style="margin-top: 30px; padding: 20px; border-radius: 10px; background: rgba(0, 153, 255, 0.1); border: 1px solid rgba(0, 153, 255, 0.3);">
+              <span style="color: var(--framer-blue); font-weight: 500;">Interactive Demo Area</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./framer.js"></script>
+  </body>
+</html>

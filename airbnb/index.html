@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airbnb Design Showcase</title>
+  <link rel="stylesheet" href="./airbnb.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <header>
+    <div style="color: var(--rausch-red); font-weight: 700; font-size: 24px; display: flex; align-items: center; gap: 8px;">
+       <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;height:32px;width:32px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415.001.228c0 4.062-2.877 6.478-6.357 6.478-2.224 0-4.556-1.258-6.709-3.386l-.257-.26-.172-.179h-.011l-.176.185c-2.044 2.1-4.392 3.415-6.619 3.415-3.477 0-6.355-2.415-6.355-6.477 0-1.042.16-2.013.785-3.523l.115-.264c1.018-2.308 5.156-11.004 7.104-14.823l.533-1.025c1.285-2.306 2.74-3.269 4.749-3.269zm0 2.046c-1.224 0-2.112.63-3.155 2.502l-.534 1.026c-2.316 4.544-6.472 13.167-7.234 14.92-.472 1.139-.636 1.917-.636 2.757 0 2.825 2.012 4.43 4.309 4.43 1.486 0 3.125-1.012 4.904-2.84l.325-.339.327.34c1.782 1.83 3.42 2.84 4.908 2.84 2.301 0 4.312-1.605 4.312-4.43 0-.84-.165-1.618-.636-2.758-.763-1.751-4.915-10.373-7.235-14.921l-.534-1.026c-1.042-1.872-1.928-2.502-3.153-2.502zm0 10.954c1.75 0 3.17 1.418 3.17 3.17s-1.42 3.17-3.17 3.17-3.17-1.42-3.17-3.17 1.42-3.17 3.17-3.17z"></path></svg>
+       <span>airbnb</span>
+    </div>
+    <div class="search-bar">
+       <div style="font-size: 14px; font-weight: 600; border-right: 1px solid #ddd; padding: 0 16px;">Anywhere</div>
+       <div style="font-size: 14px; font-weight: 600; border-right: 1px solid #ddd; padding: 0 16px;">Any week</div>
+       <div style="font-size: 14px; font-weight: 400; color: #717171; padding: 0 16px;">Add guests</div>
+       <div class="search-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;fill:none;height:12px;width:12px;stroke:currentColor;stroke-width:5.33333;overflow:visible" aria-hidden="true" role="presentation" focusable="false"><g fill="none"><path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513224-4.9248678-11-11-11-6.07513224 0-11 4.92486776-11 11 0 6.0751322 4.92486776 11 11 11zm8-3 9 9"></path></g></svg>
+       </div>
+    </div>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 24px;">
+       <div style="font-size: 14px; font-weight: 600;">Airbnb your home</div>
+       <div style="font-size: 18px;">🌐</div>
+       <div style="display: flex; align-items: center; gap: 12px; border: 1px solid #ddd; border-radius: 24px; padding: 8px 12px;">
+          <span>☰</span>
+          <div style="width: 32px; height: 32px; background: #717171; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">👤</div>
+       </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding-top: 100px; padding-bottom: 24px; border-bottom: 1px solid #f7f7f7;">
+       <div class="category-bar">
+          <div class="category-item active">
+             <span>🏰</span>
+             <span>Castles</span>
+          </div>
+          <div class="category-item">
+             <span>🏖️</span>
+             <span>Beachfront</span>
+          </div>
+          <div class="category-item">
+             <span>🏕️</span>
+             <span>Camping</span>
+          </div>
+          <div class="category-item">
+             <span>🏞️</span>
+             <span>Amazing views</span>
+          </div>
+          <div class="category-item">
+             <span>🏔️</span>
+             <span>Arctic</span>
+          </div>
+          <div class="category-item">
+             <span>🔥</span>
+             <span>Trending</span>
+          </div>
+          <div class="category-item">
+             <span>🏠</span>
+             <span>Tiny homes</span>
+          </div>
+          <div class="category-item">
+             <span>🏊</span>
+             <span>Amazing pools</span>
+          </div>
+          <div class="category-item">
+             <span>🎨</span>
+             <span>Creative spaces</span>
+          </div>
+       </div>
+    </div>
+
+    <div class="container" style="padding-top: 32px;">
+       <div class="listing-grid">
+          <div class="listing-card">
+             <div class="listing-img-container">
+                <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=600" class="listing-img" alt="Cabin">
+                <button class="wishlist-btn">❤️</button>
+             </div>
+             <div class="listing-details">
+                <div class="listing-title">Sant'Agata, Italy</div>
+                <div class="listing-subtitle">Hosted by Lorenzo</div>
+                <div class="listing-subtitle">May 12 – 17</div>
+                <div class="listing-price"><span>$450</span> night</div>
+             </div>
+          </div>
+          <div class="listing-card">
+             <div class="listing-img-container">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=600" class="listing-img" alt="Apartment">
+                <button class="wishlist-btn">❤️</button>
+             </div>
+             <div class="listing-details">
+                <div class="listing-title">Paris, France</div>
+                <div class="listing-subtitle">Stunning Eiffel views</div>
+                <div class="listing-subtitle">Jun 2 – 7</div>
+                <div class="listing-price"><span>$320</span> night</div>
+             </div>
+          </div>
+          <div class="listing-card">
+             <div class="listing-img-container">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" class="listing-img" alt="Villa">
+                <button class="wishlist-btn">❤️</button>
+             </div>
+             <div class="listing-details">
+                <div class="listing-title">Malibu, California</div>
+                <div class="listing-subtitle">Beachfront Paradise</div>
+                <div class="listing-subtitle">Jul 15 – 20</div>
+                <div class="listing-price"><span>$1,200</span> night</div>
+             </div>
+          </div>
+          <div class="listing-card">
+             <div class="listing-img-container">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=600" class="listing-img" alt="Resort">
+                <button class="wishlist-btn">❤️</button>
+             </div>
+             <div class="listing-details">
+                <div class="listing-title">Bali, Indonesia</div>
+                <div class="listing-subtitle">Tropical Escape</div>
+                <div class="listing-subtitle">Aug 1 – 10</div>
+                <div class="listing-price"><span>$280</span> night</div>
+             </div>
+          </div>
+       </div>
+    </div>
+  </main>
+
+  <footer style="background: #f7f7f7; padding: 48px 0; margin-top: 80px; border-top: 1px solid #ddd;">
+     <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 48px;">
+           <div>
+              <div class="text-semibold" style="margin-bottom: 16px;">Support</div>
+              <div class="label-small" style="margin-bottom: 8px;">Help Center</div>
+              <div class="label-small" style="margin-bottom: 8px;">AirCover</div>
+              <div class="label-small" style="margin-bottom: 8px;">Anti-discrimination</div>
+           </div>
+           <div>
+              <div class="text-semibold" style="margin-bottom: 16px;">Hosting</div>
+              <div class="label-small" style="margin-bottom: 8px;">Airbnb your home</div>
+              <div class="label-small" style="margin-bottom: 8px;">AirCover for Hosts</div>
+              <div class="label-small" style="margin-bottom: 8px;">Hosting resources</div>
+           </div>
+           <div>
+              <div class="text-semibold" style="margin-bottom: 16px;">Airbnb</div>
+              <div class="label-small" style="margin-bottom: 8px;">Newsroom</div>
+              <div class="label-small" style="margin-bottom: 8px;">New features</div>
+              <div class="label-small" style="margin-bottom: 8px;">Careers</div>
+           </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ddd; padding-top: 24px; font-size: 14px;">
+           <div>© 2024 Airbnb, Inc. · Privacy · Terms · Sitemap · Company details</div>
+           <div style="display: flex; gap: 24px; font-weight: 600;">
+              <span>🌐 English (US)</span>
+              <span>$ USD</span>
+              <span>Socials</span>
+           </div>
+        </div>
+     </div>
+  </footer>
+
+  <script type="module" src="./airbnb.js"></script>
+</body>
+</html>

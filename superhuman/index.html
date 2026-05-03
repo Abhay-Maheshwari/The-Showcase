@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhuman Design Showcase</title>
+    <link rel="stylesheet" href="./superhuman.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--pure-white);">
+    <!-- Navigation (Hero Context) -->
+    <nav class="navbar hero-nav">
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="/" style="font-weight: 700; font-size: 20px; color: var(--translucent-white-95); text-decoration: none;">Superhuman</a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Features</a>
+          <a href="#" class="nav-link">Teams</a>
+          <a href="#" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Customers</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-link" style="color: var(--translucent-white-95);">Sign In</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section hero-wrapper" style="text-align: center; padding-top: 200px; padding-bottom: 160px; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px;">
+        <div class="container" style="position: relative; z-index: 1;">
+          <h1 class="display-hero" style="margin-bottom: 24px;">The fastest email experience ever made.</h1>
+          <p class="body-large" style="max-width: 600px; margin: 0 auto 40px auto; color: var(--translucent-white-80);">
+            Visually gorgeous. Blazingly fast. And designed to help you fly through your inbox twice as fast as before.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px;">
+            <button class="btn btn-primary" style="padding: 16px 32px; font-size: 18px;">Get Superhuman</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Intro -->
+      <section class="section container" style="text-align: center; padding-top: 120px; padding-bottom: 80px;">
+        <h2 class="section-heading" style="margin-bottom: 24px; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Take back your time
+        </h2>
+        <p class="body-large" style="max-width: 700px; margin: 0 auto 64px auto; color: var(--charcoal-ink);">
+          Every detail is designed to keep you in flow. No more clicking around, no more waiting for pages to load. Just pure, unadulterated speed.
+        </p>
+
+        <!-- Product Presentation -->
+        <div style="max-width: 1000px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-radius: 16px; border: 1px solid var(--parchment-border); overflow: hidden;">
+          <div style="background-color: #fafafa; padding: 12px; border-bottom: 1px solid var(--parchment-border); display: flex; align-items: center;">
+            <div style="display: flex; gap: 8px;">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #e0e0e0;"></div>
+              <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #e0e0e0;"></div>
+              <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #e0e0e0;"></div>
+            </div>
+          </div>
+          <!-- Simple wireframe of inbox -->
+          <div style="background-color: var(--pure-white); height: 400px; display: grid; grid-template-columns: 250px 1fr;">
+            <div style="border-right: 1px solid var(--parchment-border); padding: 24px;">
+              <div style="font-weight: 700; margin-bottom: 24px; font-size: 18px;">Inbox</div>
+              <div style="color: var(--amethyst-link); margin-bottom: 16px; font-weight: 500;">Important</div>
+              <div style="color: #888; margin-bottom: 16px;">Other</div>
+              <div style="color: #888; margin-bottom: 16px;">Starred</div>
+            </div>
+            <div style="padding: 24px;">
+              <!-- Email items -->
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--parchment-border); padding-bottom: 16px; margin-bottom: 16px;">
+                <div><span style="font-weight: 700; margin-right: 16px;">Sarah Jenkins</span> <span style="font-weight: 600;">Q3 Planning Overview</span> <span style="color: #888;">- Here are the notes from...</span></div>
+                <div style="color: #888;">9:42 AM</div>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--parchment-border); padding-bottom: 16px; margin-bottom: 16px;">
+                <div><span style="font-weight: 500; margin-right: 16px; color: #666;">Design Team</span> <span style="font-weight: 400;">Feedback on new mocks</span> <span style="color: #888;">- I think we should...</span></div>
+                <div style="color: #888;">Yesterday</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Grid -->
+      <section class="section container" style="padding-top: 64px;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+          <div class="card">
+            <span style="display: inline-block; padding: 4px 8px; background-color: var(--lavender-glow); color: var(--charcoal-ink); font-size: 12px; font-weight: 700; border-radius: 4px; margin-bottom: 24px;">NEW</span>
+            <h3 class="card-title" style="margin-bottom: 24px;">Superhuman AI</h3>
+            <p class="body-text">
+              Draft emails in your own voice, summarize long threads instantly, and fix spelling and grammar with a single keystroke.
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 class="card-title" style="margin-bottom: 24px; margin-top: 40px;">Keyboard driven</h3>
+            <p class="body-text">
+              Hit <span style="font-family: monospace; background: #f0f0f0; padding: 2px 6px; border-radius: 4px; border: 1px solid #ccc;">Cmd</span> + <span style="font-family: monospace; background: #f0f0f0; padding: 2px 6px; border-radius: 4px; border: 1px solid #ccc;">K</span> to do absolutely everything. You'll never need to touch your mouse again.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTA Section -->
+      <section class="section container" style="text-align: center; padding-bottom: 160px;">
+        <h2 class="section-heading" style="margin-bottom: 32px;">Ready to fly?</h2>
+        <button class="btn btn-dark" style="padding: 16px 32px; font-size: 18px;">Get Superhuman</button>
+      </section>
+    </main>
+
+    <script type="module" src="./superhuman.js"></script>
+  </body>
+</html>

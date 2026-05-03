@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  /* Brand */
+  --coinbase-blue: #0052ff;
+  --hover-blue: #578bfa;
+  
+  /* Surface & Background */
+  --white: #ffffff;
+  --near-black: #0a0b0d;
+  --cool-gray: #eef0f3;
+  --dark-card: #282b31;
+  
+  /* Text */
+  --text-dark: #0a0b0d;
+  --text-muted: #5b616e;
+  
+  /* Fonts */
+  --font-display: 'Inter', sans-serif; /* CoinbaseDisplay substitute */
+  --font-sans: 'Inter', sans-serif; /* CoinbaseSans substitute */
+  --font-text: 'Inter', sans-serif; /* CoinbaseText substitute */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.00;
+  letter-spacing: -2px;
+}
+
+h2.section-heading {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.11;
+}
+
+h3.card-title {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.13;
+}
+
+p.body-large {
+  font-family: var(--font-text);
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+p.body-standard {
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.50;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 56px; /* Signature Coinbase radius */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--coinbase-blue);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--hover-blue);
+}
+
+.btn-secondary {
+  background-color: var(--cool-gray);
+  color: var(--text-dark);
+}
+.btn-secondary:hover {
+  background-color: #e2e5e9;
+}
+
+.btn-dark {
+  background-color: var(--dark-card);
+  color: var(--white);
+}
+.btn-dark:hover {
+  background-color: #383c44;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.dark-section {
+  background-color: var(--near-black);
+  color: var(--white);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero { font-size: 48px; }
+  .grid-2 { grid-template-columns: 1fr; }
+}

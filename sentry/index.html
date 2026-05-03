@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentry Design Showcase</title>
+    <link rel="stylesheet" href="./sentry.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--sentry-bg);">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 48px;">
+        <a href="/" style="display: flex; align-items: center; gap: 8px;">
+          <!-- Simplified Sentry-like logo -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--white)">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" fill="var(--lime-green)"/>
+          </svg>
+          <span style="font-family: var(--font-display); font-size: 24px; letter-spacing: 1px;">SENTRY</span>
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">Blog</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-link">Sign In</a>
+        <button class="btn btn-white">Get Started</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section hero-wrapper" style="text-align: center; padding-top: 180px; padding-bottom: 120px;">
+        <div class="hero-ambient"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+          <h1 class="display-hero" style="margin-bottom: 24px;">Code breaks.<br>Fix it faster.</h1>
+          <p class="body-text" style="font-size: 20px; max-width: 600px; margin: 0 auto 48px auto;">
+            Don't just log errors. See the exact line of code that caused the crash, and who committed it. Application monitoring for developers.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 64px;">
+            <button class="btn btn-primary" style="padding: 16px 32px; font-size: 16px;">Get Started</button>
+            <button class="btn btn-glass" style="padding: 16px 32px; font-size: 16px;">Request Demo</button>
+          </div>
+
+          <!-- Glass UI Simulation -->
+          <div class="glass-panel" style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="color: var(--lime-green); font-weight: 700; font-size: 18px;">UnhandledPromiseRejection</span>
+                <span style="color: var(--light-gray); font-size: 14px; font-family: var(--font-mono);">TypeError: undefined is not a function</span>
+              </div>
+              <span class="label-uppercase" style="color: var(--light-gray); font-size: 12px;">Just now</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 14px; line-height: 1.6;">
+              <span style="color: #569cd6;">async function</span> <span style="color: #dcdcaa;">fetchUserData</span>() {<br>
+              &nbsp;&nbsp;<span style="color: #569cd6;">const</span> response = <span style="color: #c586c0;">await</span> api.<span style="color: #dcdcaa;">get</span>(<span style="color: #ce9178;">'/user'</span>);<br>
+              &nbsp;&nbsp;<span style="background-color: rgba(221, 0, 0, 0.3); display: inline-block; width: 100%; border-left: 4px solid var(--sentry-red);">return response.data.<span style="color: #dcdcaa;">map</span>(user =&gt; user.id); // Crash here</span><br>
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="section container" style="background-color: var(--sentry-bg-darker); border-radius: 24px; padding: 80px 48px; border: 1px solid var(--border-purple);">
+        <div style="text-align: center; margin-bottom: 64px;">
+          <h2 class="section-heading">Application Monitoring</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+          <div>
+            <div style="width: 48px; height: 48px; background-color: var(--deep-violet); border-radius: 12px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+              <span style="color: var(--lime-green); font-weight: 700;">1</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 16px;">Error Tracking</h3>
+            <p class="body-text">
+              Track errors in every language and framework. We group related errors together so you can focus on what matters.
+            </p>
+          </div>
+          
+          <div>
+            <div style="width: 48px; height: 48px; background-color: var(--deep-violet); border-radius: 12px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+              <span style="color: var(--lime-green); font-weight: 700;">2</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 16px;">Performance</h3>
+            <p class="body-text">
+              Trace slow transactions back to poor-performing API calls or database queries to improve user experience.
+            </p>
+          </div>
+          
+          <div>
+            <div style="width: 48px; height: 48px; background-color: var(--deep-violet); border-radius: 12px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+              <span style="color: var(--lime-green); font-weight: 700;">3</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 16px;">Session Replay</h3>
+            <p class="body-text">
+              Get to the root cause of an error or latency issue faster by seeing exactly what the user was doing.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./sentry.js"></script>
+  </body>
+</html>

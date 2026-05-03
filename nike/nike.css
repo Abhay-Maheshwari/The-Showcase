@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand */
+  --nike-black: #111111;
+  --nike-white: #FFFFFF;
+  
+  /* Surfaces */
+  --snow: #FAFAFA;
+  --light-gray: #F5F5F5;
+  --hover-gray: #E5E5E5;
+  --border-secondary: #CACACB;
+  
+  /* Fonts */
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--nike-white);
+  color: var(--nike-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-title {
+  font-size: 96px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+h2.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.text-medium { font-weight: 500; }
+
+.label-secondary {
+  color: #707072;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none;
+  border-radius: 30px !important; /* Pill */
+  text-decoration: none !important;
+}
+
+.btn-black {
+  background-color: var(--nike-black);
+  color: var(--nike-white);
+}
+.btn-black:hover {
+  background-color: #707072;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--nike-black);
+  border: 1.5px solid var(--border-secondary);
+}
+.btn-outline:hover {
+  border-color: #707072;
+  background-color: var(--hover-gray);
+}
+
+/* Layout */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-swoosh {
+  width: 60px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--nike-black);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #707072;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 12px;
+}
+
+.product-card {
+  cursor: pointer;
+}
+
+.product-img-container {
+  aspect-ratio: 1;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-info {
+  padding: 12px 0;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.product-category {
+  color: #707072;
+  font-size: 16px;
+}
+
+.product-price {
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .display-title { font-size: 48px; }
+  .container { padding: 0 24px; }
+  header { padding: 0 24px; }
+  .nav-links { display: none; }
+  .product-grid { grid-template-columns: 1fr; }
+}

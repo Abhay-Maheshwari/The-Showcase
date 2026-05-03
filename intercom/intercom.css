@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Fallback mapping for Intercom's custom fonts:
+   Saans -> DM Sans (Geometric with similar tracking characteristics)
+   Serrif -> DM Serif Display
+   SaansMono -> JetBrains Mono
+*/
+
+:root {
+  /* Colors - Primary */
+  --color-off-black: #111111;
+  --color-pure-white: #ffffff;
+  --color-warm-cream: #faf9f6;
+  --color-fin: #ff5600; /* Intercom's signature orange */
+  --color-report-orange: #fe4c02;
+  
+  /* Colors - Neutral Scale (Warm) */
+  --color-black-80: #313130;
+  --color-black-60: #626260;
+  --color-black-50: #7b7b78;
+  --color-content-tertiary: #9c9fa5;
+  --color-oat-border: #dedbd6;
+  --color-warm-sand: #d3cec6;
+  
+  /* Fonts */
+  --font-display: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'DM Serif Display', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  
+  /* Theme mappings */
+  --bg-primary: var(--color-warm-cream);
+  --text-primary: var(--color-off-black);
+  --border-color: var(--color-oat-border);
+  --btn-bg: var(--color-off-black);
+  --btn-text: var(--color-pure-white);
+  --btn-hover-bg: var(--color-pure-white);
+  --btn-hover-text: var(--color-off-black);
+}
+
+/* Dark mode for the gallery toggle */
+[data-theme="dark"] {
+  --bg-primary: var(--color-off-black);
+  --text-primary: var(--color-pure-white);
+  --border-color: var(--color-black-60);
+  --btn-bg: var(--color-pure-white);
+  --btn-text: var(--color-off-black);
+  --btn-hover-bg: var(--color-off-black);
+  --btn-hover-text: var(--color-pure-white);
+  --color-oat-border: #313130;
+  --color-warm-cream: #1a1a1a;
+  --color-black-60: #a0a0a0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.00; /* Ultra tight */
+  letter-spacing: -2.4px; /* Extreme negative tracking */
+}
+
+h2.section-heading {
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -1.6px;
+}
+
+h3.sub-heading {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -1.2px;
+}
+
+h4.card-title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -0.96px;
+}
+
+p.body-emphasis {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.95; /* Intentionally tight body emphasis */
+  letter-spacing: -0.2px;
+  color: var(--color-black-60);
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.00;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--color-fin);
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 4px; /* Sharp 4px geometry */
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 12px 16px;
+  border: 1px solid var(--btn-bg);
+}
+.btn-primary:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  transform: scale(1.1); /* Signature physical expansion */
+}
+.btn-primary:active {
+  transform: scale(0.95); /* Adjusted from 0.85 to be less extreme for web */
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  padding: 12px 16px;
+}
+.btn-outlined:hover {
+  transform: scale(1.1);
+}
+.btn-outlined:active {
+  transform: scale(0.95);
+}
+
+.btn-warm {
+  background-color: var(--color-warm-cream);
+  color: var(--text-primary);
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.1); /* Approximating oklab border */
+}
+.btn-warm:hover {
+  background-color: var(--color-pure-white);
+  border-color: var(--color-oat-border);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--color-warm-cream);
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Slightly softer than buttons */
+  padding: 40px;
+  /* No visible shadows */
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 16px;
+  font-weight: 400;
+}
+.nav-links a:hover {
+  color: var(--color-black-60);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.hero {
+  padding: 120px 0 80px 0;
+  text-align: center;
+}
+
+/* Utilities */
+.fin-text {
+  color: var(--color-fin);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Design Showcase</title>
+    <link rel="stylesheet" href="./apple.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-link" aria-label="Apple">
+          <svg width="15" height="44" viewBox="0 0 15 44" fill="currentColor"><path d="M13.06 19.34a3.86 3.86 0 01-1.89-3.28 3.93 3.93 0 012.33-3.61 4.14 4.14 0 00-3.23-1.68c-1.38-.14-2.71.8-3.41.8-.71 0-1.81-.8-2.95-.78a4.12 4.12 0 00-3.48 2.11C-.23 15.68.74 21 .49 22.34c-.23 1.25-.66 2.65-1.39 3.85a4.34 4.34 0 00-2.34 1.34A4.18 4.18 0 00.1 29.8c.84-.04 1.63-.6 2.12-.6.5 0 1.25.56 2.05.54 1.09-.02 2.07-.63 2.62-1.54A7.47 7.47 0 0013.06 19.34z"/><path d="M9.69 11.23a3.64 3.64 0 00.86-2.58 3.75 3.75 0 00-2.39 1.22 3.51 3.51 0 00-.89 2.51 3.2 3.2 0 002.42-1.15z"/></svg>
+        </a>
+        <a href="#store" class="nav-link">Store</a>
+        <a href="#mac" class="nav-link">Mac</a>
+        <a href="#ipad" class="nav-link">iPad</a>
+        <a href="#iphone" class="nav-link">iPhone</a>
+        <button class="theme-toggle nav-link" style="background: none; border: none; cursor: pointer; display: flex; align-items: center;" aria-label="Toggle theme"></button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Cinematic Dark Section -->
+      <section class="section section-dark">
+        <h1 class="display-hero">iPhone 16 Pro</h1>
+        <p class="body-text" style="font-size: 28px; margin-top: 10px;">Titanium. So strong. So light. So Pro.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-pill-link">Learn more &gt;</a>
+          <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+        <!-- Abstract shape to represent product image -->
+        <div style="width: 300px; height: 300px; border-radius: 40px; background: linear-gradient(135deg, #444, #111); margin-top: 60px; box-shadow: 0 20px 40px rgba(255,255,255,0.05);"></div>
+      </section>
+
+      <!-- Light Informational Section -->
+      <section class="section">
+        <h2 class="display-hero">MacBook Air</h2>
+        <p class="body-text" style="font-size: 28px; margin-top: 10px;">Lean. Mean. M3 machine.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-pill-link">Learn more &gt;</a>
+          <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+        <!-- Abstract shape to represent product image -->
+        <div style="width: 500px; height: 250px; border-radius: 12px; background: linear-gradient(135deg, #e0e0e0, #ffffff); margin-top: 60px; box-shadow: var(--shadow-card);"></div>
+      </section>
+
+      <!-- Product Grid -->
+      <div class="product-grid" style="margin-bottom: 100px;">
+        <div class="product-tile">
+          <h3 class="tile-heading">iPad Pro</h3>
+          <p class="body-text" style="margin-top: 8px;">Unbelievably thin. Incredibly powerful.</p>
+          <div class="hero-actions" style="margin-top: 16px;">
+            <a href="#" class="btn btn-primary" style="font-size: 14px; padding: 4px 12px;">Buy</a>
+          </div>
+        </div>
+        <div class="product-tile">
+          <h3 class="tile-heading">AirPods Pro</h3>
+          <p class="body-text" style="margin-top: 8px;">Adaptive Audio. Now playing.</p>
+          <div class="hero-actions" style="margin-top: 16px;">
+            <a href="#" class="btn btn-primary" style="font-size: 14px; padding: 4px 12px;">Buy</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./apple.js"></script>
+  </body>
+</html>

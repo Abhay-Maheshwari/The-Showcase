@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Design Showcase</title>
+  <link rel="stylesheet" href="./claude.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; background-color: var(--parchment); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-cream);">
+    <div style="display: flex; align-items: center; gap: 32px;">
+      <a href="/" style="font-family: var(--font-serif); font-size: 24px; font-weight: 500; color: var(--near-black); text-decoration: none;">Claude</a>
+      <div style="display: flex; gap: 24px;">
+        <a href="#" style="color: var(--olive-gray); text-decoration: none; font-size: 16px;">Product</a>
+        <a href="#" style="color: var(--olive-gray); text-decoration: none; font-size: 16px;">Research</a>
+        <a href="#" style="color: var(--olive-gray); text-decoration: none; font-size: 16px;">Company</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <button class="btn btn-sand">Talk to sales</button>
+      <button class="btn btn-terracotta">Try Claude</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" style="text-align: center;">
+      <h1 class="display-hero" style="max-width: 800px; margin: 0 auto 32px;">Intelligent AI that's safe, reliable, and thoughtful.</h1>
+      <p class="body-large" style="max-width: 600px; margin: 0 auto 48px;">Claude is a next-generation AI assistant built for the way you work. It's helpful, harmless, and honest.</p>
+      <div style="display: flex; justify-content: center; gap: 16px;">
+        <button class="btn btn-terracotta" style="padding: 14px 28px; border-radius: 12px;">Get started</button>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: #faf9f5;">
+      <div class="container">
+        <div class="overline-label" style="margin-bottom: 16px;">Our Models</div>
+        <h2 class="section-heading" style="margin-bottom: 64px;">Built for every scale.</h2>
+        
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="sub-heading" style="margin-bottom: 16px;">Claude 3.5 Sonnet</h3>
+            <p class="body-standard">Our most intelligent model. Perfectly balanced for complex tasks and speed.</p>
+          </div>
+          <div class="card">
+            <h3 class="sub-heading" style="margin-bottom: 16px;">Claude 3 Opus</h3>
+            <h3 class="sub-heading" style="margin-bottom: 16px; opacity: 0.3; font-style: italic;">Legacy</h3>
+            <p class="body-standard">Powerful performance for high-stakes enterprise applications.</p>
+          </div>
+          <div class="card">
+            <h3 class="sub-heading" style="margin-bottom: 16px;">Claude 3 Haiku</h3>
+            <p class="body-standard">Our fastest, most compact model for near-instant responsiveness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+        <div>
+          <h2 class="section-heading" style="margin-bottom: 32px; color: var(--ivory);">Focused on safety.</h2>
+          <p class="body-large" style="color: var(--warm-silver); margin-bottom: 32px;">We build AI that respects human values. Our constitutional AI approach ensures Claude remains helpful and safe.</p>
+          <button class="btn btn-white">Read our research</button>
+        </div>
+        <div style="background-color: var(--dark-surface); height: 400px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">
+          <!-- Conceptual illustration placeholder -->
+          <div style="width: 200px; height: 200px; border: 2px solid var(--terracotta); border-radius: 50%; opacity: 0.5;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 80px 0; border-top: 1px solid var(--border-cream);">
+    <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;">
+      <div>
+        <div style="font-family: var(--font-serif); font-size: 24px; margin-bottom: 24px;">Claude</div>
+        <p class="body-standard">AI for a more thoughtful world.</p>
+      </div>
+      <div>
+        <div class="overline-label" style="margin-bottom: 16px;">Models</div>
+        <div style="margin-bottom: 8px;">Claude 3.5</div>
+        <div style="margin-bottom: 8px;">Claude 3</div>
+        <div style="margin-bottom: 8px;">API Access</div>
+      </div>
+      <div>
+        <div class="overline-label" style="margin-bottom: 16px;">Company</div>
+        <div style="margin-bottom: 8px;">About Us</div>
+        <div style="margin-bottom: 8px;">Careers</div>
+        <div style="margin-bottom: 8px;">Ethics</div>
+      </div>
+      <div>
+        <button class="btn btn-sand" style="width: 100%;">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./claude.js"></script>
+</body>
+</html>

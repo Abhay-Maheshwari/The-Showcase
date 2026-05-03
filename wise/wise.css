@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+
+:root {
+  /* Brand */
+  --wise-green: #9fe870;
+  --dark-green: #163300;
+  --pastel-green: #cdffad;
+  --light-mint: #e2f6d5;
+  
+  /* Surface */
+  --near-black: #0e0f0c;
+  --off-white: #ffffff;
+  --warm-dark: #454745;
+  --light-surface: #e8ebe6;
+  
+  /* Text */
+  --text-primary: #0e0f0c;
+  --text-muted: #868685;
+  
+  /* Fonts */
+  --font-display: 'Inter', sans-serif; /* Wise Sans substitute - with weight 900 and ultra-tight line-height */
+  --font-body: 'Inter', sans-serif;
+  
+  /* Shadows */
+  --shadow-ring: rgba(14,15,12,0.12) 0px 0px 0px 1px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-variant-ligatures: contextual; /* "calt" substitute */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--off-white);
+  color: var(--text-primary);
+  line-height: 1.44;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-mega {
+  font-family: var(--font-display);
+  font-size: 126px;
+  font-weight: 900;
+  line-height: 0.85; /* Ultra-tight */
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 0.85;
+}
+
+h3.card-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.23;
+  letter-spacing: -0.39px;
+}
+
+p.body-standard {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.44;
+  letter-spacing: 0.18px;
+}
+
+.body-semibold {
+  font-weight: 600;
+  letter-spacing: -0.108px;
+}
+
+/* Buttons - UNIVERSAL PILL */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Signature Wise growth */
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-green {
+  background-color: var(--wise-green);
+  color: var(--dark-green);
+}
+
+.btn-dark {
+  background-color: var(--near-black);
+  color: var(--white);
+}
+
+.btn-subtle {
+  background-color: rgba(22, 51, 0, 0.08);
+  color: var(--text-primary);
+}
+
+/* Cards & Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.dark-section {
+  background-color: var(--near-black);
+  color: #ffffff;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid rgba(14,15,12,0.12);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: var(--shadow-ring);
+}
+
+@media (max-width: 768px) {
+  h1.display-mega { font-size: 56px; }
+  h2.section-heading { font-size: 40px; }
+  .grid-3 { grid-template-columns: 1fr; }
+}

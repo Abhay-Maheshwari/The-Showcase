@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warp Design Showcase</title>
+    <link rel="stylesheet" href="./warp.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--deep-void);">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 48px;">
+        <a href="/" style="font-weight: 500; font-size: 20px;">Warp</a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Download</a>
+          <a href="#" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">Blog</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="btn btn-primary">Download</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 180px; padding-bottom: 80px;">
+        <h1 class="display-hero" style="margin-bottom: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+          The terminal for the 21st century
+        </h1>
+        <p class="body-large" style="max-width: 600px; margin: 0 auto 48px auto;">
+          Warp is a blazingly fast, Rust-based terminal that makes you and your team more productive.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 64px;">
+          <button class="btn btn-primary" style="padding: 16px 32px; font-size: 18px;">Download for Mac</button>
+        </div>
+
+        <!-- Terminal Image Placeholder -->
+        <div style="max-width: 1200px; margin: 0 auto; height: 600px; background-color: #0d0d0c; border: 1px solid var(--mist-border); border-radius: 12px; position: relative; box-shadow: 0 40px 80px rgba(0,0,0,0.4);">
+          <!-- Mac window controls -->
+          <div style="display: flex; gap: 8px; padding: 16px;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ed6a5e;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #f4bf4f;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #61c554;"></div>
+          </div>
+          <!-- Fake terminal content -->
+          <div style="padding: 24px; text-align: left; font-family: monospace; font-size: 14px; color: var(--warm-parchment);">
+             <span style="color: #61c554;">~/projects/warp</span> $ cargo run<br>
+             <span style="color: var(--stone-gray);">Compiling</span> warp v1.0.0<br>
+             <span style="color: #61c554;">Finished</span> dev [unoptimized + debuginfo] target(s) in 2.34s<br>
+             <span style="color: #61c554;">Running</span> `target/debug/warp`<br>
+          </div>
+          <!-- Input block mimicking Warp's IDE-like input -->
+          <div style="position: absolute; bottom: 24px; left: 24px; right: 24px; background-color: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 16px;">
+            <span style="color: #61c554;">~/projects/warp</span> <span style="opacity: 0.5;">❯</span> <span style="font-family: monospace; font-size: 14px;">|</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Feature Section -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+          <!-- Left: Nature / Calm Photography Placeholder -->
+          <div style="height: 500px; border-radius: 12px; overflow: hidden; position: relative;">
+            <div class="nature-placeholder"></div>
+            <!-- Ghostly UI element floating over nature -->
+            <div style="position: absolute; bottom: 40px; right: 40px; background-color: rgba(21, 20, 19, 0.8); backdrop-filter: blur(10px); padding: 24px; border-radius: 12px; border: 1px solid var(--mist-border);">
+              <div style="font-family: monospace; color: var(--warm-parchment);">⌘ P</div>
+              <div style="font-size: 12px; color: var(--stone-gray); margin-top: 8px;">Command Palette</div>
+            </div>
+          </div>
+          
+          <!-- Right: Restrained Text -->
+          <div>
+            <div class="category-label" style="margin-bottom: 24px;">Works like an IDE</div>
+            <h2 class="section-display" style="margin-bottom: 32px;">Input that feels modern.</h2>
+            <p class="body-text" style="margin-bottom: 24px;">
+              Warp's input acts like a modern text editor. You can click to move your cursor, select text to copy it, and use standard keyboard shortcuts to edit your commands.
+            </p>
+            <p class="body-text">
+              No more frustrating keyboard contortions just to fix a typo in the middle of a long command.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2-Up Feature Cards -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+          <div class="card">
+            <h3 class="feature-heading" style="margin-bottom: 24px;">Warp AI</h3>
+            <p class="body-text">
+              Never search for a command again. Warp AI can generate commands from natural language, explain errors, and help you debug complex terminal output right within your workflow.
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 class="feature-heading" style="margin-bottom: 24px;">Warp Drive</h3>
+            <p class="body-text">
+              Save, organize, and share commands with your team. Warp Drive replaces scattered scripts and tribal knowledge with a searchable, collaborative command palette.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./warp.js"></script>
+  </body>
+</html>

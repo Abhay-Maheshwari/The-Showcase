@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand */
+  --revolut-dark: #191c1f;
+  --revolut-blue: #494fdf;
+  
+  /* Semantic */
+  --rui-danger: #e23b4a;
+  --rui-teal: #00a87e;
+  --rui-pink: #e61e49;
+  
+  /* Surface */
+  --white: #ffffff;
+  --surface-light: #f4f4f4;
+  
+  /* Text */
+  --text-primary: #191c1f;
+  --text-secondary: #505a63;
+  --text-muted: #8d969e;
+  
+  /* Fonts */
+  --font-display: 'Inter', sans-serif; /* Aeonik Pro substitute - with weight 500 and negative tracking */
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-mega {
+  font-family: var(--font-display);
+  font-size: 136px;
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -2.72px; /* Billboard tracking */
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.48px;
+}
+
+h3.card-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.19;
+  letter-spacing: -0.32px;
+}
+
+p.body-large {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: -0.09px;
+}
+
+p.body-standard {
+  font-size: 16px;
+  line-height: 1.50;
+  letter-spacing: 0.24px; /* Positive tracking on body */
+}
+
+/* Buttons - UNIVERSAL PILL */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-dark {
+  background-color: var(--revolut-dark);
+  color: var(--white);
+}
+.btn-dark:hover {
+  opacity: 0.85;
+}
+
+.btn-light {
+  background-color: var(--surface-light);
+  color: #000000;
+}
+.btn-light:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--revolut-dark);
+  color: var(--revolut-dark);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.dark-section {
+  background-color: var(--revolut-dark);
+  color: var(--white);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--surface-light);
+  border-radius: 20px;
+  padding: 40px;
+  /* Zero shadows */
+}
+
+@media (max-width: 768px) {
+  h1.display-mega { font-size: 56px; letter-spacing: -1.5px; }
+  .grid-3 { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Primary & Background */
+  --bg-deep: #07080a; /* Signature near-black blue-tint */
+  --surface-100: #101111;
+  --card-surface: #1b1c1e;
+  
+  /* Text */
+  --text-primary: #f9f9f9;
+  --text-secondary: #cecece;
+  --text-muted: #9c9c9d;
+  --text-dim: #6a6b6c;
+  
+  /* Brand Accents */
+  --raycast-red: #FF6363;
+  --raycast-blue: #55b3ff;
+  
+  /* Borders */
+  --border-light: rgba(255, 255, 255, 0.06);
+  --border-dark: #252829;
+  
+  /* Shadows (macOS native feel) */
+  --shadow-subtle: rgba(0, 0, 0, 0.28) 0px 1px 2px;
+  --shadow-ring: rgb(27, 28, 30) 0px 0px 0px 1px, rgb(7, 8, 10) 0px 0px 0px 1px inset;
+  
+  /* Fonts */
+  --font-primary: 'Inter', -apple-system, sans-serif;
+  
+  /* Theme Map (Raycast is fundamentally dark) */
+  --bg-primary: var(--bg-deep);
+  --text-main: var(--text-primary);
+  --nav-bg: var(--bg-deep);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* OpenType features simulated */
+  font-feature-settings: "calt" 1, "kern" 1, "liga" 1, "ss03" 1;
+}
+
+/* Typography - Raycast uses positive tracking on dark */
+h1.display-hero {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.10;
+  letter-spacing: 0px;
+  font-feature-settings: "liga" 0, "ss02" 1, "ss08" 1;
+}
+
+h2.section-heading {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+h3.card-title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0px;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 500; /* 500 is baseline for readability */
+  line-height: 1.60;
+  letter-spacing: 0.2px;
+  color: var(--text-secondary);
+}
+
+.kbd {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 600;
+  background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1.5px 0.5px 2.5px, 
+              rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset;
+  border: 1px solid #000;
+  color: var(--text-primary);
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+/* Links */
+a {
+  color: var(--raycast-blue);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.nav-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+a.nav-link:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-radius: 86px; /* Pill */
+  padding: 12px 24px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset,
+              rgba(255, 255, 255, 0.15) 0px 0px 0px 1px,
+              rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.6;
+}
+
+.btn-cta {
+  background-color: hsla(0, 0%, 100%, 0.815);
+  color: #18191a;
+  border-radius: 86px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-subtle);
+}
+.btn-cta:hover {
+  background-color: #ffffff;
+  opacity: 1; /* Override default opacity fade */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 7px 3px;
+}
+.btn-secondary:hover {
+  opacity: 0.6;
+}
+
+/* Cards */
+.card {
+  background-color: var(--surface-100);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-ring);
+  border: none; /* Relies on ring shadow */
+}
+
+/* Glow effects */
+.glow-warm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(215, 201, 175, 0.05) 0%, rgba(0,0,0,0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid transparent; /* Becomes solid on scroll in real app */
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+/* Red Diagonal Element (Signature Raycast) */
+.stripe-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.8;
+}
+.stripe {
+  position: absolute;
+  background: var(--raycast-red);
+  width: 150px;
+  height: 1000px;
+  transform: rotate(45deg);
+  right: -50px;
+  top: -200px;
+  filter: blur(80px); /* Simulated abstract glow */
+}

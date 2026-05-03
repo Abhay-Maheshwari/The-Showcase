@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expo Design Showcase</title>
+    <link rel="stylesheet" href="./expo.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 20px; letter-spacing: -1px; color: var(--expo-black);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Expo Showcase
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#products">Products</a>
+          <a href="#developers">Developers</a>
+          <a href="#blog">Blog</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="badge-status" style="display: none; /* Hide on small screens */">All Systems Operational</div>
+        <button class="theme-toggle btn btn-secondary" aria-label="Toggle theme" style="padding: 8px;"></button>
+        <a href="/" class="btn" style="font-size: 14px;">Gallery</a>
+        <button class="btn btn-primary" style="font-size: 14px;">Sign Up</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 24px auto;">Make any app. <br>Run it everywhere.</h1>
+        <p class="body-large" style="max-width: 600px; margin: 0 auto 40px auto;">
+          Expo is an open-source framework for making universal native apps for Android, iOS, and the web with JavaScript and React.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-primary" style="padding: 12px 24px;">Get Started</button>
+          <button class="btn btn-secondary" style="padding: 12px 24px;">Read Docs</button>
+        </div>
+      </section>
+
+      <!-- Feature Section -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+          <div>
+            <h2 class="section-heading" style="margin-bottom: 24px;">Develop <br>at the speed <br>of thought.</h2>
+            <p class="body-text" style="margin-bottom: 32px; max-width: 400px;">
+              Write code and see it instantly on your device or simulator. With Fast Refresh, you keep your state and only reload the components you change.
+            </p>
+            <div class="code-block" style="display: inline-block;">
+              <span style="color: var(--link-cobalt);">npx</span> create-expo-app my-app
+            </div>
+          </div>
+          <div class="card card-featured" style="background: var(--pure-white); padding: 0; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+            <!-- Placeholder for colorful product screenshot -->
+            <div style="text-align: center; color: var(--silver);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="margin-bottom: 16px;">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+              <p>[Vibrant App Screenshot]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards Grid Section -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div class="card">
+            <h3 class="sub-heading" style="margin-bottom: 12px;">EAS Build</h3>
+            <p class="body-text">Compile and sign your Android and iOS apps in the cloud, ready for the app stores.</p>
+          </div>
+          <div class="card">
+            <h3 class="sub-heading" style="margin-bottom: 12px;">EAS Update</h3>
+            <p class="body-text">Fix bugs and push updates instantly to your users without going through app store review.</p>
+          </div>
+          <div class="card">
+            <h3 class="sub-heading" style="margin-bottom: 12px;">EAS Submit</h3>
+            <p class="body-text">Automate your app store submissions with a single command from your terminal.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./expo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayStation Design Showcase</title>
+  <link rel="stylesheet" href="./playstation.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_logo.svg" alt="PS Logo" class="logo-ps" style="filter: brightness(0) invert(1);">
+    <nav class="nav-links">
+       <a href="#">Games</a>
+       <a href="#">Hardware</a>
+       <a href="#">Services</a>
+       <a href="#">News</a>
+       <a href="#">Shop</a>
+       <a href="#">Support</a>
+    </nav>
+    <div style="margin-left: auto;">
+       <button class="btn btn-blue" style="padding: 6px 16px; font-size: 14px;">Sign In</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Dark Hero -->
+    <section class="section bg-dark" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=2000'); background-size: cover; height: 80vh; display: flex; align-items: center;">
+       <div class="container">
+          <div style="max-width: 600px;">
+             <h1 class="hero-display" style="margin-bottom: 24px;">Play has no limits</h1>
+             <p class="text-sub" style="color: #ffffff; margin-bottom: 32px; opacity: 0.8;">Experience the next generation of incredible PlayStation games.</p>
+             <button class="btn btn-blue">Explore PS5</button>
+          </div>
+       </div>
+    </section>
+
+    <!-- White Editorial -->
+    <section class="section" style="background-color: var(--paper-white);">
+       <div class="container">
+          <div style="text-align: center; margin-bottom: 64px;">
+             <h2 class="section-heading">Featured Games</h2>
+          </div>
+          <div class="card-grid">
+             <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&q=80&w=800" class="game-img" alt="God of War">
+                <div class="game-info">
+                   <h3 style="font-weight: 700; font-size: 20px; margin-bottom: 8px;">God of War Ragnarök</h3>
+                   <p style="color: var(--body-gray); margin-bottom: 24px;">The epic saga continues.</p>
+                   <button class="btn btn-blue" style="font-size: 14px; padding: 8px 20px;">Learn More</button>
+                </div>
+             </div>
+             <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" class="game-img" alt="Spider-Man">
+                <div class="game-info">
+                   <h3 style="font-weight: 700; font-size: 20px; margin-bottom: 8px;">Marvel's Spider-Man 2</h3>
+                   <p style="color: var(--body-gray); margin-bottom: 24px;">Be Greater. Together.</p>
+                   <button class="btn btn-blue" style="font-size: 14px; padding: 8px 20px;">Learn More</button>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Blue Footer Anchor -->
+    <section class="section bg-blue">
+       <div class="container" style="text-align: center;">
+          <h2 class="section-heading" style="margin-bottom: 24px;">Join PlayStation Plus</h2>
+          <p class="text-sub" style="color: #ffffff; margin-bottom: 32px;">Get access to hundreds of games, online multiplayer and more.</p>
+          <button class="btn btn-white">Join Now</button>
+       </div>
+    </section>
+  </main>
+
+  <footer style="background: #00439c; color: white; padding: 80px 0;">
+     <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+           <div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_logo.svg" alt="PS" style="width: 40px; margin-bottom: 24px; filter: brightness(0) invert(1);">
+           </div>
+           <div>
+              <div style="font-weight: 700; margin-bottom: 16px;">About</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">About SIE</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Careers</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">PlayStation Studios</div>
+           </div>
+           <div>
+              <div style="font-weight: 700; margin-bottom: 16px;">Products</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">PS5</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">PS4</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">PS VR2</div>
+           </div>
+           <div>
+              <div style="font-weight: 700; margin-bottom: 16px;">Values</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Environment</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Accessibility</div>
+              <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Privacy & Safety</div>
+           </div>
+        </div>
+     </div>
+  </footer>
+
+  <script type="module" src="./playstation.js"></script>
+</body>
+</html>

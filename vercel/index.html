@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vercel Design Showcase</title>
+    <link rel="stylesheet" href="./vercel.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <svg class="logo-triangle" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L22 20H2L12 2Z"/>
+        </svg>
+        Vercel Showcase
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#about" class="nav-link">About</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 8px;">
+        <button class="theme-toggle btn btn-secondary" aria-label="Toggle theme"></button>
+        <a href="/" class="btn btn-secondary">Back to Gallery</a>
+        <button class="btn btn-primary">Start Deploying</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section hero">
+        <div class="pill-badge" style="margin-bottom: 24px;">
+          Vercel Ship 2026
+        </div>
+        <h1 class="display-hero">Your complete platform for the web.</h1>
+        <p class="body-large" style="margin-top: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary">Start Deploying</button>
+          <button class="btn btn-secondary">Get a Demo</button>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Workflow Section -->
+        <section id="workflow" class="section" style="border-top: 1px solid var(--gray-100);">
+          <h2 class="section-heading" style="text-align: center; margin-bottom: 80px;">Develop. Preview. Ship.</h2>
+          
+          <div class="workflow-grid">
+            <div class="workflow-step">
+              <span class="mono-small workflow-develop">Develop</span>
+              <h4 class="card-title">Build with the tools you love.</h4>
+              <p class="body-small">Works with 30+ frameworks. Instant dev servers and seamless local environments.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="mono-small workflow-preview">Preview</span>
+              <h4 class="card-title">Iterate with your team.</h4>
+              <p class="body-small">Every push gets a live preview URL. Gather feedback directly on your UI.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="mono-small workflow-ship">Ship</span>
+              <h4 class="card-title">Deploy to a global edge.</h4>
+              <p class="body-small">Push to main and your site is live instantly across the globe with zero configuration.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Components Showcase -->
+        <section id="features" class="section" style="border-top: 1px solid var(--gray-100);">
+          <h3 class="sub-heading-large" style="margin-bottom: 48px;">Component Philosophy</h3>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+            <!-- Shadow Cards Demo -->
+            <div class="card featured">
+              <h4 class="card-title" style="margin-bottom: 16px;">Shadow as Border</h4>
+              <p class="body-small" style="margin-bottom: 24px;">Instead of traditional CSS borders, Vercel uses multi-layered shadow stacks to create depth, glow, and borders in a single declaration.</p>
+              
+              <div style="padding: 24px; background: var(--gray-50); border-radius: 8px; box-shadow: var(--shadow-border);">
+                <p class="mono-small" style="color: var(--gray-500); margin-bottom: 8px;">CSS Rule</p>
+                <code class="mono" style="font-size: 14px; color: var(--vercel-black);">
+                  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+                </code>
+              </div>
+            </div>
+
+            <!-- Typography Demo -->
+            <div class="card">
+              <h4 class="card-title" style="margin-bottom: 16px;">Typography</h4>
+              <p class="body-small" style="margin-bottom: 24px;">Geist Sans with extreme negative letter-spacing for display, paired with Geist Mono for technical clarity.</p>
+              
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <span class="pill-badge" style="align-self: flex-start;">Ligatures Enabled</span>
+                <p class="mono" style="font-size: 16px;">-> => === !==</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./vercel.js"></script>
+  </body>
+</html>

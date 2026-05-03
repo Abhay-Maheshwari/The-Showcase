@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+:root {
+  /* Brand */
+  --mistral-orange: #fa520f;
+  --mistral-flame: #fb6424;
+  --block-orange: #ff8105;
+  --sunshine-700: #ffa110;
+  --sunshine-300: #ffd06a;
+  
+  /* Surface & Background */
+  --warm-ivory: #fffaeb;
+  --cream: #fff0c2;
+  --pure-white: #ffffff;
+  --mistral-black: #1f1f1f;
+  
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif; /* Arial substitute */
+  
+  /* Shadow Cascade */
+  --shadow-golden: 
+    rgba(127, 99, 21, 0.12) -8px 16px 39px,
+    rgba(127, 99, 21, 0.1) -33px 64px 72px,
+    rgba(127, 99, 21, 0.06) -73px 144px 97px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--warm-ivory);
+  color: var(--mistral-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 82px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -2.05px;
+}
+
+h2.section-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+h3.card-title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+p.body-standard {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+}
+
+.label-uppercase {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+  border-radius: 0; /* Sharp corners */
+}
+
+.btn-dark {
+  background-color: var(--mistral-black);
+  color: var(--pure-white);
+}
+.btn-dark:hover {
+  background-color: var(--mistral-orange);
+}
+
+.btn-cream {
+  background-color: var(--cream);
+  color: var(--mistral-black);
+}
+.btn-cream:hover {
+  background-color: var(--sunshine-300);
+}
+
+/* Mistral Blocks */
+.mistral-blocks {
+  display: flex;
+  height: 48px;
+}
+.block {
+  flex: 1;
+  height: 100%;
+}
+.block-1 { background-color: #ffd900; }
+.block-2 { background-color: #ffe295; }
+.block-3 { background-color: #ffa110; }
+.block-4 { background-color: #ff8105; }
+.block-5 { background-color: #fb6424; }
+.block-6 { background-color: #fa520f; }
+
+/* Cards & Containers */
+.card {
+  background-color: var(--cream);
+  padding: 40px;
+  box-shadow: var(--shadow-golden);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero { font-size: 48px; }
+  .grid-2 { grid-template-columns: 1fr; }
+}

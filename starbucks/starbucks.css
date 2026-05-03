@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kalam&family=Lora&display=swap');
+
+:root {
+  /* Brand */
+  --starbucks-green: #006241;
+  --green-accent: #00754A;
+  --house-green: #1E3932;
+  --green-uplift: #2B5148;
+  --green-light: #D4E9E2;
+  --gold: #CBA258;
+  
+  /* Text */
+  --text-black: rgba(0, 0, 0, 0.87);
+  --text-black-soft: rgba(0, 0, 0, 0.58);
+  --text-white: #FFFFFF;
+  --text-white-soft: rgba(255, 255, 255, 0.7);
+  
+  /* Surfaces */
+  --white: #FFFFFF;
+  --neutral-warm: #F2F0EB;
+  --ceramic: #EDEBE9;
+  
+  /* Fonts */
+  --font-main: 'Inter', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-script: 'Kalam', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--text-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+}
+
+.display-text {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.rewards-serif {
+  font-family: var(--font-serif);
+}
+
+.careers-script {
+  font-family: var(--font-script);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 16px;
+  min-height: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  border-radius: 50px !important; /* Full pill */
+  text-decoration: none !important;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-green-accent {
+  background-color: var(--green-accent);
+  color: var(--white);
+}
+
+.btn-black {
+  background-color: #000000;
+  color: var(--white);
+}
+
+.btn-outline-green {
+  background-color: transparent;
+  color: var(--green-accent);
+  border-color: var(--green-accent);
+}
+
+.btn-outline-black {
+  background-color: transparent;
+  color: var(--text-black);
+  border-color: var(--text-black);
+}
+
+.btn-inverted {
+  background-color: var(--white);
+  color: var(--green-accent);
+}
+
+/* Floating Frap Button */
+.frap-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--green-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.24), 0 8px 12px rgba(0,0,0,0.14);
+  z-index: 2000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.frap-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 6px rgba(0,0,0,0.24);
+}
+
+/* Layout */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+header {
+  height: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-black);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Section Bands */
+.feature-band {
+  background-color: var(--house-green);
+  color: var(--white);
+  padding: 80px 0;
+}
+
+.editorial-section {
+  padding: 80px 0;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 0.5px 0px rgba(0,0,0,0.14), 0px 1px 1px 0px rgba(0,0,0,0.24);
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .editorial-grid { grid-template-columns: 1fr; gap: 40px; }
+}

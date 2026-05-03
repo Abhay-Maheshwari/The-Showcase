@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Fallback for Berkeley Mono using Space Mono to ensure monospace aesthetic */
+:root {
+  /* Colors */
+  --opencode-dark: #201d1d; /* Warm near-black */
+  --opencode-light: #fdfcfc; /* Warm off-white */
+  --mid-gray: #9a9898;
+  
+  /* Semantic (Apple HIG inspired) */
+  --accent-blue: #007aff;
+  --accent-blue-hover: #0056b3;
+  --danger-red: #ff3b30;
+  --success-green: #30d158;
+  --warning-orange: #ff9f0a;
+  
+  /* Surfaces */
+  --dark-surface: #302c2c;
+  --light-surface: #f1eeee;
+  --input-bg: #f8f7f7;
+  
+  /* Borders */
+  --border-warm: rgba(15, 0, 0, 0.12);
+  --border-warm-dark: rgba(255, 240, 240, 0.12); /* Adjusted for dark mode */
+  --border-outline: #646262;
+  
+  /* Fonts */
+  --font-mono: 'Space Mono', 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  
+  /* Theme mapping (Terminal native is dark) */
+  --bg-primary: var(--opencode-dark);
+  --text-primary: var(--opencode-light);
+  --text-secondary: var(--mid-gray);
+  --border-color: var(--border-warm-dark);
+  --btn-bg: var(--opencode-light);
+  --btn-text: var(--opencode-dark);
+}
+
+[data-theme="light"] {
+  --bg-primary: var(--opencode-light);
+  --text-primary: var(--opencode-dark);
+  --text-secondary: var(--mid-gray);
+  --border-color: var(--border-warm);
+  --btn-bg: var(--opencode-dark);
+  --btn-text: var(--opencode-light);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.50;
+}
+
+h2.section-heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.50;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+}
+
+p.body-medium {
+  font-size: 16px;
+  font-weight: 700; /* Simulated 500 since Space Mono only has 400/700 */
+}
+
+.caption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.00;
+  color: var(--text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  color: var(--accent-blue);
+  text-decoration-color: var(--accent-blue);
+}
+a.nav-link {
+  text-decoration: none;
+  font-weight: 700; /* 500 equivalent */
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700; /* 500 equivalent */
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px 20px;
+  transition: all 0.15s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--border-outline);
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+/* Inputs */
+.input-field {
+  background-color: var(--input-bg);
+  color: var(--opencode-dark); /* Always dark text inside this light input */
+  border: 1px solid var(--border-warm);
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+.input-field:focus {
+  border-color: var(--accent-blue);
+}
+
+/* Terminal Hero */
+.terminal-window {
+  border: 1px solid var(--border-outline);
+  border-radius: 8px;
+  background-color: var(--opencode-dark);
+  color: var(--opencode-light);
+  overflow: hidden;
+  text-align: left;
+}
+.terminal-header {
+  border-bottom: 1px solid var(--border-outline);
+  padding: 12px 16px;
+  display: flex;
+  gap: 8px;
+  background-color: var(--dark-surface);
+}
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--border-outline);
+}
+.terminal-body {
+  padding: 32px;
+}
+
+/* Layout */
+.container {
+  max-width: 900px; /* Narrow reading width */
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+.feature-item {
+  margin-bottom: 24px;
+}
+.feature-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.feature-desc {
+  color: var(--text-secondary);
+}

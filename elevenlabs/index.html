@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevenLabs Design Showcase</title>
+  <link rel="stylesheet" href="./elevenlabs.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; background-color: var(--pure-white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05);">
+    <div style="display: flex; align-items: center; gap: 32px;">
+      <a href="/" style="font-family: var(--font-display); font-size: 24px; color: var(--black); text-decoration: none;">ElevenLabs</a>
+      <div style="display: flex; gap: 24px;">
+        <a href="#" style="color: var(--dark-gray); text-decoration: none; font-size: 15px; font-weight: 500;">Product</a>
+        <a href="#" style="color: var(--dark-gray); text-decoration: none; font-size: 15px; font-weight: 500;">Resources</a>
+        <a href="#" style="color: var(--dark-gray); text-decoration: none; font-size: 15px; font-weight: 500;">Company</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <button class="btn btn-white">Log in</button>
+      <button class="btn btn-black">Get started free</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" style="text-align: center;">
+      <h1 class="display-hero" style="max-width: 800px; margin: 0 auto 32px;">The most realistic AI speech software ever.</h1>
+      <p class="body-large" style="max-width: 600px; margin: 0 auto 48px;">ElevenLabs brings the most compelling, rich and lifelike voices to creators and developers in any language.</p>
+      <div style="display: flex; justify-content: center; gap: 16px;">
+        <button class="btn btn-warm">Try it out now</button>
+      </div>
+    </section>
+
+    <section class="section section-gray">
+      <div class="container">
+        <h2 class="section-heading" style="margin-bottom: 64px; text-align: center;">Vibrant and lifelike.</h2>
+        
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="card-heading" style="margin-bottom: 16px;">Text to Speech</h3>
+            <p class="body-standard">Instantly convert any text into high-quality audio with our state-of-the-art models.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-heading" style="margin-bottom: 16px;">Speech to Speech</h3>
+            <p class="body-standard">Change the voice of your audio while maintaining the original emotion and delivery.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-heading" style="margin-bottom: 16px;">Dubbing</h3>
+            <p class="body-standard">Automatically translate and dub your videos into 29+ languages in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div style="background: linear-gradient(135deg, #fff9f0 0%, #f0f7ff 100%); padding: 80px; border-radius: 32px; text-align: center; box-shadow: var(--shadow-warm);">
+        <h2 class="section-heading" style="margin-bottom: 24px;">Built for creators.</h2>
+        <p class="body-standard" style="max-width: 600px; margin: 0 auto 48px;">Whether you're a YouTuber, an author, or a game developer, ElevenLabs provides the tools to tell your story.</p>
+        <button class="btn btn-black" style="padding: 0 32px; height: 48px;">
+          <span class="label-bold" style="color: #fff;">Get Started</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 80px 0; border-top: 1px solid var(--light-gray);">
+    <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 24px; margin-bottom: 24px;">ElevenLabs</div>
+        <p class="body-standard" style="font-size: 14px;">The world's most advanced AI audio platform.</p>
+      </div>
+      <div>
+        <div class="label-bold" style="margin-bottom: 16px;">Product</div>
+        <div style="margin-bottom: 8px; font-size: 14px; color: var(--dark-gray);">Voice Library</div>
+        <div style="margin-bottom: 8px; font-size: 14px; color: var(--dark-gray);">API</div>
+        <div style="margin-bottom: 8px; font-size: 14px; color: var(--dark-gray);">Demos</div>
+      </div>
+      <div>
+        <div class="label-bold" style="margin-bottom: 16px;">Support</div>
+        <div style="margin-bottom: 8px; font-size: 14px; color: var(--dark-gray);">Help Center</div>
+        <div style="margin-bottom: 8px; font-size: 14px; color: var(--dark-gray);">Community</div>
+        <div style="margin-bottom: 8px; font-size: 14px; color: var(--dark-gray);">Guides</div>
+      </div>
+      <div>
+        <button class="btn btn-white" style="width: 100%;">Sign Up</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./elevenlabs.js"></script>
+</body>
+</html>

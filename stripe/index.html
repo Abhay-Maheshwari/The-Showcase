@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripe Design Showcase</title>
+    <link rel="stylesheet" href="./stripe.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="logo">Stripe Showcase</a>
+      <div class="nav-links">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#developers" class="nav-link">Developers</a>
+        <a href="#company" class="nav-link">Company</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 8px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme"></button>
+        <a href="/" class="btn btn-ghost">Gallery</a>
+        <button class="btn btn-primary">Start now</button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="badge-success" style="margin-bottom: 24px;">New • Financial Connections</div>
+        <h1 class="display-hero">Financial infrastructure<br>for the internet</h1>
+        <p class="body-large" style="margin-top: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Millions of companies of all sizes use Stripe online and in person to accept payments, send payouts, automate financial processes, and ultimately grow revenue.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+          <button class="btn btn-primary">Start now</button>
+          <button class="btn btn-ghost">Contact sales</button>
+        </div>
+      </section>
+
+      <div class="container section">
+        <h3 class="section-heading" style="margin-bottom: 48px; text-align: center;">A fully integrated suite of payments products</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+          <div class="card featured">
+            <h4 class="sub-heading-large" style="margin-bottom: 16px;">Payments</h4>
+            <p class="body">Online and in-person payments for startups to Fortune 500s.</p>
+          </div>
+          <div class="card">
+            <h4 class="sub-heading-large" style="margin-bottom: 16px;">Billing</h4>
+            <p class="body">Build and scale your recurring revenue.</p>
+          </div>
+          <div class="card">
+            <h4 class="sub-heading-large" style="margin-bottom: 16px;">Connect</h4>
+            <p class="body">Everything platforms and marketplaces need to get paid and route payments globally.</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="dark-section">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+            <div>
+              <h3 class="section-heading" style="margin-bottom: 24px;">Designed for developers</h3>
+              <p class="body-large" style="margin-bottom: 32px;">
+                Stripe makes it easy for developers to integrate robust payment processing with a few lines of code. The powerful API allows you to build completely custom flows.
+              </p>
+              <button class="btn btn-primary">Read the docs</button>
+            </div>
+            
+            <div class="dark-card" style="font-family: var(--font-mono); font-size: 12px; line-height: 2.00;">
+              <div style="color: #64748d; margin-bottom: 8px;">// Create a PaymentIntent</div>
+              <div style="color: var(--pure-white);">
+                <span style="color: var(--magenta);">const</span> paymentIntent = <span style="color: var(--magenta);">await</span> stripe.paymentIntents.<span style="color: var(--ruby);">create</span>({<br>
+                &nbsp;&nbsp;amount: <span style="color: #108c3d;">1099</span>,<br>
+                &nbsp;&nbsp;currency: <span style="color: #665efd;">'usd'</span>,<br>
+                &nbsp;&nbsp;automatic_payment_methods: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;enabled: <span style="color: #108c3d;">true</span>,<br>
+                &nbsp;&nbsp;},<br>
+                });
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./stripe.js"></script>
+  </body>
+</html>

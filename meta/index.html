@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Store Showcase</title>
+    <link rel="stylesheet" href="./meta.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="font-weight: 700; font-size: 20px; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px;">
+          <svg width="24" height="24" viewBox="0 0 36 36" fill="currentColor">
+            <path d="M25.75,12.5c-2.45,0-4.52,1.2-5.75,3.07C18.77,13.7,16.7,12.5,14.25,12.5c-3.66,0-6.75,3.09-6.75,6.75s3.09,6.75,6.75,6.75c2.45,0,4.52-1.2,5.75-3.07c1.23,1.88,3.3,3.07,5.75,3.07c3.66,0,6.75-3.09,6.75-6.75S29.41,12.5,25.75,12.5z M14.25,22.5c-1.8,0-3.25-1.45-3.25-3.25s1.45-3.25,3.25-3.25s3.25,1.45,3.25,3.25S16.05,22.5,14.25,22.5z M25.75,22.5c-1.8,0-3.25-1.45-3.25-3.25s1.45-3.25,3.25-3.25s3.25,1.45,3.25,3.25S27.55,22.5,25.75,22.5z"/>
+          </svg>
+          Meta
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Shop</a>
+          <a href="#" class="nav-link">Quest</a>
+          <a href="#" class="nav-link">Ray-Ban Meta</a>
+          <a href="#" class="nav-link">Apps & Games</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme" style="padding: 8px; border: none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="btn btn-primary">Shop Now</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Cinematic Hero -->
+      <section class="section section-dark" style="padding: 120px 0; position: relative; overflow: hidden; min-height: 80vh; display: flex; align-items: center;">
+        <!-- Simulated cinematic background -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, #181A1B, #301040); z-index: 0;"></div>
+        <div class="gradient-overlay" style="z-index: 1;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2; width: 100%;">
+          <div style="max-width: 600px;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 14px; font-weight: 700; color: #A121CE; margin-bottom: 16px;">New Release</p>
+            <h1 class="display-1" style="margin-bottom: 24px;">Meta Quest 3</h1>
+            <h4 class="heading-2" style="margin-bottom: 32px; color: #E4E6EB;">Expand your world with mixed reality.</h4>
+            <div style="display: flex; gap: 16px;">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-secondary" style="color: white; border-color: rgba(255,255,255,0.3);">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- White Canvas Product Grid -->
+      <section class="section container">
+        <div style="text-align: center; margin-bottom: 64px;">
+          <h2 class="display-2" style="margin-bottom: 16px;">Featured Products</h2>
+          <p class="body-copy">Explore the latest in virtual reality and smart glasses.</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
+          <!-- Product Card 1 -->
+          <div class="card product-card elevated">
+            <div class="product-card-image" style="background: linear-gradient(to bottom right, #f8f9fa, #e9ecef); display: flex; align-items: center; justify-content: center;">
+              <!-- Placeholder for product image -->
+              <div style="width: 200px; height: 120px; background: #dee2e6; border-radius: 12px;"></div>
+            </div>
+            <div class="product-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="heading-1" style="font-size: 24px;">Meta Quest 2</h3>
+                <span style="font-weight: 700; font-size: 18px;">From $249</span>
+              </div>
+              <p class="body-copy" style="font-size: 16px; margin-bottom: 24px;">Our most affordable all-in-one VR system.</p>
+              <button class="btn btn-secondary" style="width: 100%;">Shop Quest 2</button>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="card product-card elevated">
+            <div class="product-card-image" style="background: linear-gradient(to bottom right, #fdf4f4, #fae3e3); display: flex; align-items: center; justify-content: center;">
+              <!-- Placeholder for product image -->
+              <div style="width: 180px; height: 60px; background: #eebfbf; border-radius: 8px;"></div>
+            </div>
+            <div class="product-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="heading-1" style="font-size: 24px;">Ray-Ban Meta</h3>
+                <span style="font-weight: 700; font-size: 18px;">From $299</span>
+              </div>
+              <p class="body-copy" style="font-size: 16px; margin-bottom: 24px;">Next-generation smart glasses.</p>
+              <button class="btn btn-secondary" style="width: 100%;">Shop Smart Glasses</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Soft Gray Feature Section -->
+      <section class="section section-soft">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+            <div style="border-radius: 24px; overflow: hidden; aspect-ratio: 4/3; background: #1C1E21; position: relative;">
+              <!-- Decorative graphic -->
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: radial-gradient(circle, rgba(161,33,206,0.2) 0%, rgba(0,0,0,0) 70%);"></div>
+            </div>
+            <div>
+              <h2 class="display-2" style="margin-bottom: 24px;">Immersive experiences await.</h2>
+              <p class="body-copy" style="margin-bottom: 32px;">Discover hundreds of hit games, one-of-a-kind experiences, and ways to work and create.</p>
+              <button class="btn btn-primary">Explore Apps & Games</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./meta.js"></script>
+  </body>
+</html>

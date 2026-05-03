@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanity Design Showcase</title>
+    <link rel="stylesheet" href="./sanity.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--sanity-black);">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 48px;">
+        <a href="/" style="font-weight: 500; font-size: 18px; color: var(--white); letter-spacing: -0.5px;">Sanity</a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Solutions</a>
+          <a href="#" class="nav-link">Resources</a>
+          <a href="#" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Docs</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-link" style="color: var(--silver);">Log in</a>
+        <button class="btn btn-primary">Start building</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: left; padding-top: 140px; padding-bottom: 100px;">
+        <div style="max-width: 900px;">
+          <h1 class="display-hero" style="margin-bottom: 24px;">Content is data.</h1>
+          <p class="body-text" style="font-size: 20px; line-height: 1.6; max-width: 600px; margin-bottom: 48px;">
+            Treat content as data and build remarkable digital experiences. The Sanity Composable Content Cloud is the premier headless CMS.
+          </p>
+          <div style="display: flex; gap: 16px;">
+            <button class="btn btn-primary" style="padding: 12px 24px; font-size: 18px;">Start building</button>
+            <button class="btn btn-secondary" style="padding: 12px 24px; font-size: 18px; border: 1px solid var(--dark-gray);">Book a demo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="section container">
+        <h2 class="section-heading" style="margin-bottom: 64px; max-width: 800px;">Everything you need to deliver content anywhere.</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <!-- Card 1 -->
+          <div class="card">
+            <div style="margin-bottom: 24px;">
+              <span class="mono-label">Sanity Studio</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 16px; font-size: 24px; letter-spacing: -0.24px;">Customizable workspace</h3>
+            <p class="body-text">
+              An open-source React single-page application you can customize with your own components and deploy anywhere.
+            </p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="card">
+            <div style="margin-bottom: 24px;">
+              <span class="mono-label">Content Lake</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 16px; font-size: 24px; letter-spacing: -0.24px;">Real-time database</h3>
+            <p class="body-text">
+              Store your content as structured JSON. Query it in real-time. Distribute globally via our CDN edge network.
+            </p>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="card">
+            <div style="margin-bottom: 24px;">
+              <span class="mono-label">GROQ & GraphQL</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 16px; font-size: 24px; letter-spacing: -0.24px;">Developer experience</h3>
+            <p class="body-text">
+              Query exactly what you need with GROQ, our open-source query language, or use standard GraphQL.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / Form Section -->
+      <section class="section container" style="border-top: 1px solid var(--dark-gray);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px;">
+          <div>
+            <span class="mono-label" style="color: var(--neon-green);">Enterprise</span>
+            <h2 class="section-heading" style="margin-top: 16px; margin-bottom: 24px;">Scale with confidence.</h2>
+            <p class="body-text">
+              Get dedicated support, custom SLAs, and advanced security features for your organization.
+            </p>
+          </div>
+          <div style="background-color: var(--dark-gray); padding: 32px; border-radius: 6px;">
+            <div style="margin-bottom: 16px;">
+              <input type="email" class="input-field" placeholder="Work email">
+              <p class="mono-label" style="font-size: 11px; margin-top: 8px;">We'll never share your email.</p>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; border-radius: 3px; padding: 12px;">Contact Sales</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./sanity.js"></script>
+  </body>
+</html>

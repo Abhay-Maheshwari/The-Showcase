@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binance.US Design Showcase</title>
+  <link rel="stylesheet" href="./binance.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <div class="ticker-strip">
+    <div class="container" style="display: flex; gap: 32px; overflow-x: auto; white-space: nowrap;">
+      <div class="ticker-item"><span>BTC/USD</span> <span class="price-up">$64,231.50 +2.4%</span></div>
+      <div class="ticker-item"><span>BNB/USD</span> <span class="price-up">$582.10 +1.2%</span></div>
+      <div class="ticker-item"><span>SOL/USD</span> <span class="price-down">$142.45 -0.8%</span></div>
+      <div class="ticker-item"><span>ETH/USD</span> <span class="price-up">$3,421.12 +0.5%</span></div>
+    </div>
+  </div>
+
+  <nav style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; background-color: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #E6E8EA;">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <a href="/" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+        <div style="width: 24px; height: 24px; background: var(--binance-yellow); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+        <span style="font-weight: 700; font-size: 20px; color: var(--ink);">Binance.US</span>
+      </a>
+      <div style="display: flex; gap: 24px;">
+        <a href="#" style="color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600;">Buy Crypto</a>
+        <a href="#" style="color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600;">Markets</a>
+        <a href="#" style="color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600;">Trade</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="#" style="color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600;">Log In</a>
+      <button class="btn btn-yellow-pill">Get Started</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <div>
+        <h1 class="display-hero" style="margin-bottom: 24px;">Buy, sell, and trade crypto with confidence.</h1>
+        <p class="body-large" style="margin-bottom: 40px;">The secure way to trade Bitcoin, Ethereum, and 150+ cryptocurrencies with some of the lowest fees in the US.</p>
+        <div style="display: flex; gap: 16px;">
+          <button class="btn btn-yellow-pill" style="padding: 14px 48px;">Sign Up Now</button>
+        </div>
+      </div>
+      <div style="position: relative;">
+        <div style="width: 100%; aspect-ratio: 1; background: radial-gradient(circle, rgba(240,185,11,0.2) 0%, transparent 70%); position: absolute; top: 0; left: 0;"></div>
+        <div style="background: var(--white); border-radius: 24px; padding: 24px; box-shadow: var(--shadow-subtle); position: relative; z-index: 2; border: 1px solid #E6E8EA;">
+           <!-- App UI Mockup placeholder -->
+           <div style="height: 400px; display: flex; flex-direction: column; gap: 20px;">
+              <div style="height: 40px; background: var(--snow); border-radius: 8px;"></div>
+              <div style="flex: 1; background: #fafafa; border-radius: 12px; border: 1px dashed #ddd; display: flex; align-items: center; justify-content: center; color: #999;">Trading View Mockup</div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="container">
+        <h2 class="section-heading" style="text-align: center; margin-bottom: 64px;">Trusted by millions of US traders</h2>
+        <div class="grid-3">
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 700; color: var(--binance-yellow); margin-bottom: 8px;">$65B+</div>
+            <div style="font-size: 14px; color: var(--slate); text-transform: uppercase; letter-spacing: 1px;">24h Trading Volume</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 700; color: var(--binance-yellow); margin-bottom: 8px;">150+</div>
+            <div style="font-size: 14px; color: var(--slate); text-transform: uppercase; letter-spacing: 1px;">Cryptocurrencies</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 700; color: var(--binance-yellow); margin-bottom: 8px;">0.0%</div>
+            <div style="font-size: 14px; color: var(--slate); text-transform: uppercase; letter-spacing: 1px;">Trading Fees on BTC</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-heading" style="margin-bottom: 48px;">Explore Our Features</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div style="font-size: 32px; margin-bottom: 24px;">🔒</div>
+          <h3 class="card-title" style="margin-bottom: 16px;">Advanced Security</h3>
+          <p class="body-standard" style="color: var(--slate);">State-of-the-art security measures to keep your assets and personal information safe.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px; margin-bottom: 24px;">⚡</div>
+          <h3 class="card-title" style="margin-bottom: 16px;">Fast Onboarding</h3>
+          <p class="body-standard" style="color: var(--slate);">Get verified and start trading in minutes with our streamlined KYC process.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px; margin-bottom: 24px;">📊</div>
+          <h3 class="card-title" style="margin-bottom: 16px;">Advanced Trading</h3>
+          <p class="body-standard" style="color: var(--slate);">Professional tools and real-time market data for experienced traders.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color: var(--binance-dark); color: var(--white); padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;">
+      <div>
+        <div style="font-weight: 700; font-size: 24px; margin-bottom: 24px;">Binance.US</div>
+        <p style="color: var(--slate); font-size: 14px; line-height: 1.6;">The most trusted platform for US based traders to access the crypto market.</p>
+      </div>
+      <div>
+        <div style="font-weight: 600; margin-bottom: 24px;">Products</div>
+        <div style="margin-bottom: 12px; color: var(--slate); font-size: 14px;">Buy & Sell</div>
+        <div style="margin-bottom: 12px; color: var(--slate); font-size: 14px;">Advanced Trade</div>
+        <div style="margin-bottom: 12px; color: var(--slate); font-size: 14px;">Staking</div>
+      </div>
+      <div>
+        <div style="font-weight: 600; margin-bottom: 24px;">Support</div>
+        <div style="margin-bottom: 12px; color: var(--slate); font-size: 14px;">Help Center</div>
+        <div style="margin-bottom: 12px; color: var(--slate); font-size: 14px;">Fee Schedule</div>
+        <div style="margin-bottom: 12px; color: var(--slate); font-size: 14px;">API Docs</div>
+      </div>
+      <div>
+        <button class="btn btn-yellow-pill" style="width: 100%;">Get Started</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./binance.js"></script>
+</body>
+</html>

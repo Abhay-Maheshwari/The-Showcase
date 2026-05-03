@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&display=swap');
+
+/* Font fallbacks representing the 3 voices of Cursor: Gothic display, serif editorial, mono code */
+:root {
+  --font-gothic: 'League Gothic', 'Impact', sans-serif;
+  --font-serif: 'Crimson Pro', 'Georgia', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-ui: system-ui, -apple-system, sans-serif;
+
+  /* Colors */
+  --cursor-dark: #26251e; /* Warm near-black */
+  --cursor-cream: #f2f1ed; /* Primary background */
+  --cursor-light: #e6e5e0; /* Secondary surface */
+  --surface-300: #ebeae5; /* Button default */
+  --surface-500: #e1e0db;
+  
+  --accent-orange: #f54e00;
+  --error-crimson: #cf2d56;
+  --success-green: #1f8a65;
+  
+  /* Timeline colors */
+  --color-thinking: #dfa88f;
+  --color-grep: #9fc9a2;
+  --color-read: #9fbbe0;
+  --color-edit: #c0a8dd;
+
+  /* Borders (Using rgba fallback for oklab) */
+  --border-primary: rgba(38, 37, 30, 0.1);
+  --border-medium: rgba(38, 37, 30, 0.2);
+  --text-muted: rgba(38, 37, 30, 0.55);
+
+  /* Shadows */
+  --shadow-elevated: rgba(0,0,0,0.14) 0px 28px 70px, rgba(0,0,0,0.1) 0px 14px 32px;
+  --shadow-focus: rgba(0,0,0,0.1) 0px 4px 12px;
+
+  /* Theme mappings */
+  --bg-primary: var(--cursor-cream);
+  --text-primary: var(--cursor-dark);
+  --card-bg: var(--cursor-light);
+  --btn-bg: var(--surface-300);
+}
+
+/* Light mode inversion (Cursor is already light, so dark mode will be the inverted one) */
+[data-theme="dark"] {
+  --bg-primary: #1a1a16;
+  --text-primary: #e6e5e0;
+  --card-bg: #22211b;
+  --btn-bg: #2a2922;
+  --border-primary: rgba(230, 229, 224, 0.1);
+  --border-medium: rgba(230, 229, 224, 0.2);
+  --text-muted: rgba(230, 229, 224, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-serif); /* Default to editorial serif */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-gothic);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.10;
+  letter-spacing: -2.16px; /* Aggressive negative tracking */
+  text-transform: uppercase;
+}
+
+h2.section-heading {
+  font-family: var(--font-gothic);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.20;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+h3.sub-heading {
+  font-family: var(--font-gothic);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+}
+
+p.body-serif {
+  font-family: var(--font-serif);
+  font-size: 19.2px;
+  font-weight: 500;
+  line-height: 1.50;
+}
+
+p.body-serif-sm {
+  font-family: var(--font-serif);
+  font-size: 17.28px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.system-label {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--accent-orange);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-gothic);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s ease;
+  line-height: 1.0;
+}
+
+.btn-primary {
+  background: var(--btn-bg);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.btn-primary:hover {
+  color: var(--error-crimson);
+}
+.btn-primary:focus {
+  box-shadow: var(--shadow-focus);
+}
+
+.btn-pill {
+  background: var(--card-bg);
+  color: var(--text-muted);
+  padding: 3px 12px;
+  border-radius: 9999px; /* Full pill */
+  font-size: 14px;
+}
+.btn-pill:hover {
+  color: var(--error-crimson);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Editor Mockup */
+.editor-mockup {
+  background: #1a1a16;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.67;
+  color: #e6e5e0;
+}
+.editor-header {
+  background: #22211b;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  gap: 8px;
+}
+
+/* AI Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 1px solid var(--border-primary);
+  padding-left: 24px;
+  margin-left: 8px;
+}
+.timeline-item {
+  position: relative;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -29px; /* Align with border-left */
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-primary);
+}
+.timeline-item.thinking::before { background: var(--color-thinking); }
+.timeline-item.grep::before { background: var(--color-grep); }
+.timeline-item.read::before { background: var(--color-read); }
+.timeline-item.edit::before { background: var(--color-edit); }
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(242, 241, 237, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(26, 26, 22, 0.9);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.hero {
+  padding: 120px 0 60px;
+  text-align: center;
+}

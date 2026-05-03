@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenCode.ai Design Showcase</title>
+    <link rel="stylesheet" href="./opencode.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <!-- Default to dark theme for terminal aesthetic -->
+  <body data-theme="dark">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="font-weight: 700; font-size: 18px; text-decoration: none;">> opencode.ai_</a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Features</a>
+          <a href="#" class="nav-link">Documentation</a>
+          <a href="#" class="nav-link">GitHub</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn" style="padding: 4px; border: none; background: transparent; color: var(--text-primary);" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="btn btn-primary">Install CLI</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 80px; padding-bottom: 48px;">
+        <h1 class="display-hero" style="margin-bottom: 24px;">The open source AI coding agent.</h1>
+        <p class="body-text" style="color: var(--text-secondary); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          OpenCode integrates directly into your terminal, understands your entire codebase, and writes code alongside you. No proprietary lock-in.
+        </p>
+        
+        <!-- Terminal Window -->
+        <div class="terminal-window" style="margin-bottom: 64px;">
+          <div class="terminal-header">
+            <div class="terminal-dot" style="background-color: var(--danger-red);"></div>
+            <div class="terminal-dot" style="background-color: var(--warning-orange);"></div>
+            <div class="terminal-dot" style="background-color: var(--success-green);"></div>
+          </div>
+          <div class="terminal-body">
+            <div style="color: var(--accent-blue); margin-bottom: 16px;">$ opencode init</div>
+            <div style="color: var(--text-secondary); margin-bottom: 8px;">Analyzing workspace...</div>
+            <div style="color: var(--text-secondary); margin-bottom: 8px;">Found React, TypeScript, and TailwindCSS.</div>
+            <div style="margin-bottom: 16px;">Project initialized. Ready for instructions.</div>
+            
+            <div style="color: var(--accent-blue); margin-bottom: 16px;">$ opencode "Create a user authentication flow"</div>
+            <div style="color: var(--text-secondary); margin-bottom: 8px;">> Generating components...</div>
+            <div style="color: var(--text-secondary); margin-bottom: 8px;">> Writing tests...</div>
+            <div style="color: var(--success-green);">✓ Authentication flow complete. Added 4 files.</div>
+            <div style="color: var(--text-primary); margin-top: 16px; display: inline-block; border-right: 10px solid var(--text-primary); animation: blink 1s step-end infinite;">_</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature List Section -->
+      <section class="section container" style="border-top: 1px solid var(--border-color); padding-top: 64px;">
+        <h2 class="section-heading" style="margin-bottom: 48px;">Why OpenCode?</h2>
+        
+        <ul class="feature-list">
+          <li class="feature-item">
+            <div class="feature-title">Open Source Foundation</div>
+            <div class="feature-desc">Audit the code, run it locally, and deploy it on your own infrastructure. You control your data and your development environment.</div>
+          </li>
+          <li class="feature-item">
+            <div class="feature-title">Terminal Native</div>
+            <div class="feature-desc">Works where you work. No context switching to web browsers or specialized IDE plugins. It's just another command in your workflow.</div>
+          </li>
+          <li class="feature-item">
+            <div class="feature-title">Bring Your Own Model</div>
+            <div class="feature-desc">Plug in OpenAI, Anthropic, or run local models via Ollama. Swap intelligence providers without changing your workflow.</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Email Capture / Waitlist -->
+      <section class="section container" style="border-top: 1px solid var(--border-color); padding-top: 64px; padding-bottom: 120px;">
+        <div style="background-color: var(--dark-surface); border: 1px solid var(--border-outline); border-radius: 8px; padding: 48px; text-align: center;">
+          <h2 class="section-heading" style="margin-bottom: 16px;">Join the private beta</h2>
+          <p class="body-text" style="color: var(--text-secondary); margin-bottom: 32px;">Get early access to the next generation of AI coding tools.</p>
+          
+          <form style="display: flex; gap: 16px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+            <input type="email" class="input-field" placeholder="email@address.com" style="flex: 1; min-width: 250px;">
+            <button type="submit" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px; border-radius: 6px;">Subscribe</button>
+          </form>
+          <p class="caption" style="margin-top: 16px;">No spam. Unsubscribe anytime.</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./opencode.js"></script>
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  </body>
+</html>

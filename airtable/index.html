@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airtable Design Showcase</title>
+    <link rel="stylesheet" href="./airtable.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.666 1.833C11.868 1.547 12.132 1.547 12.334 1.833L22.607 16.366C22.843 16.699 22.646 17.134 22.25 17.134H1.75C1.354 17.134 1.157 16.699 1.393 16.366L11.666 1.833Z" fill="var(--airtable-blue)"/>
+        </svg>
+        Airtable Showcase
+      </a>
+      <div class="nav-links">
+        <a href="#platform" class="nav-link">Platform</a>
+        <a href="#solutions" class="nav-link">Solutions</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-toggle btn btn-white" aria-label="Toggle theme" style="padding: 8px;"></button>
+        <a href="/" class="btn btn-white">Gallery</a>
+        <button class="btn btn-primary">Sign up for free</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="display-bold" style="max-width: 800px; margin: 0 auto;">Build apps that transform your business</h1>
+          <p class="body" style="margin-top: 24px; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--text-weak);">
+            Airtable is the low-code platform for building collaborative apps. Customize your workflow, collaborate, and achieve ambitious outcomes.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Sign up for free</button>
+            <button class="btn btn-white">Contact Sales</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="container section">
+        <h3 class="section-heading" style="margin-bottom: 64px; text-align: center;">Sophisticated simplicity</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+          <!-- Feature Card 1 -->
+          <div class="card card-large">
+            <h5 class="card-title" style="margin-bottom: 16px;">Relational Database Power</h5>
+            <p class="body" style="color: var(--text-weak); margin-bottom: 24px;">
+              Link records, write complex formulas, and structure your data exactly how you need it. The power of a database with the familiarity of a spreadsheet.
+            </p>
+            <a href="#" style="color: var(--airtable-blue); font-weight: 500; text-decoration: none; letter-spacing: 0.12px;">Learn more →</a>
+          </div>
+          
+          <!-- Feature Card 2 -->
+          <div class="card card-large">
+            <h5 class="card-title" style="margin-bottom: 16px;">Custom Interfaces</h5>
+            <p class="body" style="color: var(--text-weak); margin-bottom: 24px;">
+              Build tailored interfaces for every team member. Give them exactly the information they need to do their jobs without overwhelming them.
+            </p>
+            <a href="#" style="color: var(--airtable-blue); font-weight: 500; text-decoration: none; letter-spacing: 0.12px;">Explore interfaces →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./airtable.js"></script>
+  </body>
+</html>

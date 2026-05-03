@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
+
+/* Fallback for Roobert PRO using system-ui/sans-serif, with Noto Sans for body */
+:root {
+  /* Primary */
+  --color-near-black: #1c1c1e;
+  --color-white: #ffffff;
+  --color-blue-450: #5b76fe;
+  --color-actionable-pressed: #2a41b6;
+  --color-success: #00b473;
+  
+  /* Neutral */
+  --color-slate: #555a6a;
+  --color-placeholder: #a5a8b5;
+  --color-border: #c7cad5;
+  --color-ring: rgb(224,226,232);
+  --color-bg-subtle: #f5f6f8;
+  
+  /* Pastel Palette */
+  --pastel-coral-light: #ffc6c6;
+  --pastel-coral-dark: #600000;
+  --pastel-rose-light: #ffd8f4;
+  --pastel-teal-light: #c3faf5;
+  --pastel-teal-dark: #187574;
+  --pastel-orange-light: #ffe6cd;
+  --pastel-yellow-dark: #746019;
+  
+  /* Fonts */
+  --font-display: system-ui, -apple-system, sans-serif; /* Best approximation for Roobert PRO's geometric feel without custom loading */
+  --font-body: 'Noto Sans', sans-serif;
+  
+  /* Theme mapping */
+  --bg-primary: var(--color-white);
+  --text-primary: var(--color-near-black);
+  --text-secondary: var(--color-slate);
+  --btn-primary-bg: var(--color-blue-450);
+  --btn-primary-text: var(--color-white);
+  --card-bg: var(--color-white);
+  --nav-bg: var(--color-white);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --color-ring: #333333;
+  --color-border: #444444;
+  --card-bg: #1e1e1e;
+  --nav-bg: #121212;
+  --pastel-coral-light: #600000;
+  --pastel-coral-dark: #ffc6c6;
+  --pastel-teal-light: #187574;
+  --pastel-teal-dark: #c3faf5;
+  --pastel-orange-light: #7a4b1c;
+  --pastel-rose-light: #7a2b66;
+  --color-bg-subtle: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 500; /* Medium */
+  line-height: 1.15;
+  letter-spacing: -1.68px; /* Signature negative tracking */
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -1.44px;
+}
+
+h3.card-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.72px;
+}
+
+p.sub-heading {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.44px;
+  color: var(--text-secondary);
+}
+
+p.body-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* Links */
+a {
+  color: var(--color-blue-450);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 17.5px;
+  font-weight: 700;
+  letter-spacing: 0.175px;
+  cursor: pointer;
+  border-radius: 8px; /* Strict 8px radius */
+  transition: all 0.2s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  padding: 12px 24px;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--color-actionable-pressed);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--color-border);
+  padding: 11px 23px; /* Account for 1px border */
+}
+.btn-outlined:hover {
+  background-color: var(--color-bg-subtle);
+}
+
+.btn-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: none;
+  box-shadow: 0 0 0 1px var(--color-ring), 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-near-black);
+}
+.btn-icon-circle:hover {
+  box-shadow: 0 0 0 1px var(--color-border), 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 0 0 1px var(--color-ring); /* Ring shadow border */
+}
+
+.panel {
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 0 0 1px var(--color-ring);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 0 var(--color-ring);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none !important;
+}
+.nav-link:hover {
+  color: var(--color-blue-450);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+/* Pastel Accents */
+.accent-coral {
+  background-color: var(--pastel-coral-light);
+  color: var(--pastel-coral-dark);
+}
+.accent-teal {
+  background-color: var(--pastel-teal-light);
+  color: var(--pastel-teal-dark);
+}
+.accent-rose {
+  background-color: var(--pastel-rose-light);
+}
+.accent-orange {
+  background-color: var(--pastel-orange-light);
+}

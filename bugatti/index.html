@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bugatti Design Showcase</title>
+  <link rel="stylesheet" href="./bugatti.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="mono-label" style="cursor: pointer;">Menu</div>
+    <div class="wordmark">Bugatti</div>
+    <div class="mono-label" style="cursor: pointer;">Store</div>
+  </nav>
+
+  <main>
+    <section class="hero-cinema">
+      <!-- Full-bleed media -->
+      <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=2000" alt="Bugatti Chiron" class="media-bg">
+      <div class="vignette"></div>
+      
+      <div style="position: relative; z-index: 1; text-align: center;">
+        <h1 class="monumental" style="margin-bottom: 24px;">CHIRON</h1>
+        <div style="margin-top: 48px;">
+          <button class="btn btn-pill">Explore the legend</button>
+        </div>
+      </div>
+      
+      <div class="mono-label" style="position: absolute; bottom: 48px; left: 64px;">MOLSHEIM, FRANCE</div>
+      <div class="mono-label" style="position: absolute; bottom: 48px; right: 64px;">1500 HP / 1600 NM</div>
+    </section>
+
+    <section class="section-full">
+      <div class="container" style="text-align: center;">
+         <div class="mono-label-muted" style="margin-bottom: 32px;">The Peak of Performance</div>
+         <h2 class="mid-display" style="margin-bottom: 64px;">BORN FOR THE TRACK</h2>
+         
+         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; text-align: left;">
+            <div>
+               <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=1000" alt="Bugatti Detail" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 32px;">
+               <div class="mono-label" style="margin-bottom: 16px;">Aerodynamics</div>
+               <p style="font-size: 16px; opacity: 0.8; max-width: 400px;">Every curve and every intake is designed for one thing: the perfect management of air at 400+ km/h.</p>
+            </div>
+            <div style="margin-top: 100px;">
+               <img src="https://images.unsplash.com/photo-1566473065136-ca81016892f6?auto=format&fit=crop&q=80&w=1000" alt="Bugatti Interior" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 32px;">
+               <div class="mono-label" style="margin-bottom: 16px;">Craftsmanship</div>
+               <p style="font-size: 16px; opacity: 0.8; max-width: 400px;">Hand-stitched leather and solid aluminium. A cabin that is as sculptural as the exterior.</p>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <section class="section-full" style="background-color: #050505;">
+       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+          <h1 class="monumental" style="opacity: 0.1; font-size: 200px; position: absolute; pointer-events: none;">COUTURE</h1>
+          <div style="position: relative; z-index: 1; text-align: center; margin-top: 100px;">
+             <h2 class="mid-display" style="margin-bottom: 24px;">ATELIER MOLSHEIM</h2>
+             <p style="max-width: 600px; margin: 0 auto 48px; opacity: 0.8;">Where your unique vision becomes a reality. Each Bugatti is a masterpiece of personalization, hand-built by our master artisans.</p>
+             <button class="btn btn-pill">Define your masterpiece</button>
+          </div>
+       </div>
+    </section>
+  </main>
+
+  <footer style="padding: 100px 0; border-top: 1px solid #1a1a1a;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px;">
+       <div>
+          <div class="wordmark" style="font-size: 18px; margin-bottom: 32px;">Bugatti</div>
+          <p class="mono-label-muted" style="font-size: 10px;">© 2024 BUGATTI AUTOMOBILES S.A.S.</p>
+       </div>
+       <div>
+          <div class="mono-label" style="margin-bottom: 24px;">Models</div>
+          <div class="mono-label-muted" style="margin-bottom: 12px; cursor: pointer;">Chiron</div>
+          <div class="mono-label-muted" style="margin-bottom: 12px; cursor: pointer;">Mistral</div>
+          <div class="mono-label-muted" style="margin-bottom: 12px; cursor: pointer;">Bolide</div>
+       </div>
+       <div>
+          <div class="mono-label" style="margin-bottom: 24px;">Company</div>
+          <div class="mono-label-muted" style="margin-bottom: 12px; cursor: pointer;">Heritage</div>
+          <div class="mono-label-muted" style="margin-bottom: 12px; cursor: pointer;">Careers</div>
+          <div class="mono-label-muted" style="margin-bottom: 12px; cursor: pointer;">Media</div>
+       </div>
+       <div style="display: flex; flex-direction: column; gap: 16px;">
+          <button class="btn btn-utility">Contact Us</button>
+          <button class="btn btn-utility">Newsletter</button>
+       </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./bugatti.js"></script>
+</body>
+</html>

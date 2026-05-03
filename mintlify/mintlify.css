@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap');
+
+:root {
+  /* Colors - Primary */
+  --color-near-black: #0d0d0d;
+  --color-pure-white: #ffffff;
+  --color-brand: #18E299;
+  
+  /* Accents */
+  --color-brand-light: #d4fae8;
+  --color-brand-deep: #0fa76e;
+  
+  /* Neutrals */
+  --color-gray-900: #0d0d0d;
+  --color-gray-700: #333333;
+  --color-gray-500: #666666;
+  --color-gray-400: #888888;
+  --color-gray-200: #e5e5e5;
+  --color-gray-100: #f5f5f5;
+  --color-gray-50: #fafafa;
+  
+  /* Borders */
+  --border-subtle: rgba(0,0,0,0.05);
+  --border-medium: rgba(0,0,0,0.08);
+  
+  /* Shadows */
+  --shadow-ambient: rgba(0,0,0,0.03) 0px 2px 4px;
+  --shadow-btn: rgba(0,0,0,0.06) 0px 1px 2px;
+  
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+  
+  /* Theme mappings */
+  --bg-primary: var(--color-pure-white);
+  --text-primary: var(--color-near-black);
+  --text-secondary: var(--color-gray-700);
+  --text-muted: var(--color-gray-500);
+  --card-bg: var(--color-pure-white);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --btn-dark-bg: var(--color-near-black);
+  --btn-dark-text: var(--color-pure-white);
+  --border-color: var(--border-subtle);
+  
+  /* Hero Gradient */
+  --hero-gradient: radial-gradient(100% 100% at 50% 0%, rgba(24, 226, 153, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0d0d0d;
+  --text-primary: #ededed;
+  --text-secondary: #a0a0a0;
+  --text-muted: #888888;
+  --card-bg: #141414;
+  --nav-bg: rgba(13, 13, 13, 0.8);
+  --btn-dark-bg: var(--color-pure-white);
+  --btn-dark-text: var(--color-near-black);
+  --border-color: rgba(255,255,255,0.08);
+  --border-subtle: rgba(255,255,255,0.05);
+  --border-medium: rgba(255,255,255,0.12);
+  --shadow-ambient: rgba(0,0,0,0.4) 0px 2px 4px;
+  --hero-gradient: radial-gradient(100% 100% at 50% 0%, rgba(24, 226, 153, 0.1) 0%, rgba(13, 13, 13, 0) 100%);
+  --color-brand-light: #0a4f36;
+  --color-brand-deep: #2bf4a8;
+  --color-gray-50: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -1.28px; /* Signature tight tracking */
+}
+
+h2.section-heading {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.10;
+  letter-spacing: -0.8px;
+}
+
+h3.sub-heading {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.30;
+  letter-spacing: -0.24px;
+}
+
+h4.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.30;
+  letter-spacing: -0.2px;
+}
+
+p.body-large {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--text-secondary);
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--text-secondary);
+}
+
+.label-uppercase {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+  color: var(--text-muted);
+}
+
+.mono-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.50;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-deep);
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--color-brand);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 9999px; /* Signature full pill */
+  transition: all 0.15s ease;
+  outline: none;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--btn-dark-bg);
+  color: var(--btn-dark-text);
+  padding: 8px 24px;
+  border: none;
+  box-shadow: var(--shadow-btn);
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  padding: 7px 12px; /* Accounts for border */
+  border: 1px solid var(--border-medium);
+}
+.btn-secondary:hover {
+  opacity: 0.9;
+  border-color: var(--text-muted);
+}
+
+.btn-nav {
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px; /* Nav buttons use 8px */
+}
+.btn-nav:hover {
+  background-color: var(--color-gray-50);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-ambient);
+  transition: border-color 0.2s ease;
+}
+.card:hover {
+  border-color: var(--border-medium);
+}
+
+.card-featured {
+  border-radius: 24px;
+  padding: 32px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0; /* Generous chapter breaks */
+}
+
+/* Atmospheric Hero Wash */
+.hero-wash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 800px;
+  background: var(--hero-gradient);
+  pointer-events: none;
+  z-index: -1;
+}

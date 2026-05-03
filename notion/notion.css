@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --notion-black: rgba(0, 0, 0, 0.95);
+  --notion-white: #ffffff;
+  --notion-blue: #0075de;
+  --notion-blue-hover: #005bab;
+  
+  /* Warm Neutrals */
+  --warm-white: #f6f5f4;
+  --warm-dark: #31302e;
+  --warm-gray-500: #615d59;
+  --warm-gray-300: #a39e98;
+  
+  /* Accents */
+  --teal: #2a9d99;
+  --green: #1aae39;
+  --orange: #dd5b00;
+  --pink: #ff64c8;
+  
+  /* Badges */
+  --badge-bg: #f2f9ff;
+  --badge-text: #097fe8;
+  
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
+  
+  /* Shadows & Borders */
+  --whisper-border: 1px solid rgba(0,0,0,0.1);
+  --card-shadow: rgba(0,0,0,0.04) 0px 4px 18px, rgba(0,0,0,0.027) 0px 2.025px 7.85px, rgba(0,0,0,0.02) 0px 0.8px 2.93px, rgba(0,0,0,0.01) 0px 0.175px 1.04px;
+  
+  /* Theme Mappings */
+  --bg-primary: var(--notion-white);
+  --bg-secondary: var(--warm-white);
+  --text-primary: var(--notion-black);
+  --text-secondary: var(--warm-gray-500);
+  --border-color: rgba(0,0,0,0.1);
+  --card-bg: var(--notion-white);
+  --nav-bg: var(--notion-white);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #191919;
+  --bg-secondary: #202020;
+  --text-primary: rgba(255,255,255,0.9);
+  --text-secondary: rgba(255,255,255,0.6);
+  --border-color: rgba(255,255,255,0.1);
+  --card-bg: #1f1f1f;
+  --nav-bg: #191919;
+  --whisper-border: 1px solid rgba(255,255,255,0.1);
+  --badge-bg: rgba(0, 117, 222, 0.2);
+  --badge-text: #62aef0;
+  --notion-black: rgba(255, 255, 255, 0.95);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -2.125px;
+}
+
+h2.section-heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -1.5px;
+}
+
+h3.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.25px;
+}
+
+p.body-large {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.125px;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.125px;
+  padding: 4px 8px;
+  border-radius: 9999px;
+}
+
+/* Links */
+a {
+  color: var(--notion-blue);
+  text-decoration: none;
+}
+a.nav-link {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 15px;
+}
+a.nav-link:hover {
+  color: var(--notion-blue);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  outline: none;
+  text-decoration: none !important;
+  padding: 8px 16px;
+}
+
+.btn-primary {
+  background-color: var(--notion-blue);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+.btn-primary:hover {
+  background-color: var(--notion-blue-hover);
+}
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid transparent;
+}
+.btn-ghost:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .btn-ghost:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--card-bg);
+  border: var(--whisper-border);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-card {
+  border-radius: 16px;
+  border: var(--whisper-border);
+  background-color: var(--card-bg);
+  box-shadow: rgba(0,0,0,0.01) 0px 1px 3px, rgba(0,0,0,0.02) 0px 3px 7px, rgba(0,0,0,0.02) 0px 7px 15px, rgba(0,0,0,0.04) 0px 14px 28px, rgba(0,0,0,0.05) 0px 23px 52px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: var(--whisper-border);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-warm {
+  background-color: var(--bg-secondary);
+}

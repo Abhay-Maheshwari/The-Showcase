@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HashiCorp Design Showcase</title>
+    <link rel="stylesheet" href="./hashicorp.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation (Light Mode Default) -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 48px;">
+        <a href="/" style="display: flex; align-items: center; gap: 8px; font-family: var(--font-brand); font-weight: 700; font-size: 24px; letter-spacing: -0.5px; color: var(--text-brand);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 4h4v16H4V4zm6 6h4v10h-4V10zm6-6h4v16h-4V4z"/>
+          </svg>
+          HashiCorp
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on small screens */">
+          <a href="#products">Products</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#docs">Docs</a>
+          <a href="#community">Community</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn btn-secondary-white" aria-label="Toggle theme" style="padding: 8px;"></button>
+        <a href="/" class="btn" style="color: var(--text-body);">Gallery</a>
+        <button class="btn btn-primary-dark">Contact Sales</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section (Dark Mode) -->
+      <section class="hero dark-section">
+        <div class="container" style="text-align: center;">
+          <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 24px auto;">Infrastructure for any cloud</h1>
+          <p class="body-large" style="max-width: 700px; margin: 0 auto 48px auto;">
+            Deliver applications faster by helping transition from manual processes and ITIL practices to self-service automation and DevOps engineering practices.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px;">
+            <button class="btn btn-secondary-white" style="padding: 12px 24px; font-size: 16px;">Get Started</button>
+            <button class="btn btn-primary-dark" style="padding: 12px 24px; font-size: 16px; border-color: transparent;">View Products</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section (Light Mode) -->
+      <section class="section container">
+        <div class="uppercase-label" style="text-align: center; margin-bottom: 16px;">The HashiCorp Stack</div>
+        <h2 class="section-heading" style="text-align: center; margin-bottom: 64px;">Provision, secure, connect, and run</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 32px; height: 32px; background: var(--color-terraform); border-radius: 4px;"></div>
+              <h4 class="card-title">Terraform</h4>
+            </div>
+            <p class="body-text" style="margin-bottom: 24px;">
+              Infrastructure as code to provision and manage any cloud, infrastructure, or service.
+            </p>
+            <button class="btn btn-terraform">Explore Terraform</button>
+          </div>
+          
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 32px; height: 32px; background: var(--color-vault); border-radius: 4px;"></div>
+              <h4 class="card-title">Vault</h4>
+            </div>
+            <p class="body-text" style="margin-bottom: 24px;">
+              Manage secrets and protect sensitive data. Secure, store and tightly control access to tokens, passwords, certificates, encryption keys.
+            </p>
+            <button class="btn btn-vault">Explore Vault</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enterprise Feature (Dark Mode) -->
+      <section class="section dark-section">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+          <div>
+            <div class="uppercase-label" style="color: var(--hcp-cool-gray); margin-bottom: 16px;">Enterprise Ready</div>
+            <h3 class="feature-heading" style="margin-bottom: 24px;">Standardize cloud operating models</h3>
+            <p class="body-text" style="margin-bottom: 32px; color: var(--hcp-mid-gray);">
+              HashiCorp provides infrastructure automation software for multi-cloud environments, enabling enterprises to unlock a common cloud operating model to provision, secure, connect, and run any application on any infrastructure.
+            </p>
+            <a href="#" style="font-family: var(--font-brand); font-weight: 600; font-size: 17px;">Read the whitepaper →</a>
+          </div>
+          <div class="card card-dark">
+            <h4 class="card-title" style="margin-bottom: 16px;">Request a Demo</h4>
+            <p class="body-text" style="margin-bottom: 24px;">See how HashiCorp can help your organization.</p>
+            <input type="text" class="input-dark" placeholder="Work Email" style="margin-bottom: 16px;">
+            <button class="btn btn-secondary-white" style="width: 100%; padding: 12px;">Submit Request</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./hashicorp.js"></script>
+  </body>
+</html>

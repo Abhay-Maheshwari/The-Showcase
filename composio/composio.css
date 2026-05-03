@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* Fallback for abcDiatype: using system geometric sans-serif */
+:root {
+  /* Colors */
+  --composio-cobalt: #0007cd;
+  --electric-cyan: #00ffff;
+  --signal-blue: #0089ff;
+  --ocean-blue: #0096ff;
+  
+  --void-black: #0f0f0f;
+  --pure-black: #000000;
+  --charcoal: #2c2c2c;
+  
+  --pure-white: #ffffff;
+  --muted-smoke: #444444;
+  --ghost-white: rgba(255, 255, 255, 0.6);
+  --whisper-white: rgba(255, 255, 255, 0.5);
+  --phantom-white: rgba(255, 255, 255, 0.2);
+
+  /* Borders */
+  --border-mist-12: rgba(255, 255, 255, 0.12);
+  --border-mist-10: rgba(255, 255, 255, 0.10);
+  --border-mist-08: rgba(255, 255, 255, 0.08);
+  --border-mist-06: rgba(255, 255, 255, 0.06);
+
+  /* Fonts */
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  /* Theme mappings */
+  --bg-primary: var(--void-black);
+  --text-primary: var(--pure-white);
+  --text-secondary: var(--ghost-white);
+  --card-bg: var(--pure-black);
+  --card-border: var(--border-mist-10);
+}
+
+/* Light mode inversion for the gallery toggle (Composio is inherently dark, we invert to white) */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --text-primary: #0f0f0f;
+  --text-secondary: #444444;
+  --card-bg: #f5f5f5;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --electric-cyan: #0089ff; /* Cyan is hard to see on white, shift to blue */
+  --void-black: #ffffff;
+  --pure-black: #f0f0f0;
+  --pure-white: #000000;
+  --border-mist-10: rgba(0, 0, 0, 0.1);
+  --ghost-white: rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.87;
+  letter-spacing: normal;
+}
+
+h2.section-heading {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.0;
+}
+
+h3.sub-heading {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.20;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--text-secondary);
+}
+
+.code-inline {
+  font-family: var(--font-code);
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  background: var(--phantom-white);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.overline {
+  font-family: var(--font-code);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--electric-cyan);
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background: #ffffff; /* Always white */
+  color: #0f0f0f; /* Always dark */
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+}
+.btn-primary:hover {
+  background: #e0e0e0;
+}
+
+.btn-cyan {
+  background: rgba(0, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--ocean-blue);
+}
+.btn-cyan:hover {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--signal-blue);
+}
+
+/* Cards & Brutalism */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 32px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.card-brutalist {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-brutalist:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Glow effects */
+.glow-cyan {
+  position: relative;
+}
+.glow-cyan::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,255,255,0.08) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-mist-06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.hero {
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(180deg, var(--composio-cobalt) -200%, var(--void-black) 40%);
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Inter:wght@400;500;600;700;900&display=swap');
+
+:root {
+  /* Colors */
+  --neon-volt: #faff69;
+  --forest-green: #166534;
+  --pale-yellow: #f4f692;
+  --pure-black: #000000;
+  --near-black: #141414;
+  --hover-gray: #3a3a3a;
+  --pure-white: #ffffff;
+  --silver: #a0a0a0;
+  --charcoal-border: rgba(65, 65, 65, 0.8);
+  --border-olive: #4f5100;
+
+  /* Fonts */
+  --font-display: 'Inter', sans-serif;
+  --font-code: 'Inconsolata', monospace;
+
+  /* Theme mappings (ClickHouse is exclusively dark) */
+  --bg-primary: var(--pure-black);
+  --text-primary: var(--pure-white);
+  --text-secondary: var(--silver);
+  --card-bg: transparent;
+  --card-border: var(--charcoal-border);
+}
+
+/* Light mode inversion for the gallery toggle (though ClickHouse is inherently dark) */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --card-bg: #f9f9f9;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --neon-volt: #d6db00; /* Darker neon for light mode contrast */
+  --pure-black: #ffffff; /* For explicitly inverted elements */
+  --near-black: #f0f0f0;
+  --hover-gray: #e5e5e5;
+  --pure-white: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-mega {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: normal;
+}
+
+h2.display-hero {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.0;
+}
+
+h3.feature-heading {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.30;
+}
+
+h4.sub-heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.38;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--text-secondary);
+}
+
+.uppercase-label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.stats-number {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.0;
+  color: var(--text-primary);
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--neon-volt);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.btn-neon {
+  background: var(--neon-volt);
+  color: #151515; /* Hardcoded dark text for contrast */
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--neon-volt);
+}
+.btn-neon:hover {
+  background: #1d1d1d;
+  color: var(--neon-volt);
+}
+.btn-neon:active {
+  color: var(--pale-yellow);
+}
+
+.btn-green {
+  background: var(--forest-green);
+  color: #ffffff; /* Hardcoded white */
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--near-black);
+}
+.btn-green:hover {
+  background: var(--hover-gray);
+}
+.btn-green:active {
+  color: var(--pale-yellow);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 32px;
+  border-radius: 4px;
+  border: 1px solid var(--border-olive);
+}
+.btn-ghost:hover {
+  background: var(--near-black);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 32px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.card-neon-highlight {
+  border: 1px solid var(--neon-volt);
+}
+
+.card-inset {
+  box-shadow: 0px 4px 25px rgba(0,0,0,0.14) inset;
+}
+
+/* Code Blocks */
+.code-block {
+  font-family: var(--font-code);
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--near-black);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 24px;
+  color: var(--pure-white);
+  overflow-x: auto;
+}
+.code-neon {
+  color: var(--neon-volt);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+/* Layout */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.hero {
+  padding: 120px 0;
+}

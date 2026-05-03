@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Brand */
+  --zapier-orange: #ff4f00;
+  --zapier-black: #201515;
+  
+  /* Surface & Background */
+  --cream-white: #fffefb;
+  --off-white: #fffdf9;
+  
+  /* Neutrals */
+  --dark-charcoal: #36342e;
+  --warm-gray: #939084;
+  --sand: #c5c0b1;
+  --light-sand: #eceae3;
+  
+  /* Fonts */
+  --font-display: 'Inter', sans-serif; /* Degular Display fallback */
+  --font-primary: 'Inter', sans-serif;
+  --font-editorial: 'Libre Baskerville', serif; /* GT Alpina fallback */
+  
+  /* Theme Map */
+  --bg-primary: var(--cream-white);
+  --text-primary: var(--zapier-black);
+  --text-secondary: var(--dark-charcoal);
+  --nav-bg: var(--cream-white);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 0.90;
+  letter-spacing: -1px;
+}
+
+h2.section-heading {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+h3.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.48px;
+}
+
+p.body-large {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.20;
+  letter-spacing: -0.2px;
+  color: var(--text-secondary);
+}
+
+p.body-standard {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.16px;
+}
+
+.editorial-text {
+  font-family: var(--font-editorial);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.uppercase-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--zapier-orange);
+  color: var(--cream-white);
+  border-color: var(--zapier-orange);
+  border-radius: 4px; /* Primary CTA uses 4px */
+  padding: 8px 16px;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-dark {
+  background-color: var(--zapier-black);
+  color: var(--cream-white);
+  padding: 20px 24px;
+}
+.btn-dark:hover {
+  background-color: var(--sand);
+  color: var(--zapier-black);
+  border-color: var(--sand);
+}
+
+.btn-light {
+  background-color: var(--light-sand);
+  color: var(--dark-charcoal);
+  border-color: var(--sand);
+  padding: 20px 24px;
+}
+.btn-light:hover {
+  background-color: var(--sand);
+  color: var(--zapier-black);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--cream-white);
+  border: 1px solid var(--sand);
+  border-radius: 5px;
+  padding: 32px;
+  transition: border-color 0.2s ease;
+}
+.card:hover {
+  border-color: var(--dark-charcoal);
+}
+
+/* Tabs */
+.tab-nav {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid var(--sand);
+}
+.tab-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--zapier-black);
+}
+.tab-item.active {
+  box-shadow: var(--zapier-orange) 0px -4px 0px 0px inset;
+}
+.tab-item:hover:not(.active) {
+  box-shadow: var(--sand) 0px -4px 0px 0px inset;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero { font-size: 56px; }
+}

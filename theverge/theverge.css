@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Oswald:wght@700&display=swap');
+
+/* Fallback for Manuka, PolySans, and PolySans Mono */
+:root {
+  /* Brand Hazards */
+  --jelly-mint: #3cffd0;
+  --verge-ultraviolet: #5200ff;
+  --console-mint: #309875;
+  --deep-link-blue: #3860be;
+  --purple-rule: #3d00bf;
+  
+  /* Surface & Background */
+  --canvas-black: #131313;
+  --surface-slate: #2d2d2d;
+  --image-frame: #313131;
+  --hazard-white: #ffffff;
+  --absolute-black: #000000;
+  
+  /* Text */
+  --primary-text: #ffffff;
+  --secondary-text: #949494;
+  --muted-text: #e9e9e9;
+  
+  /* Fonts */
+  /* Oswald is used as a stand-in for Manuka */
+  --font-display: 'Oswald', Impact, 'Arial Black', sans-serif;
+  /* Space Grotesk is used as a stand-in for PolySans */
+  --font-ui: 'Space Grotesk', -apple-system, sans-serif;
+  /* Space Mono is used as a stand-in for PolySans Mono */
+  --font-mono: 'Space Mono', monospace;
+  
+  /* Theme Map */
+  --bg-primary: var(--canvas-black);
+  --text-primary: var(--primary-text);
+  --nav-bg: var(--canvas-black);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-ui);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 107px;
+  font-weight: 700;
+  line-height: 0.95; /* Loosened slightly for fallback font */
+  letter-spacing: 1.07px;
+  text-transform: uppercase;
+}
+
+h2.section-display {
+  font-family: var(--font-display);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+h3.large-headline {
+  font-family: var(--font-ui);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.00;
+}
+
+h4.heading-medium {
+  font-family: var(--font-ui);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.00;
+}
+
+.kicker-whisper {
+  font-family: var(--font-ui);
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.20;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.20;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+p.body-text {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.60;
+}
+
+/* Links */
+a {
+  color: var(--primary-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--deep-link-blue);
+}
+a.nav-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.nav-link.active {
+  box-shadow: 0px -1px 0px 0px inset var(--jelly-mint);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 24px;
+  padding: 10px 24px;
+  transition: all 0.18s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--jelly-mint);
+  color: var(--absolute-black);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--absolute-black);
+  box-shadow: 0 0 0 1px #c2c2c2 inset;
+}
+
+.btn-secondary {
+  background-color: var(--surface-slate);
+  color: var(--muted-text);
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--absolute-black);
+  box-shadow: 0 0 0 1px #c2c2c2 inset;
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--canvas-black);
+  border: 1px solid var(--hazard-white);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.card-accent {
+  background-color: var(--verge-ultraviolet);
+  border: none;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+/* StoryStream Timeline */
+.storystream-container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.storystream-rail {
+  border-right: 1px dashed var(--purple-rule);
+  padding-right: 16px;
+  text-align: right;
+  padding-top: 24px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--image-frame);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero {
+    font-size: 54px;
+  }
+  .storystream-container {
+    grid-template-columns: 1fr;
+  }
+  .storystream-rail {
+    border-right: none;
+    border-bottom: 1px dashed var(--purple-rule);
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 8px;
+    padding-top: 0;
+  }
+}

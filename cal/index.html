@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cal.com Design Showcase</title>
+    <link rel="stylesheet" href="./cal.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/>
+        </svg>
+        Cal.com Showcase
+      </a>
+      <div class="nav-links">
+        <a href="#product" class="nav-link">Product</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 8px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme" style="padding: 8px;"></button>
+        <a href="/" class="btn btn-ghost">Gallery</a>
+        <button class="btn btn-primary">Start for free</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="display-hero">Scheduling infrastructure<br>for everyone.</h1>
+          <p class="body-light" style="margin-top: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Meet Cal.com, the event-juggling scheduler for everyone. Focus on meeting, not making meetings. Free for individuals.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Start for free</button>
+            <button class="btn btn-ghost">Contact Sales</button>
+          </div>
+          
+          <div class="card card-large" style="margin-top: 80px; height: 400px; display: flex; align-items: center; justify-content: center;">
+            <p class="body-text">Product UI Screenshot Simulation</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container section">
+        <h2 class="section-heading" style="text-align: center; margin-bottom: 80px;">Built for scale.</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+          <!-- Feature Card 1 -->
+          <div class="card">
+            <h3 class="feature-heading" style="margin-bottom: 12px;">Open Source</h3>
+            <p class="body-text">
+              Inspect the code, self-host it, or contribute. Cal.com gives you control over your scheduling infrastructure.
+            </p>
+          </div>
+          
+          <!-- Feature Card 2 -->
+          <div class="card">
+            <h3 class="feature-heading" style="margin-bottom: 12px;">White-label</h3>
+            <p class="body-text">
+              Make it yours. Strip away our branding and use Cal.com as a seamless part of your own product.
+            </p>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div class="card">
+            <h3 class="feature-heading" style="margin-bottom: 12px;">Workflows</h3>
+            <p class="body-text">
+              Automate everything. Send reminders, follow-ups, and trigger webhooks without lifting a finger.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./cal.js"></script>
+  </body>
+</html>

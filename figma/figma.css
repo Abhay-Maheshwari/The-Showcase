@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&family=Inter:wght@300;400;500;700&display=swap');
+
+/* Fallback fonts approximating figmaSans and figmaMono */
+:root {
+  /* Colors */
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --glass-dark: rgba(0, 0, 0, 0.08);
+  --glass-light: rgba(255, 255, 255, 0.16);
+  
+  /* Gradients */
+  --hero-gradient: linear-gradient(135deg, #0acf83 0%, #ff7262 33%, #f24e1e 66%, #1abcfe 100%);
+
+  /* Fonts */
+  /* Using Inter at light weights to approximate figmaSans 320/330/340 */
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-code: 'Roboto Mono', monospace;
+
+  /* Theme mappings (Figma site is strictly black/white) */
+  --bg-primary: var(--pure-white);
+  --text-primary: var(--pure-black);
+  --btn-primary-bg: var(--pure-black);
+  --btn-primary-text: var(--pure-white);
+}
+
+/* Dark mode for the gallery toggle */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --text-primary: #ffffff;
+  --pure-white: #121212;
+  --pure-black: #ffffff;
+  --glass-dark: rgba(255, 255, 255, 0.08);
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #121212;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  /* figmaSans emulates variable font features. OpenType kern enabled */
+  font-feature-settings: "kern" 1;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 86px;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -1.72px; /* Extreme tracking */
+  color: #ffffff; /* Always white on the gradient */
+}
+
+h2.section-heading {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.10;
+  letter-spacing: -0.96px;
+}
+
+h3.sub-heading {
+  font-size: 26px;
+  font-weight: 500; /* Approx figmaSans 540 */
+  line-height: 1.35;
+  letter-spacing: -0.26px;
+}
+
+.mono-label {
+  font-family: var(--font-code);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.30;
+  letter-spacing: 0.54px; /* Positive tracking for mono */
+  text-transform: uppercase;
+}
+
+p.body-large {
+  font-size: 20px;
+  font-weight: 300; /* Approx figmaSans 330/340 */
+  line-height: 1.40;
+  letter-spacing: -0.14px;
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.14px;
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+a.underline-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  line-height: 1.45;
+  outline: none; /* We handle focus ourselves */
+}
+/* Focus is dashed everywhere in Figma */
+.btn:focus-visible {
+  outline: 2px dashed var(--text-primary);
+  outline-offset: 2px;
+}
+
+.btn-black-pill {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  padding: 8px 18px 10px;
+  border-radius: 50px; /* Pill */
+}
+
+.btn-white-pill {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 18px 10px;
+  border-radius: 50px;
+}
+.btn-white-pill:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* Product Tabs */
+.tab-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+.tab {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+.tab.active {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+.tab:hover:not(.active) {
+  background: var(--glass-dark);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Layout */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.hero {
+  padding: 160px 0;
+  background: var(--hero-gradient);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cards */
+.showcase-card {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+}

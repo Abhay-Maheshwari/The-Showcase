@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand */
+  --kraken-purple: #7132f5;
+  --purple-dark: #5741d8;
+  --purple-subtle: rgba(133,91,251,0.16);
+  
+  /* Text */
+  --near-black: #101114;
+  --silver-blue: #9497a9;
+  --cool-gray: #686b82;
+  
+  /* Semantic */
+  --green: #149e61;
+  --green-dark: #026b3f;
+  
+  /* Surface */
+  --white: #ffffff;
+  --border-gray: #dedee5;
+  
+  /* Fonts */
+  --font-display: 'IBM Plex Sans', sans-serif; /* Kraken-Brand substitute */
+  --font-product: 'IBM Plex Sans', sans-serif; /* Kraken-Product substitute */
+  
+  /* Shadows */
+  --shadow-subtle: rgba(0,0,0,0.03) 0px 4px 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-product);
+  background-color: var(--white);
+  color: var(--near-black);
+  line-height: 1.38;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1px;
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.5px;
+}
+
+h3.card-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.5px;
+}
+
+p.body-standard {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--silver-blue);
+}
+
+.mono-micro {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Buttons - 12px RADIUS ONLY */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-purple {
+  background-color: var(--kraken-purple);
+  color: var(--white);
+}
+.btn-purple:hover {
+  background-color: var(--purple-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--purple-dark);
+  color: var(--purple-dark);
+}
+
+.btn-subtle {
+  background-color: var(--purple-subtle);
+  color: var(--kraken-purple);
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--near-black);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Badges */
+.badge-green {
+  background-color: rgba(20,158,97,0.16);
+  color: var(--green-dark);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero { font-size: 32px; }
+  .grid-3 { grid-template-columns: 1fr; }
+}

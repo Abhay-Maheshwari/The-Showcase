@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/* Using system-ui as fallback for Matter */
+
+:root {
+  /* Surface & Containment */
+  --deep-void: #151413; /* Warm dark */
+  --earth-gray: #353534;
+  
+  /* Text */
+  --warm-parchment: #faf9f6;
+  --ash-gray: #afaeac;
+  --stone-gray: #868584;
+  --muted-purple: #666469;
+  
+  /* Borders & Overlays */
+  --mist-border: rgba(226, 226, 226, 0.35);
+  --frosted-veil: rgba(255, 255, 255, 0.04);
+  
+  /* Fonts */
+  --font-primary: 'Matter Regular', system-ui, -apple-system, sans-serif;
+  --font-medium: 'Matter Medium', system-ui, -apple-system, sans-serif;
+  
+  /* Theme Map */
+  --bg-primary: var(--deep-void);
+  --text-primary: var(--warm-parchment);
+  --text-secondary: var(--ash-gray);
+  --nav-bg: rgba(21, 20, 19, 0.85);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -2.4px;
+}
+
+h2.section-display {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.20;
+  letter-spacing: -0.56px;
+}
+
+h3.feature-heading {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.10;
+  letter-spacing: -0.4px;
+}
+
+p.body-large {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.40;
+  letter-spacing: -0.2px;
+  color: var(--text-secondary);
+}
+
+p.body-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.30;
+  letter-spacing: -0.18px;
+  color: var(--text-secondary);
+}
+
+.category-label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: var(--stone-gray);
+}
+
+/* Links */
+a {
+  color: var(--warm-parchment);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+a:hover {
+  opacity: 0.7;
+}
+a.content-link {
+  color: var(--muted-purple);
+  text-decoration: underline;
+}
+a.nav-link {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--stone-gray);
+}
+a.nav-link:hover {
+  color: var(--warm-parchment);
+  opacity: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-medium);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px; /* Pill */
+  padding: 10px 24px;
+  transition: all 0.2s ease;
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--earth-gray);
+  color: var(--ash-gray);
+}
+.btn-primary:hover {
+  background-color: #454545;
+  color: var(--warm-parchment);
+}
+
+.btn-tag {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--warm-parchment);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--deep-void);
+  border: 1px solid var(--mist-border);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Nature Photography Placeholder */
+.nature-placeholder {
+  background: linear-gradient(to bottom, #2b3b2b, #1f271f); /* Forest green tint */
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+@media (max-width: 810px) {
+  h1.display-hero {
+    font-size: 48px;
+    letter-spacing: -1.4px;
+  }
+}

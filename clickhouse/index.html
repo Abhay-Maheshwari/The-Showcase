@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickHouse Design Showcase</title>
+    <link rel="stylesheet" href="./clickhouse.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="/" style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 20px;">
+        <div style="width: 24px; height: 24px; background: var(--neon-volt); border-radius: 2px;"></div>
+        ClickHouse Showcase
+      </a>
+      <div class="nav-links">
+        <a href="#product" class="uppercase-label">Product</a>
+        <a href="#docs" class="uppercase-label">Docs</a>
+        <a href="#pricing" class="uppercase-label">Pricing</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme" style="padding: 8px; border: 1px solid var(--card-border);"></button>
+        <a href="/" class="btn btn-ghost" style="padding: 8px 16px;">Gallery</a>
+        <button class="btn btn-neon">Get Started</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <div class="uppercase-label" style="margin-bottom: 24px; color: var(--neon-volt);">The Real-Time Data Warehouse</div>
+        <h1 class="display-mega" style="max-width: 900px; margin-bottom: 32px;">Fastest database for real-time apps and analytics</h1>
+        <p class="body-text" style="font-size: 20px; max-width: 600px; margin-bottom: 48px;">
+          ClickHouse is an open-source, column-oriented database management system that allows generating analytical data reports in real-time.
+        </p>
+        <div style="display: flex; gap: 16px;">
+          <button class="btn btn-neon" style="padding: 16px 32px;">Start Free Trial</button>
+          <button class="btn btn-ghost">View Documentation</button>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); padding: 48px 0;">
+          <div>
+            <div class="stats-number">100x</div>
+            <p class="uppercase-label" style="margin-top: 16px;">Faster Queries</p>
+          </div>
+          <div>
+            <div class="stats-number" style="color: var(--neon-volt);">PB</div>
+            <p class="uppercase-label" style="margin-top: 16px;">Petabyte Scale</p>
+          </div>
+          <div>
+            <div class="stats-number">SQL</div>
+            <p class="uppercase-label" style="margin-top: 16px;">Standard Dialect</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Code Feature Section -->
+      <section class="section container" style="padding-bottom: 120px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+          <div>
+            <h3 class="feature-heading" style="margin-bottom: 24px;">Lightning fast execution</h3>
+            <p class="body-text" style="margin-bottom: 32px;">
+              Vectorized query execution and extreme parallelization extract every ounce of performance from modern hardware.
+            </p>
+            <button class="btn btn-green">Read the benchmark</button>
+          </div>
+          <div class="code-block card-inset">
+            <div><span style="color: #a0a0a0;">-- Compute average trip duration by neighborhood</span></div>
+            <div><span class="code-neon">SELECT</span></div>
+            <div>&nbsp;&nbsp;pickup_ntaname,</div>
+            <div>&nbsp;&nbsp;<span class="code-neon">avg</span>(trip_duration) <span class="code-neon">AS</span> avg_duration</div>
+            <div><span class="code-neon">FROM</span> trips</div>
+            <div><span class="code-neon">GROUP BY</span> pickup_ntaname</div>
+            <div><span class="code-neon">ORDER BY</span> avg_duration <span class="code-neon">DESC</span></div>
+            <div><span class="code-neon">LIMIT</span> 10;</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./clickhouse.js"></script>
+  </body>
+</html>

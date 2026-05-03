@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Together AI Design Showcase</title>
+  <link rel="stylesheet" href="./together.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav style="padding: 24px; display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; position: sticky; top: 0; z-index: 100;">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <a href="/" style="font-size: 24px; font-weight: 500; letter-spacing: -1px; color: var(--pure-black); text-decoration: none;">together</a>
+      <div style="display: flex; gap: 32px;">
+        <a href="#" style="color: var(--pure-black); text-decoration: none; font-size: 16px;">Models</a>
+        <a href="#" style="color: var(--pure-black); text-decoration: none; font-size: 16px;">Platform</a>
+        <a href="#" style="color: var(--pure-black); text-decoration: none; font-size: 16px;">Research</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="#" style="color: var(--pure-black); text-decoration: none; font-size: 16px;">Log in</a>
+      <button class="btn btn-dark">Get started</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section" style="background: radial-gradient(circle at top right, #ffcce6 0%, #ffffff 50%, #e6e6ff 100%);">
+      <div class="container" style="text-align: center;">
+        <div class="mono-label" style="margin-bottom: 24px; color: var(--brand-magenta);">The AI-Native Cloud</div>
+        <h1 class="display-hero" style="margin-bottom: 32px;">Build the future of AI.</h1>
+        <p class="body-large" style="max-width: 650px; margin: 0 auto 48px;">Together AI is the fastest cloud platform for building and running generative AI models.</p>
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <button class="btn btn-dark">Start building for free</button>
+          <button class="btn btn-outline">Explore models</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div style="display: flex; justify-content: space-around; margin-bottom: 80px; text-align: center;">
+        <div>
+          <div style="font-size: 64px; font-weight: 500; letter-spacing: -2px;">2x</div>
+          <div class="mono-label">Faster inference</div>
+        </div>
+        <div>
+          <div style="font-size: 64px; font-weight: 500; letter-spacing: -2px;">60%</div>
+          <div class="mono-label">Lower cost</div>
+        </div>
+        <div>
+          <div style="font-size: 64px; font-weight: 500; letter-spacing: -2px;">90%</div>
+          <div class="mono-label">Less latency</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title" style="margin-bottom: 16px;">Together Inference</h3>
+          <p class="body-standard">Run the world's leading open-source models with high performance and low cost.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title" style="margin-bottom: 16px;">Together GPU Clusters</h3>
+          <p class="body-standard">Scalable, high-performance H100 GPU clusters for training and fine-tuning.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title" style="margin-bottom: 16px;">Together Fine-tuning</h3>
+          <p class="body-standard">Seamlessly fine-tune models on your private data with just a few lines of code.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="container">
+        <div class="mono-label" style="margin-bottom: 24px; color: var(--soft-lavender);">Research</div>
+        <h2 class="section-heading" style="margin-bottom: 48px;">Advancing the frontier.</h2>
+        
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 48px;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 48px; border-radius: 8px;">
+             <h3 class="card-title" style="margin-bottom: 24px;">Llama-3-70B-Instruct-v1</h3>
+             <p class="body-standard" style="opacity: 0.8; margin-bottom: 32px;">Introducing our latest fine-tuned version of Llama 3, optimized for instruction following and complex reasoning tasks.</p>
+             <button class="btn btn-glass">Read the paper</button>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 24px; border-radius: 8px;">
+               <div class="mono-label" style="margin-bottom: 8px;">Paper</div>
+               <div style="font-weight: 500;">FlashAttention-3</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 24px; border-radius: 8px;">
+               <div class="mono-label" style="margin-bottom: 8px;">Dataset</div>
+               <div style="font-weight: 500;">RedPajama-V2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 120px 0; background-color: var(--dark-blue); color: var(--pure-white);">
+    <div class="container">
+      <div style="font-size: 120px; font-weight: 500; letter-spacing: -8px; opacity: 0.1; margin-bottom: 64px;">together</div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px;">
+        <div>
+          <div class="mono-label" style="margin-bottom: 24px;">Product</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">Inference</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">Fine-tuning</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">GPU Clusters</div>
+        </div>
+        <div>
+          <div class="mono-label" style="margin-bottom: 24px;">Resources</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">Docs</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">API Reference</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">Status</div>
+        </div>
+        <div>
+          <div class="mono-label" style="margin-bottom: 24px;">Company</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">About</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">Careers</div>
+          <div style="margin-bottom: 12px; opacity: 0.6;">Research</div>
+        </div>
+        <div>
+          <button class="btn btn-glass" style="width: 100%;">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./together.js"></script>
+</body>
+</html>

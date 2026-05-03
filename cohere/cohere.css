@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Inter:wght@400;500&display=swap');
+
+:root {
+  /* Brand */
+  --cohere-black: #000000;
+  --near-black: #212121;
+  --deep-dark: #17171c;
+  --interaction-blue: #1863dc;
+  --focus-purple: #9b60aa;
+  
+  /* Surface & Background */
+  --pure-white: #ffffff;
+  --snow: #fafafa;
+  --lightest-gray: #f2f2f2;
+  
+  /* Neutrals */
+  --muted-slate: #93939f;
+  --border-cool: #d9d9dd;
+  --border-light: #e5e7eb;
+  
+  /* Fonts */
+  --font-display: 'Crimson Pro', serif; /* CohereText substitute */
+  --font-body: 'Inter', sans-serif; /* Unica77 substitute */
+  
+  /* Radius */
+  --radius-signature: 22px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--pure-white);
+  color: var(--near-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -1.44px;
+}
+
+h2.display-secondary {
+  font-family: var(--font-display);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: -1.2px;
+}
+
+h3.section-heading {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.20;
+  letter-spacing: -0.48px;
+}
+
+h4.card-heading {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.20;
+  letter-spacing: -0.32px;
+}
+
+p.body-large {
+  font-size: 18px;
+  line-height: 1.40;
+}
+
+p.body-standard {
+  font-size: 16px;
+  line-height: 1.50;
+}
+
+.uppercase-label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: var(--muted-slate);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--cohere-black);
+}
+.btn-ghost:hover {
+  color: var(--interaction-blue);
+  opacity: 0.8;
+}
+
+.btn-dark {
+  background-color: var(--cohere-black);
+  color: var(--pure-white);
+  border-radius: 9999px;
+}
+.btn-dark:hover {
+  background-color: var(--interaction-blue);
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--pure-white);
+  border: 1px solid var(--lightest-gray);
+  border-radius: var(--radius-signature);
+  padding: 32px;
+}
+.card-cool {
+  border-color: var(--border-cool);
+}
+
+/* Hero Band */
+.hero-band {
+  background: linear-gradient(135deg, #17171c 0%, #301a4d 100%);
+  color: var(--pure-white);
+  padding: 100px 0;
+  width: 100%;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  h1.display-hero { font-size: 48px; }
+  .grid-2 { grid-template-columns: 1fr; }
+}

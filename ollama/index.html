@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ollama Design Showcase</title>
+  <link rel="stylesheet" href="./ollama.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+  <nav style="padding: 24px; display: flex; justify-content: space-between; align-items: center; background-color: var(--pure-white);">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <a href="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--black);">
+        <div style="width: 32px; height: 32px; background: var(--black); border-radius: 50%;"></div>
+        <span style="font-weight: 500; font-size: 20px;">Ollama</span>
+      </a>
+      <div style="display: flex; gap: 32px;">
+        <a href="#" style="color: var(--black); text-decoration: none; font-size: 16px;">Models</a>
+        <a href="#" style="color: var(--black); text-decoration: none; font-size: 16px;">Docs</a>
+        <a href="#" style="color: var(--black); text-decoration: none; font-size: 16px;">Blog</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 24px; align-items: center;">
+      <a href="#" style="color: var(--black); text-decoration: none; font-size: 16px;">Sign in</a>
+      <button class="btn btn-primary">Download</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" style="text-align: center; padding-top: 120px;">
+      <div style="font-size: 80px; margin-bottom: 48px;">🦙</div>
+      <h1 class="display-hero" style="margin-bottom: 32px;">Get up and running with large language models locally.</h1>
+      <p class="body-large" style="max-width: 600px; margin: 0 auto 48px;">Run Llama 3, Mistral, Gemma, and other open-weight models on your machine.</p>
+      <div style="display: flex; justify-content: center; gap: 16px;">
+        <button class="btn btn-primary">Download for macOS</button>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="grid-2">
+        <div>
+          <h2 class="section-heading" style="margin-bottom: 24px;">Run any model with a single command.</h2>
+          <p class="body-standard" style="margin-bottom: 32px;">Ollama makes it incredibly easy to pull and run open-source models without complex configuration.</p>
+          <div class="terminal-block" style="margin-bottom: 24px;">
+            <span style="color: var(--stone);"># Run Llama 3</span><br>
+            ollama run llama3
+          </div>
+          <button class="btn btn-secondary">Explore models</button>
+        </div>
+        <div class="card">
+          <h3 style="font-weight: 500; font-size: 24px; margin-bottom: 24px;">Supported Apps</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+            <div style="padding: 12px; border: 1px solid var(--light-gray); border-radius: 9999px; text-align: center; font-size: 14px;">Cursor</div>
+            <div style="padding: 12px; border: 1px solid var(--light-gray); border-radius: 9999px; text-align: center; font-size: 14px;">OpenWebUI</div>
+            <div style="padding: 12px; border: 1px solid var(--light-gray); border-radius: 9999px; text-align: center; font-size: 14px;">Enchanted</div>
+            <div style="padding: 12px; border: 1px solid var(--light-gray); border-radius: 9999px; text-align: center; font-size: 14px;">Obsidian</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" style="text-align: center; border-top: 1px solid var(--light-gray);">
+      <h2 class="section-heading" style="margin-bottom: 32px;">Customize your own models.</h2>
+      <p class="body-standard" style="max-width: 600px; margin: 0 auto 48px;">Create customized models using your own parameters and system prompts via a simple Modelfile.</p>
+      <div class="terminal-block" style="text-align: left; max-width: 500px; margin: 0 auto;">
+        FROM llama3<br>
+        PARAMETER temperature 1<br>
+        SYSTEM """You are Mario from Super Mario Bros."""
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 80px 0; border-top: 1px solid var(--light-gray); color: var(--stone); font-size: 14px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; gap: 32px;">
+        <a href="#" style="color: inherit; text-decoration: none;">GitHub</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Discord</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Twitter</a>
+      </div>
+      <div>
+        Released under the MIT License
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./ollama.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Primary */
+  --olive-ink: #4d4f46;
+  --deep-olive: #23251d;
+  --posthog-orange: #F54E00;
+  
+  /* Accent & Status */
+  --amber-gold: #F7A501;
+  --focus-blue: rgba(59, 130, 246, 0.5);
+  
+  /* Surfaces */
+  --warm-parchment: #fdfdf8;
+  --sage-cream: #eeefe9;
+  --light-sage: #e5e7e0;
+  --warm-tan: #d4c9b8;
+  
+  /* Borders & Text */
+  --sage-border: #bfc1b7;
+  --light-border: #b6b7af;
+  --sage-placeholder: #9ea096;
+  
+  /* Fonts */
+  --font-primary: 'IBM Plex Sans', -apple-system, sans-serif;
+  
+  /* Shadows */
+  --deep-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Theme Map */
+  --bg-primary: var(--warm-parchment);
+  --bg-secondary: var(--sage-cream);
+  --text-primary: var(--olive-ink);
+  --text-heading: var(--deep-olive);
+  --border-color: var(--sage-border);
+  --btn-dark: #1e1f23;
+  --nav-bg: var(--warm-parchment);
+}
+
+[data-theme="dark"] {
+  /* PostHog isn't known for a traditional dark mode, but we'll provide a warm dark fallback */
+  --bg-primary: #1e1f23;
+  --bg-secondary: #2c2d32;
+  --text-primary: #d4c9b8;
+  --text-heading: #fdfdf8;
+  --border-color: #4d4f46;
+  --btn-dark: #fdfdf8;
+  --nav-bg: #1e1f23;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-size: 30px; /* Surprising, but matched to DESIGN.md */
+  font-weight: 700;
+  line-height: 1.20;
+  letter-spacing: -0.75px;
+  color: var(--text-heading);
+}
+
+h2.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.50;
+  color: var(--text-heading);
+}
+
+h3.card-title {
+  font-size: 21.4px;
+  font-weight: 700;
+  line-height: 1.40;
+  letter-spacing: -0.54px;
+  color: var(--text-heading);
+}
+
+p.body-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+}
+
+p.body-relaxed {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.label-uppercase {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.50;
+  text-transform: uppercase;
+  color: var(--text-heading);
+}
+
+/* Links */
+a {
+  color: var(--text-heading);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.1s;
+}
+a:hover {
+  color: var(--posthog-orange);
+}
+a.nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+a.nav-link:hover {
+  color: var(--posthog-orange);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--btn-dark);
+  color: var(--bg-primary); /* White/Parchment */
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+  color: var(--amber-gold);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: var(--light-sage);
+  color: var(--olive-ink);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 15px;
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: #f4f4f4;
+  color: var(--posthog-orange);
+}
+
+/* Inputs */
+.input-field {
+  background-color: var(--sage-cream);
+  border: 1px solid var(--light-border);
+  border-radius: 4px;
+  padding: 12px 12px;
+  font-size: 16px;
+  font-family: var(--font-primary);
+  color: var(--text-heading);
+}
+.input-field::placeholder {
+  color: var(--sage-placeholder);
+}
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-blue);
+  border-color: transparent;
+}
+
+/* Cards & Containers */
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--sage-border);
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.card-sage {
+  background-color: var(--sage-cream);
+  border-radius: 6px;
+  padding: 32px;
+}
+
+/* Layout */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--sage-border);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Verge Design Showcase</title>
+    <link rel="stylesheet" href="./theverge.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body style="background-color: var(--canvas-black);">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="/" style="font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--hazard-white); text-transform: uppercase; letter-spacing: 0.5px;">The Verge</a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link active">Tech</a>
+          <a href="#" class="nav-link">Reviews</a>
+          <a href="#" class="nav-link">Science</a>
+          <a href="#" class="nav-link">Entertainment</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- Hero Header -->
+      <header style="padding: 48px 0; border-bottom: 1px solid var(--image-frame); margin-bottom: 32px;">
+        <h1 class="display-hero">The Verge</h1>
+      </header>
+
+      <!-- Main Layout Grid -->
+      <div style="display: grid; grid-template-columns: 1fr 350px; gap: 32px; align-items: start;">
+        
+        <!-- Left Column: StoryStream -->
+        <div>
+          <div class="storystream-container">
+            <div class="storystream-rail">
+              <div class="mono-label" style="color: var(--secondary-text);">10:42 AM</div>
+            </div>
+            <a href="#" class="card" style="display: block;">
+              <div class="kicker-whisper" style="color: var(--jelly-mint); margin-bottom: 8px;">Artificial Intelligence</div>
+              <h4 class="heading-medium" style="margin-bottom: 12px;">OpenAI releases new voice mode to all Plus subscribers</h4>
+              <p class="body-text" style="color: var(--secondary-text);">The highly anticipated feature is finally rolling out, complete with custom instructions and regional accents.</p>
+            </a>
+          </div>
+
+          <!-- Color Block Breakout -->
+          <div style="margin: 32px 0;">
+            <a href="#" class="card-accent" style="display: block;">
+              <div class="mono-label" style="margin-bottom: 16px;">Review</div>
+              <h3 class="large-headline" style="margin-bottom: 16px;">The iPhone 16 Pro is exactly what you think it is</h3>
+              <p class="body-text">Apple's latest pro phone refines the formula with a new camera control button and better battery life, but the AI features are still missing in action.</p>
+            </a>
+          </div>
+
+          <div class="storystream-container">
+            <div class="storystream-rail">
+              <div class="mono-label" style="color: var(--secondary-text);">9:15 AM</div>
+            </div>
+            <a href="#" class="card" style="display: block; border-color: var(--jelly-mint);">
+              <div class="kicker-whisper" style="color: var(--jelly-mint); margin-bottom: 8px;">Gaming</div>
+              <h4 class="heading-medium" style="margin-bottom: 12px;">Sony officially announces the PlayStation 5 Pro for $700</h4>
+              <p class="body-text" style="color: var(--secondary-text);">The mid-generation refresh arrives this November with an upgraded GPU and AI upscaling.</p>
+            </a>
+          </div>
+          
+          <div class="storystream-container">
+            <div class="storystream-rail">
+              <div class="mono-label" style="color: var(--secondary-text);">Yesterday</div>
+            </div>
+            <a href="#" class="card" style="display: block;">
+              <div class="kicker-whisper" style="color: var(--verge-ultraviolet); margin-bottom: 8px;">Space</div>
+              <h4 class="heading-medium" style="margin-bottom: 12px;">SpaceX successfully completes the first commercial spacewalk</h4>
+              <p class="body-text" style="color: var(--secondary-text);">The Polaris Dawn mission makes history hundreds of miles above Earth.</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Sidebar Features -->
+        <aside style="display: flex; flex-direction: column; gap: 32px;">
+          <div style="border: 1px solid var(--image-frame); border-radius: 24px; padding: 32px; background-color: var(--surface-slate);">
+            <h2 class="section-display" style="font-size: 48px; margin-bottom: 24px; color: var(--jelly-mint);">Command Line</h2>
+            <p class="body-text" style="margin-bottom: 24px;">Our weekly newsletter exploring the tech industry's biggest shifts and the people driving them.</p>
+            <div style="display: flex; gap: 8px;">
+              <input type="email" placeholder="Email address" style="background: var(--canvas-black); border: 1px solid var(--image-frame); border-radius: 4px; padding: 10px 16px; color: var(--hazard-white); flex: 1; font-family: var(--font-ui);" />
+              <button class="btn btn-primary" style="border-radius: 4px; padding: 10px 16px;">Sign Up</button>
+            </div>
+          </div>
+          
+          <a href="#" class="card" style="display: block; background-color: var(--jelly-mint); border: none;">
+            <div class="mono-label" style="color: var(--absolute-black); margin-bottom: 16px;">Exclusive</div>
+            <h4 class="heading-medium" style="color: var(--absolute-black); margin-bottom: 12px;">Inside the chaotic race to build the ultimate mixed reality headset</h4>
+            <p class="body-text" style="color: #222;">How Meta and Apple are fighting for the future of computing.</p>
+          </a>
+        </aside>
+
+      </div>
+    </main>
+
+    <script type="module" src="./theverge.js"></script>
+  </body>
+</html>

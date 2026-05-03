@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raycast Design Showcase</title>
+    <link rel="stylesheet" href="./raycast.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <!-- Force dark theme structure since Raycast is fundamentally dark -->
+  <body style="background-color: #07080a; color: #f9f9f9;">
+    <!-- Abstract Red Hero Glow -->
+    <div class="stripe-container">
+      <div class="stripe"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" style="background-color: transparent;">
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="/" style="display: flex; align-items: center; gap: 8px; color: white;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--raycast-red)">
+            <!-- Placeholder geometric logo -->
+            <rect x="4" y="4" width="16" height="16" rx="4" />
+          </svg>
+          <span style="font-weight: 600; font-size: 18px; letter-spacing: 0.5px;">Raycast</span>
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on mobile */">
+          <a href="#" class="nav-link">Store</a>
+          <a href="#" class="nav-link">Developer</a>
+          <a href="#" class="nav-link">Pro</a>
+          <a href="#" class="nav-link">Teams</a>
+          <a href="#" class="nav-link">Pricing</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#" class="nav-link" style="color: var(--text-primary); font-size: 14px;">Log in</a>
+        <button class="btn btn-cta">Download</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 120px; position: relative;">
+        <h1 class="display-hero" style="margin-bottom: 24px;">Supercharged<br>productivity.</h1>
+        <p class="body-text" style="max-width: 600px; margin: 0 auto 40px auto; font-size: 18px;">
+          Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 80px;">
+          <button class="btn btn-cta" style="padding: 12px 24px; font-size: 16px;">Download for Mac</button>
+          <button class="btn btn-primary">Install Extension</button>
+        </div>
+
+        <!-- Simulated App Window -->
+        <div style="max-width: 800px; margin: 0 auto; background: rgba(20, 20, 20, 0.6); border: 1px solid var(--border-light); border-radius: 12px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px, rgba(0, 0, 0, 0.8) 0px 0px 0px 1px; overflow: hidden; text-align: left;">
+          
+          <!-- Fake Raycast Input -->
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 16px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 20px; color: var(--text-primary); font-weight: 400;">Search for apps and commands...</span>
+          </div>
+          
+          <!-- Fake List -->
+          <div style="padding: 12px;">
+            <div style="padding: 12px 12px; border-radius: 8px; background: rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 24px; height: 24px; border-radius: 4px; background: #FF6363;"></div>
+                <span style="font-weight: 500;">Create Issue</span>
+              </div>
+              <span style="color: var(--text-dim); font-size: 13px;">Linear</span>
+            </div>
+            <div style="padding: 12px 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 24px; height: 24px; border-radius: 4px; background: #2ea44f;"></div>
+                <span style="font-weight: 500;">Review Pull Requests</span>
+              </div>
+              <span style="color: var(--text-dim); font-size: 13px;">GitHub</span>
+            </div>
+            <div style="padding: 12px 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 24px; height: 24px; border-radius: 4px; background: #55b3ff;"></div>
+                <span style="font-weight: 500;">Toggle System Theme</span>
+              </div>
+              <span style="color: var(--text-dim); font-size: 13px;">System</span>
+            </div>
+          </div>
+
+          <!-- Fake Footer -->
+          <div style="padding: 8px 16px; border-top: 1px solid var(--border-light); background: rgba(0,0,0,0.2); display: flex; justify-content: flex-end; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="color: var(--text-dim); font-size: 12px;">Action</span>
+              <span class="kbd">↵</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="section container">
+        <h2 class="section-heading" style="text-align: center; margin-bottom: 64px;">Built for speed and extendability.</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          
+          <div class="card card-elevated" style="padding: 40px;">
+            <div class="glow-warm"></div>
+            <div style="position: relative; z-index: 1;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)" stroke-width="2" style="margin-bottom: 24px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <h3 class="card-title" style="margin-bottom: 12px;">Lightning Fast</h3>
+              <p class="body-text" style="max-width: 400px;">
+                Written in Swift and built to run natively on macOS. Raycast takes no toll on your system and is instantly ready when you need it.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card card-elevated" style="padding: 40px;">
+            <div style="position: relative; z-index: 1;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)" stroke-width="2" style="margin-bottom: 24px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              <h3 class="card-title" style="margin-bottom: 12px;">Powerful Extensions</h3>
+              <p class="body-text" style="max-width: 400px;">
+                Search the Store to find extensions for your favorite tools. Or use the API to build your own with React and Node.js.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./raycast.js"></script>
+  </body>
+</html>

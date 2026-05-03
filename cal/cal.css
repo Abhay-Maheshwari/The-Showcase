@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Fallback for Cal Sans: Inter or another geometric sans. For true fidelity, we'd load Cal Sans */
+@font-face {
+  font-family: 'Cal Sans';
+  src: local('Inter'), local('Helvetica Neue');
+  /* Ideally we'd have the actual Cal Sans woff2 here */
+}
+
+:root {
+  /* Colors */
+  --charcoal: #242424;
+  --midnight: #111111;
+  --mid-gray: #898989;
+  --pure-white: #ffffff;
+  --light-gray: #f5f5f5;
+  --link-blue: #0099ff;
+
+  /* Fonts */
+  --font-display: 'Cal Sans', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-level-1: rgba(0,0,0,0.16) 0px 1px 1.9px 0px inset;
+  --shadow-level-2: rgba(19,19,22,0.7) 0px 1px 5px -4px, rgba(34,42,53,0.08) 0px 0px 0px 1px, rgba(34,42,53,0.05) 0px 4px 8px 0px;
+  --shadow-level-3: rgba(36,36,36,0.7) 0px 1px 5px -4px, rgba(36,36,36,0.05) 0px 4px 8px;
+  --shadow-level-4: rgba(255,255,255,0.15) 0px 2px 0px inset;
+  --shadow-level-5: rgba(34,42,53,0.05) 0px 4px 8px;
+
+  /* Theme mappings */
+  --bg-primary: var(--pure-white);
+  --bg-secondary: var(--light-gray);
+  --text-primary: var(--charcoal);
+  --text-secondary: var(--mid-gray);
+  --card-bg: var(--pure-white);
+  --border-subtle: rgba(34, 42, 53, 0.08);
+}
+
+[data-theme="dark"] {
+  --bg-primary: var(--midnight);
+  --bg-secondary: #0a0a0a;
+  --text-primary: var(--pure-white);
+  --text-secondary: #aaaaaa;
+  --card-bg: #1a1a1a;
+  --shadow-level-2: rgba(0,0,0,0.7) 0px 1px 5px -4px, rgba(255,255,255,0.08) 0px 0px 0px 1px, rgba(0,0,0,0.5) 0px 4px 8px 0px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.display-hero {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.10;
+  letter-spacing: 0px;
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.10;
+  letter-spacing: 0px;
+}
+
+h3.feature-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.30;
+  letter-spacing: 0px;
+}
+
+h4.sub-heading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.20;
+  letter-spacing: 0.2px;
+}
+
+p.body-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  color: var(--text-secondary);
+}
+
+p.body-light {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.30;
+  letter-spacing: -0.2px;
+  color: var(--text-secondary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-level-4);
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+.btn-ghost:hover {
+  background: rgba(137, 137, 137, 0.1);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-level-2);
+}
+
+.card-large {
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--bg-primary);
+  z-index: 100;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: var(--text-secondary);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 0 80px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}

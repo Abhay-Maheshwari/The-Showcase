@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A high-fidelity showcase of the Linear Design System" />
+    <title>Linear Design Showcase</title>
+    <link rel="stylesheet" href="./linear.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.43 4 16.05 4 12C4 7.95 7.05 4.57 11 4.07V19.93ZM13 4.07C16.95 4.57 20 7.95 20 12C20 16.05 16.95 19.43 13 19.93V4.07Z" fill="currentColor"/>
+        </svg>
+        Linear Showcase
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#components" class="nav-link">Components</a>
+        <a href="#about" class="nav-link">About</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 8px;">
+        <button class="theme-toggle btn btn-subtle" aria-label="Toggle theme"></button>
+        <button class="btn btn-ghost">Log in</button>
+        <button class="btn btn-primary">Sign up</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section hero">
+        <div class="pill pill-success" style="margin-bottom: 24px;">
+          <span>•</span> Introducing Linear Design Showcase
+        </div>
+        <h1 class="display-xl">Precision engineering.<br/>Flawless design.</h1>
+        <p class="body-large hero-subtitle">
+          Experience a masterclass in dark-mode-first product design. Every element exists in a carefully calibrated hierarchy of luminance, from barely-visible borders to soft, luminous text.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary">Get started</button>
+          <button class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            View components
+          </button>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Feature Cards -->
+        <section id="features" class="section">
+          <h2 class="display" style="text-align: center; margin-bottom: 64px;">Built for speed.</h2>
+          <div class="grid-3">
+            <div class="card">
+              <h5 class="heading-3" style="margin-bottom: 12px; color: var(--text-primary);">Keyboard first</h5>
+              <p class="body">Navigate the entire application without touching your mouse. The command palette is always one keystroke away.</p>
+              <div style="margin-top: 24px;">
+                <span class="pill">Cmd</span> <span class="pill">K</span>
+              </div>
+            </div>
+            <div class="card">
+              <h5 class="heading-3" style="margin-bottom: 12px; color: var(--text-primary);">Dark native</h5>
+              <p class="body">Not a dark theme applied to a light design — darkness is the native medium. Information density managed through subtle gradations.</p>
+            </div>
+            <div class="card">
+              <h5 class="heading-3" style="margin-bottom: 12px; color: var(--text-primary);">Inter Variable</h5>
+              <p class="body">Using cv01 and ss03 OpenType features to transform Inter into a distinctive, geometric, and purposeful character.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Components Showcase -->
+        <section id="components" class="section">
+          <h2 class="display" style="text-align: center; margin-bottom: 64px;">Component Showcase</h2>
+          
+          <div class="grid-2">
+            <!-- Command Palette Demo -->
+            <div class="card featured" style="display: flex; flex-direction: column; gap: 24px;">
+              <h4 class="heading-2" style="color: var(--text-primary);">Command Palette</h4>
+              <p class="body">Multi-layered dialog shadow stack over Level 3 surfaces.</p>
+              
+              <div class="cmd-palette">
+                <div class="cmd-input-area">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  <input type="text" class="cmd-input" placeholder="Type a command or search..." />
+                </div>
+                <div class="cmd-results">
+                  <div class="cmd-item active">
+                    <span class="cmd-item-label">Create new issue</span>
+                    <span class="cmd-item-meta">C</span>
+                  </div>
+                  <div class="cmd-item">
+                    <span class="cmd-item-label">Search issues</span>
+                    <span class="cmd-item-meta">/</span>
+                  </div>
+                  <div class="cmd-item">
+                    <span class="cmd-item-label">Switch workspace</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- UI Elements -->
+            <div class="card featured" style="display: flex; flex-direction: column; gap: 32px;">
+              <h4 class="heading-2" style="color: var(--text-primary);">Interactive Elements</h4>
+              
+              <div>
+                <h5 class="heading-3" style="margin-bottom: 16px; font-size: 16px; color: var(--text-secondary);">Buttons</h5>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                  <button class="btn btn-primary">Primary Action</button>
+                  <button class="btn btn-ghost">Ghost Button</button>
+                  <button class="btn btn-subtle">Subtle</button>
+                </div>
+              </div>
+              
+              <div>
+                <h5 class="heading-3" style="margin-bottom: 16px; font-size: 16px; color: var(--text-secondary);">Inputs</h5>
+                <input type="text" class="input-text" placeholder="Start typing here..." />
+              </div>
+              
+              <div>
+                <h5 class="heading-3" style="margin-bottom: 16px; font-size: 16px; color: var(--text-secondary);">Badges & Pills</h5>
+                <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                  <span class="pill pill-success">Active</span>
+                  <span class="pill">Feature</span>
+                  <span class="pill">Bug</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="section" style="border-top: 1px solid var(--border-subtle); text-align: center; padding: 64px 0;">
+          <h2 class="heading-1" style="margin-bottom: 24px; color: var(--text-primary);">Ready to build?</h2>
+          <button class="btn btn-primary">Get started now</button>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./linear.js"></script>
+  </body>
+</html>

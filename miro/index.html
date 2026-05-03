@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miro Design Showcase</title>
+    <link rel="stylesheet" href="./miro.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="/" style="font-family: var(--font-display); font-weight: 700; font-size: 24px; color: var(--text-primary); text-decoration: none;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M4 12L8 4L12 12L8 20L4 12Z" fill="#ffc6c6"/>
+            <path d="M12 12L16 4L20 12L16 20L12 12Z" fill="#ffe6cd"/>
+            <path d="M8 12L12 4L16 12L12 20L8 12Z" fill="#c3faf5"/>
+          </svg>
+          miro
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on small screens */">
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Solutions</a>
+          <a href="#" class="nav-link">Resources</a>
+          <a href="#" class="nav-link">Pricing</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle btn-icon-circle" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="#" class="nav-link" style="font-weight: 400;">Log in</a>
+        <button class="btn btn-primary">Sign up free</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section container" style="text-align: center; padding-top: 120px;">
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 24px auto;">Enter the innovation workspace</h1>
+        <p class="sub-heading" style="max-width: 700px; margin: 0 auto 40px auto;">
+          Miro is the visual workspace for innovation where teams manage projects, design products, and build the future together.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 24px;">
+          <input type="email" placeholder="Enter your work email" style="width: 320px; padding: 12px 16px; border: 1px solid var(--color-border); border-radius: 8px; font-family: var(--font-body); font-size: 16px; outline: none;">
+          <button class="btn btn-primary">Sign up free</button>
+        </div>
+        <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-secondary);">Keep work and life separate by using your work email</p>
+      </section>
+
+      <!-- Pastel Feature Grid -->
+      <section class="section container">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          
+          <div class="panel accent-coral" style="display: flex; flex-direction: column; justify-content: center; min-height: 400px; padding: 64px;">
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px;">Brainstorming</div>
+            <h2 class="section-heading" style="margin-bottom: 24px;">Unleash creative ideas</h2>
+            <p class="body-text" style="margin-bottom: 32px; max-width: 400px;">
+              Build on each other's ideas in real-time. Use sticky notes, voting, and mind maps to run engaging workshops.
+            </p>
+            <div>
+              <button class="btn" style="background-color: var(--pastel-coral-dark); color: var(--color-white); padding: 12px 24px; border: none;">Explore Brainstorming</button>
+            </div>
+          </div>
+          
+          <div class="panel accent-teal" style="display: flex; flex-direction: column; justify-content: center; min-height: 400px; padding: 64px;">
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px;">Diagramming</div>
+            <h2 class="section-heading" style="margin-bottom: 24px;">Map out complex systems</h2>
+            <p class="body-text" style="margin-bottom: 32px; max-width: 400px;">
+              Quickly draft technical architecture, flowcharts, and customer journeys with industry standard shape packs.
+            </p>
+            <div>
+              <button class="btn" style="background-color: var(--pastel-teal-dark); color: var(--color-white); padding: 12px 24px; border: none;">Explore Diagramming</button>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Integration / Logo Section -->
+      <section class="section container" style="text-align: center; padding-top: 48px;">
+        <h3 class="card-title" style="margin-bottom: 48px;">Connect Miro with the tools you already use</h3>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;">
+          <div class="card" style="width: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px;">
+            <div style="width: 48px; height: 48px; background-color: var(--color-bg-subtle); border-radius: 8px;"></div>
+            <span style="font-family: var(--font-display); font-weight: 500;">Zoom</span>
+          </div>
+          <div class="card" style="width: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px;">
+            <div style="width: 48px; height: 48px; background-color: var(--color-bg-subtle); border-radius: 8px;"></div>
+            <span style="font-family: var(--font-display); font-weight: 500;">Slack</span>
+          </div>
+          <div class="card" style="width: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px;">
+            <div style="width: 48px; height: 48px; background-color: var(--color-bg-subtle); border-radius: 8px;"></div>
+            <span style="font-family: var(--font-display); font-weight: 500;">Google Workspace</span>
+          </div>
+          <div class="card" style="width: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px;">
+            <div style="width: 48px; height: 48px; background-color: var(--color-bg-subtle); border-radius: 8px;"></div>
+            <span style="font-family: var(--font-display); font-weight: 500;">Jira</span>
+          </div>
+        </div>
+        
+        <div style="margin-top: 48px;">
+          <a href="#" style="font-family: var(--font-display); font-weight: 500; font-size: 16px;">View all 100+ integrations →</a>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./miro.js"></script>
+  </body>
+</html>

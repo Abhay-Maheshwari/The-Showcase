@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Fallback for HashiCorp Sans using Inter */
+:root {
+  /* Colors - Brand Primary */
+  --hcp-black: #000000;
+  --hcp-dark-charcoal: #15181e;
+  --hcp-near-black: #0d0e12;
+
+  /* Colors - Neutral Scale */
+  --hcp-light-gray: #f1f2f3;
+  --hcp-mid-gray: #d5d7db;
+  --hcp-cool-gray: #b2b6bd;
+  --hcp-dark-gray: #656a76;
+  --hcp-charcoal: #3b3d45;
+  --hcp-near-white: #efeff1;
+
+  /* Colors - Product Brand Colors */
+  --color-terraform: #7b42bc;
+  --color-vault: #ffcf25;
+  --color-waypoint: #14c6cb;
+  --color-vagrant: #1868f2;
+
+  /* Colors - Semantic */
+  --color-action-light: #2264d6; /* blue on light */
+  --color-action-dark: #1060ff; /* blue on dark */
+  
+  /* System UI */
+  --font-brand: 'Inter', sans-serif; /* Fallback for HashiCorp Sans */
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* Theme mappings - Light Mode */
+  --bg-primary: #ffffff;
+  --text-brand: var(--hcp-black);
+  --text-body: var(--hcp-charcoal);
+  --border-subtle: rgba(178, 182, 189, 0.4);
+  --link-color: var(--color-action-light);
+  --shadow-whisper: rgba(97, 104, 117, 0.05) 0px 1px 1px, rgba(97, 104, 117, 0.05) 0px 2px 2px;
+}
+
+/* Dark mode for the gallery toggle AND for specific dark sections */
+[data-theme="dark"], .dark-section {
+  --bg-primary: var(--hcp-dark-charcoal);
+  --text-brand: var(--hcp-near-white);
+  --text-body: var(--hcp-mid-gray);
+  --border-subtle: rgb(97, 104, 117);
+  --link-color: var(--color-action-dark);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-system);
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  line-height: 1.63;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .brand-text {
+  font-family: var(--font-brand);
+  color: var(--text-brand);
+  font-feature-settings: "kern" 1;
+}
+
+h1.display-hero {
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 1.17;
+}
+
+h2.section-heading {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.19;
+}
+
+h3.feature-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: -0.42px;
+}
+
+h4.card-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+}
+
+.uppercase-label {
+  font-family: var(--font-brand);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.69;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: var(--hcp-dark-gray);
+}
+
+p.body-large {
+  font-family: var(--font-system);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.50;
+}
+
+p.body-text {
+  font-family: var(--font-system);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.63;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-system);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.btn-primary-dark {
+  background: var(--hcp-dark-charcoal);
+  color: var(--hcp-mid-gray);
+  padding: 9px 9px 9px 15px; /* Asymmetric */
+  border-radius: 5px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-whisper);
+}
+.btn-primary-dark:hover {
+  background: #1f232b;
+}
+
+.btn-secondary-white {
+  background: #ffffff;
+  color: var(--hcp-charcoal);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+.btn-secondary-white:hover {
+  background: var(--hcp-light-gray);
+}
+
+/* Product Buttons */
+.btn-terraform { background: var(--color-terraform); color: white; border: none; padding: 9px 15px; border-radius: 5px; }
+.btn-vault { background: var(--color-vault); color: var(--hcp-charcoal); border: none; padding: 9px 15px; border-radius: 5px; }
+.btn-waypoint { background: var(--color-waypoint); color: white; border: none; padding: 9px 15px; border-radius: 5px; }
+
+/* Cards */
+.card {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: var(--shadow-whisper);
+  border: 1px solid var(--border-subtle);
+}
+
+.card-dark {
+  background: var(--hcp-dark-charcoal);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Inputs */
+.input-dark {
+  background: var(--hcp-near-black);
+  color: var(--hcp-near-white);
+  border: 1px solid rgb(97, 104, 117);
+  padding: 11px;
+  border-radius: 5px;
+  font-family: var(--font-system);
+  font-size: 16px;
+  width: 100%;
+}
+.input-dark:focus {
+  outline: 3px solid var(--color-action-dark);
+  border-color: transparent;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-links a {
+  font-family: var(--font-system);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+/* Layout */
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.hero {
+  padding: 120px 0;
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono&display=swap');
+
+:root {
+  /* Brand Swatches */
+  --matcha-300: #84e7a5;
+  --matcha-600: #078a52;
+  --matcha-800: #02492a;
+  --slushie-500: #3bd3fd;
+  --slushie-800: #0089ad;
+  --lemon-400: #f8cc65;
+  --lemon-500: #fbbd41;
+  --ube-300: #c1b0ff;
+  --ube-800: #43089f;
+  --pomegranate-400: #fc7981;
+  
+  /* Neutral */
+  --clay-black: #000000;
+  --warm-cream: #faf9f7;
+  --oat-border: #dad4c8;
+  --oat-light: #eee9df;
+  --warm-silver: #9f9b93;
+  
+  /* Shadows */
+  --clay-shadow: rgba(0,0,0,0.1) 0px 1px 1px, 
+                 rgba(0,0,0,0.04) 0px -1px 1px inset, 
+                 rgba(0,0,0,0.05) 0px -0.5px 1px;
+  --hard-shadow: #000000 -7px 7px;
+  
+  /* Fonts */
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--warm-cream);
+  color: var(--clay-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+.display-hero {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -3.2px;
+}
+
+.section-heading {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--warm-silver);
+}
+
+/* Buttons */
+.btn-clay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid var(--oat-border);
+  background-color: #ffffff;
+  color: var(--clay-black);
+  border-radius: 12px;
+  text-decoration: none !important;
+}
+
+.btn-clay:hover {
+  transform: rotateZ(-8deg) translateY(-4px);
+  box-shadow: var(--hard-shadow);
+  background-color: var(--ube-300);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: var(--warm-cream);
+  border-bottom: 1px solid var(--oat-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.swatch-section {
+  border-radius: 40px;
+  margin: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--oat-border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--clay-shadow);
+}
+
+.dashed-card {
+  border: 1px dashed var(--oat-border);
+}
+
+@media (max-width: 768px) {
+  .display-hero { font-size: 48px; letter-spacing: -1px; }
+  .section-heading { font-size: 32px; }
+  .swatch-section { margin: 20px; border-radius: 24px; }
+}

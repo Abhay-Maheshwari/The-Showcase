@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+  /* Brand */
+  --vodafone-red: #E60000;
+  
+  /* Text */
+  --charcoal-headline: #25282B;
+  --secondary-body: #7E7E7E;
+  
+  /* Surfaces */
+  --pure-white: #FFFFFF;
+  --light-neutral: #F2F2F2;
+  --charcoal-panel: #25282B;
+  
+  /* Fonts */
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--pure-white);
+  color: var(--charcoal-headline);
+  line-height: 1.38;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1.monumental-display {
+  font-size: clamp(64px, 10vw, 144px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -1px;
+}
+
+h2.section-title {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.text-lead {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14.4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-red-pill {
+  background-color: var(--vodafone-red);
+  color: var(--pure-white);
+  padding: 16px 32px;
+  border-radius: 60px !important;
+}
+
+.btn-red-rect {
+  background-color: var(--vodafone-red);
+  color: var(--pure-white);
+  padding: 12px 24px;
+  border-radius: 2px !important;
+}
+
+/* Layout Elements */
+.red-divider-band {
+  width: 100%;
+  height: 80px;
+  background-color: var(--vodafone-red);
+}
+
+.institutional-panel {
+  background-color: var(--charcoal-panel);
+  color: var(--pure-white);
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-speechmark {
+  width: 40px;
+  height: 40px;
+  background-color: var(--vodafone-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  margin-right: 24px;
+}
+
+/* Editorial Cards */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 80px 0;
+}
+
+.editorial-card {
+  background: white;
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.tag-pill-red {
+  display: inline-block;
+  border: 1px solid var(--vodafone-red);
+  color: var(--charcoal-headline);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .monumental-display { font-size: 56px; }
+  .red-divider-band { height: 40px; }
+  .section-title { font-size: 32px; }
+}

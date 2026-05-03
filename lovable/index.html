@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lovable Design Showcase</title>
+    <link rel="stylesheet" href="./lovable.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body>
+    <div class="hero-wash"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="/" class="no-underline" style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 20px; letter-spacing: -0.5px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          Lovable
+        </a>
+        <div class="nav-links" style="display: none; /* Hide on small screens */">
+          <a href="#templates">Templates</a>
+          <a href="#showcase">Showcase</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#docs">Docs</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-toggle btn btn-ghost" aria-label="Toggle theme" style="padding: 6px; border: none;"></button>
+        <a href="/" class="btn no-underline" style="padding: 8px 16px;">Gallery</a>
+        <button class="btn btn-ghost">Log In</button>
+        <button class="btn btn-primary-dark">Start Building</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 9999px; margin-bottom: 32px; font-size: 14px; background: var(--bg-primary);">
+          <span>Introducing Lovable v2.0</span>
+          <a href="#">Read the announcement</a>
+        </div>
+        <h1 class="display-hero" style="max-width: 900px; margin: 0 auto 24px auto;">The last AI coding assistant you'll ever need.</h1>
+        <p class="body-large" style="max-width: 600px; margin: 0 auto 48px auto;">
+          Build production-ready web apps just by describing what you want. Lovable understands your intent and writes clean, maintainable code.
+        </p>
+        
+        <!-- Chat Input Simulation -->
+        <div class="chat-input-container" style="max-width: 800px; margin: 0 auto; text-align: left;">
+          <textarea class="chat-input" rows="3" placeholder="What do you want to build today? (e.g. A dashboard for a coffee shop)"></textarea>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-pill" style="font-size: 14px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Upload image
+              </button>
+              <button class="btn btn-pill" style="font-size: 14px;">Start from template</button>
+            </div>
+            <button class="btn btn-primary-dark" style="border-radius: 8px;">Generate App</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar Section -->
+      <section class="section container" style="padding-top: 0; padding-bottom: 64px;">
+        <div style="display: flex; justify-content: center; gap: 64px; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 48px 0;">
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 600; letter-spacing: -1.2px; margin-bottom: 8px;">100k+</div>
+            <div class="body-text">Apps generated</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 600; letter-spacing: -1.2px; margin-bottom: 8px;">10M+</div>
+            <div class="body-text">Lines of code written</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 600; letter-spacing: -1.2px; margin-bottom: 8px;">4.9/5</div>
+            <div class="body-text">Average user rating</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Template Gallery Section -->
+      <section class="section container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px;">
+          <div>
+            <h2 class="section-heading" style="margin-bottom: 16px;">Start from a template.</h2>
+            <p class="body-text">Or start from scratch. Lovable can handle both.</p>
+          </div>
+          <a href="#" class="no-underline btn btn-ghost">View all templates</a>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+          <div class="card">
+            <div style="height: 200px; background-color: #e5e7eb; border-bottom: 1px solid var(--border-color);"></div>
+            <div style="padding: 24px;">
+              <h4 class="card-title" style="margin-bottom: 8px;">SaaS Dashboard</h4>
+              <p class="body-text" style="font-size: 14px; margin-bottom: 16px;">A complete dashboard with charts, data tables, and user management.</p>
+              <div style="display: flex; gap: 8px;">
+                <span style="font-size: 12px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px;">React</span>
+                <span style="font-size: 12px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px;">Tailwind</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div style="height: 200px; background-color: #e5e7eb; border-bottom: 1px solid var(--border-color);"></div>
+            <div style="padding: 24px;">
+              <h4 class="card-title" style="margin-bottom: 8px;">E-commerce Store</h4>
+              <p class="body-text" style="font-size: 14px; margin-bottom: 16px;">Product listings, shopping cart, and checkout flow integration.</p>
+              <div style="display: flex; gap: 8px;">
+                <span style="font-size: 12px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px;">Next.js</span>
+                <span style="font-size: 12px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px;">Stripe</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div style="height: 200px; background-color: #e5e7eb; border-bottom: 1px solid var(--border-color);"></div>
+            <div style="padding: 24px;">
+              <h4 class="card-title" style="margin-bottom: 8px;">Link in Bio</h4>
+              <p class="body-text" style="font-size: 14px; margin-bottom: 16px;">A mobile-first personal landing page with social links and integrations.</p>
+              <div style="display: flex; gap: 8px;">
+                <span style="font-size: 12px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px;">Vite</span>
+                <span style="font-size: 12px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px;">Framer Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./lovable.js"></script>
+  </body>
+</html>
